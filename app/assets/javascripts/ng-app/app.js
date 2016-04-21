@@ -2,9 +2,15 @@ angular
     .module('myApp', [
         'ngAnimate',
         'ui.router',
-        'templates'
+        'templates',
+        'uiGmapgoogle-maps',
+        'xeditable'
     ])
-    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    .config(
+        ['uiGmapGoogleMapApiProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, GoogleMapApiProviders) {
+            GoogleMapApiProviders.configure({
+            china: true
+            });
 
       $stateProvider
         .state('home', {
@@ -63,11 +69,15 @@ angular
         //         templateUrl: 'dashboard/three.html'
         //     })
 
-            // default fall back route
+    // default fall back route
     $urlRouterProvider.otherwise('/');
 
     // enable HTML5 Mode for SEO
     $locationProvider.html5Mode(true);
 
-          });
+    }])
 
+.run(function(editableOptions) {
+  console.log('angular app running');
+  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+});
