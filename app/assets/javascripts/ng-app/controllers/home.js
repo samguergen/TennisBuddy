@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('homeController', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi){
+.controller('HomeCtrl', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi){
   console.log('inside the controller');
 
   $scope.positionObj = {};
@@ -38,7 +38,7 @@ angular.module('myApp')
     'score': '10-6',
     'winner': 'Sam',
     'location': 'Williamsburg Sports Center',
-    'description', 'Who wants to play with me this morning?',
+    'description': 'Who wants to play with me this morning?',
     'comments': [{'melanie': 'nice game!'}, {}]
   };
 
