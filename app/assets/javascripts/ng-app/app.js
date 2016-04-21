@@ -12,31 +12,56 @@ angular
             templateUrl: 'home.html',
             controller: 'HomeCtrl'
         }) // make sure you remove the semicolon
-        .state('test', {
-            url: '/test',
-            templateUrl: 'test.html',
+        .state('signup', {
+            url: '/signup',
+            templateUrl: 'signup.html',
             controller: 'HomeCtrl'
         })
-        .state('dashboard', {
-            abstract: true,
-            url: '/dashboard',
-            templateUrl: 'dashboard/layout.html'
+        .state('login', {
+            url: '/login',
+            templateUrl: 'login.html',
+            controller: 'HomeCtrl'
         })
-            // the default route when someone hits dashboard
-            .state('dashboard.one', {
-                url: '/one',
-                templateUrl: 'dashboard/one.html'
-            })
-            // this is /dashboard/two
-            .state('dashboard.two', {
-                url: '/two',
-                templateUrl: 'dashboard/two.html'
-            })
-            // this is /dashboard/three
-            .state('dashboard.three', {
-                url: '/three',
-                templateUrl: 'dashboard/three.html'
-            })
+        .state('past-games', {
+            url: '/past-games',
+            templateUrl: 'past-games.html',
+            controller: 'HomeCtrl'
+        })
+        .state('profile', {
+            url: '/profile',
+            templateUrl: 'profile.html',
+            controller: 'HomeCtrl'
+        })
+        .state('browse', {
+            url: '/browse',
+            templateUrl: 'browse.html',
+            controller: 'HomeCtrl'
+        })
+        .state('new-game', {
+            url: '/new-game',
+            templateUrl: 'new-game.html',
+            controller: 'HomeCtrl'
+        })
+        // .state('dashboard', {
+        //     abstract: true,
+        //     url: '/dashboard',
+        //     templateUrl: 'dashboard/layout.html'
+        // })
+        //     // the default route when someone hits dashboard
+        //     .state('dashboard.one', {
+        //         url: '/one',
+        //         templateUrl: 'dashboard/one.html'
+        //     })
+        //     // this is /dashboard/two
+        //     .state('dashboard.two', {
+        //         url: '/two',
+        //         templateUrl: 'dashboard/two.html'
+        //     })
+        //     // this is /dashboard/three
+        //     .state('dashboard.three', {
+        //         url: '/three',
+        //         templateUrl: 'dashboard/three.html'
+        //     })
 
             // default fall back route
     $urlRouterProvider.otherwise('/');
