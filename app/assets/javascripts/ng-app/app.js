@@ -24,7 +24,7 @@ angular
         })
             // the default route when someone hits dashboard
             .state('dashboard.one', {
-                url: '',
+                url: '/one',
                 templateUrl: 'dashboard/one.html'
             })
             // this is /dashboard/two
