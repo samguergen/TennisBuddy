@@ -13,13 +13,10 @@ angular
             controller: 'HomeCtrl'
         }) // make sure you remove the semicolon
         .state('test', {
-            url: '/',
+            url: '/test',
             templateUrl: 'test.html',
             controller: 'HomeCtrl'
-        }) // make sure you remove the semicolon
-
-        // an abstract state that just serves as a
-        // parent for the below child states
+        })
         .state('dashboard', {
             abstract: true,
             url: '/dashboard',
@@ -39,7 +36,13 @@ angular
             .state('dashboard.three', {
                 url: '/three',
                 templateUrl: 'dashboard/three.html'
-            });
+            })
+
+            // default fall back route
+    $urlRouterProvider.otherwise('/');
+
+    // enable HTML5 Mode for SEO
+    $locationProvider.html5Mode(true);
 
           });
 
