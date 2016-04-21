@@ -12,6 +12,11 @@ angular
             templateUrl: 'home.html',
             controller: 'HomeCtrl'
         }) // make sure you remove the semicolon
+        .state('test', {
+            url: '/',
+            templateUrl: 'test.html',
+            controller: 'HomeCtrl'
+        }) // make sure you remove the semicolon
 
         // an abstract state that just serves as a
         // parent for the below child states
