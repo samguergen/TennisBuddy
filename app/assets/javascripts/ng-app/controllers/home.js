@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('HomeCtrl', ['$scope', 'xeditable', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi){
+.controller('HomeCtrl', ['$scope', function($scope){
   console.log('inside the controller');
 
   $scope.positionObj = {};
