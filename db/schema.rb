@@ -11,6 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160423195117) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "description", null: false
+    t.integer  "games_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string   "title",       null: false
+    t.string   "description"
+    t.string   "player_1"
+    t.string   "player_2"
+    t.string   "winner"
+    t.string   "location"
+    t.integer  "comments_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name",      null: false
+    t.string   "last_name",       null: false
+    t.integer  "age"
+    t.string   "photo_url"
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.boolean  "deactivated"
+    t.integer  "zipcode"
+    t.integer  "games_id"
+    t.integer  "comments_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
 end
