@@ -20,6 +20,10 @@ html {
 
 }
 
+.section {
+  margin-left: 10%
+}
+
 nav {
   padding: 5px;
   background-color: #ceeb37;
@@ -240,9 +244,4 @@ button.btn.btn-primary, button.btn.btn-default {
   height: 20%;
   color: rgb(92, 180, 122);
   margin-top: 5px;
-}
-
-
-form#signup-form {
-  margin-left: 10%
 }
