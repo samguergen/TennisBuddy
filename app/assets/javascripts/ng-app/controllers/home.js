@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('HomeCtrl', ['$scope', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi){
+.controller('HomeCtrl', ['$scope', 'xeditable', 'uiGmapGoogleMapApi', function($scope, uiGmapGoogleMapApi){
   console.log('inside the controller');
 
   $scope.positionObj = {};
@@ -82,19 +82,19 @@ angular.module('myApp')
 
 //TODO: implement timeout on geolocation
 
-    var options = {
-                  enableHighAccuracy: true
-              };
+    // var options = {
+    //               enableHighAccuracy: true
+    //           };
 
-    navigator.geolocation.getCurrentPosition(function(pos) {
-                  $scope.position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-                  $scope.positionObj = JSON.stringify($scope.position);
-                  console.log('your current longitude and latitudes are....');
-                  console.log($scope.positionObj);
-                  alert($scope.positionObj);
-              },
-              function(error) {
-                  alert('Unable to get location: ' + error.message);
-              }, options);
+    // navigator.geolocation.getCurrentPosition(function(pos) {
+    //               $scope.position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+    //               $scope.positionObj = JSON.stringify($scope.position);
+    //               console.log('your current longitude and latitudes are....');
+    //               console.log($scope.positionObj);
+    //               alert($scope.positionObj);
+    //           },
+    //           function(error) {
+    //               alert('Unable to get location: ' + error.message);
+    //           }, options);
 
 }]);

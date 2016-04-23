@@ -1,1 +1,243 @@
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+
+* {
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+html {
+  font-size: 14px;
+  min-height:100%;
+  position:relative;
+  font-family: "Palatino Linotype", "Book Antiqua", "serif";
+  background-color: black;
+  font-size: 16px;
+
+}
+
+body {
+  height: 100%;
+}
+
+nav {
+  padding: 5px;
+  background-color: #ceeb37;
+  margin: 2px;
+  height: 20%;
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+}
+
+nav a.logo img{
+  width: 245px;
+  margin: auto;
+  order: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  width: 70%;
+  padding-top: 40px;
+  margin-top: -150px;
+  font-size: 160%;
+  margin: auto;
+  order: 2;
+  display: flex;
+}
+
+nav ul li a {
+  padding: 15px;
+  color: rgb(92, 180, 122);
+  text-shadow: 0px 0px 2px black;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+}
+
+a:hover {
+  cursor: pointer;
+  font-size: 26px;
+  margin-top: -5px;
+}
+
+a:hover:not(.active) {
+  text-shadow: 0px 0px 5px #81F7F3;
+}
+
+.active {
+  background-color:#4CAF50;
+}
+
+.main-body {
+  margin-top: 5px;
+  height: 450px;
+  display: block;
+  overflow: hidden;
+}
+
+.main-body .profile {
+  background-color: green;
+  height: 450px;
+}
+
+.main-body .profile .page-title {
+  font-weight: bold;
+  font-size: 28px;
+  margin-left: 11%;
+  padding-top: 20px;
+}
+
+.main-body .profile .edit-instruction {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 16%;
+}
+
+.main-body .profile .profile-description {
+  margin: 20px;
+  line-height: 30px;
+}
+
+.main-body .profile input.editable-input.form-control {
+  height: 35px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.main-body .profile .edit-labels {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1B4536;
+}
+
+.main-body .profile .first-col {
+  float: left;
+  margin-left: 9%;
+}
+
+.main-body .profile .second-col {
+  float: left;
+  margin-left: 30%;
+}
+
+.main-body .profile .second-col .profile-games {
+  margin-left: -135%;
+  margin-top: 110px;
+}
+
+.main-body .profile #edit-form {
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.editable-buttons {
+  font-size: 25px;
+}
+
+button.btn.btn-primary, button.btn.btn-default {
+  width: 8%;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.main-body .past {
+  background-color: beige;
+  height: 450px;
+  padding: 35px;
+}
+
+.main-body .browse {
+  height: 450px;
+}
+
+.angular-google-map-container {
+  height: 450px;
+}
+
+.main-body .login {
+  background-color: red;
+  height: 450px;
+  padding: 35px;
+  display: flex;
+}
+
+.main-body .login label {
+  font-size: 24px;
+}
+
+.main-body .login input {
+  font-size: 20px;
+}
+
+.main-body .login input.login-email {
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+.main-body .login input.login-password {
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+.main-body .login input.login-submit {
+  margin-top: 10%;
+  float: right;
+  margin-right: 7%;
+}
+
+.main-body .login .login-form {
+  margin: auto;
+  width: 200px;
+  height: 400px;
+}
+
+.home img {
+  height: 450px;
+  width: 100%;
+}
+
+.home input.current-location {
+  height: 50px;
+  width: 30%;
+  margin: 10px;
+}
+
+.home input.submit-location {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.home input.locate {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.home .main-content {
+  margin-top: -350px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: #92ac08;
+  text-shadow: 0px 0px 10px black;
+}
+
+.home .main-content .location-question {
+  display: block;
+  margin-top: 40px;
+}
+
+.footer {
+  text-align: right;
+  background-color: #ceeb37;
+  padding: 15px;
+  clear: both;
+  height: 20%;
+  color: rgb(92, 180, 122);
+  margin-top: 5px;
+}

@@ -3,14 +3,8 @@ angular
         'ngAnimate',
         'ui.router',
         'templates',
-        'uiGmapgoogle-maps',
-        'xeditable'
     ])
-    .config(
-        ['uiGmapGoogleMapApiProvider', function ($stateProvider, $urlRouterProvider, $locationProvider, GoogleMapApiProviders) {
-            GoogleMapApiProviders.configure({
-            china: true
-            });
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
       $stateProvider
         .state('home', {
@@ -75,9 +69,8 @@ angular
     // enable HTML5 Mode for SEO
     $locationProvider.html5Mode(true);
 
-    }])
+    })
 
-.run(function(editableOptions) {
+.run(function() {
   console.log('angular app running');
-  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });
