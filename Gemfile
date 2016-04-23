@@ -24,6 +24,8 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 
 gem 'httparty'
 
+gem 'devise'
+
 gem 'yelp', require: 'yelp'
 
 # Use jquery as the JavaScript library
