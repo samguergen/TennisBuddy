@@ -5,15 +5,15 @@
       <a class="navbar-brand" href="/">My App!</a>
     </div>
 
-    <ul class="nav navbar-nav">
-      <li><a ui-sref="home">Home</a></li>
-      <li><a ui-sref="signup">Signup</a></li>
-      <li><a ui-sref="login">Login</a></li>
-      <li><a ui-sref="new-game">New Game</a></li>
-      <li><a ui-sref="past-games">Past Game</a></li>
-      <li><a ui-sref="browse">Browse</a></li>
+    <ul class="nav navbar-nav main-nav">
 
+      <li><a ui-sref="login">Login</a></li>
+      <li class="game-zone" ng-mouseenter="popOverIsVisible = true; showPopOver()" ng-mouseleave="popOverIsVisible = false"><a ui-sref="new-game">Play Tennis!</a></li>
+      <li><a ui-sref="profile">My Profile</a></li>
+      <li><a ui-sref="signup">Sign Up</a></li>
     </ul>
+
+    <button class="popover" ng-show="popOverIsVisible"><span>Popover Content</span></button>
 
   </div>
 </nav>

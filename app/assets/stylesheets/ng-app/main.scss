@@ -24,6 +24,11 @@ html {
   margin-left: 10%
 }
 
+.home {
+
+  background-image: url('/tennis-ball.jpg')
+}
+
 nav {
   padding: 5px;
   background-color: #ceeb37;
@@ -32,6 +37,10 @@ nav {
   list-style-type: none;
   overflow: hidden;
   display: flex;
+}
+
+.main-nav {
+  width: 85%;
 }
 
 nav a.logo img{
@@ -244,4 +253,10 @@ button.btn.btn-primary, button.btn.btn-default {
   height: 20%;
   color: rgb(92, 180, 122);
   margin-top: 5px;
+}
+
+
+.popover {
+  position: absolute;
+  z-index: 100;
 }

@@ -52,16 +52,14 @@ angular.module('myApp')
 
   $scope.showEditForm = false;
 
-  $scope.tabSelection = $scope.tabs[0];
+  $scope.showPopOver = function() {
+    // $scope.popOverIsVisible = true;
+    console.log('working!');
+  };
 
-  $scope.tabSwitch = function(tab) {
-    console.log(tab);
-    for (var i in $scope.tabs) {
-      $scope.tabs[i] = 'deactivated';
-      if (i == tab) {
-        $scope.tabs[i] = 'active';
-      }
-    }
+  $scope.hidePopOver = function() {
+    $scope.popOverIsVisible = false;
+    console.log('pop over hiding');
   };
 
   $scope.editProfile = function() {
