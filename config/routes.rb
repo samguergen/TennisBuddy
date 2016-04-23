@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   root 'application#index'
   get '*path' => 'application#index'
 
-  resources :users, :games, :comments
+  resources :games, :comments
+
+  devise_for :users, :path_prefix => 'my'
+
+  resources :users
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

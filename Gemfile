@@ -24,7 +24,7 @@ gem "omniauth-google-oauth2", "~> 0.2.1"
 
 gem 'httparty'
 
-gem 'devise'
+gem 'devise', '~> 3.4.0'
 
 gem 'yelp', require: 'yelp'
 
