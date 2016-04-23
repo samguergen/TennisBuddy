@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :games, :comments
 
-  devise_for :users, :path_prefix => 'my'
+  # devise_for :users, :path_prefix => 'my'
+  devise_for :users, controllers: {sessions: "sessions"}, :path_names => { :sign_in => "login", :sign_out => "logout" }
 
   resources :users
   # You can have the root of your site routed with "root"
