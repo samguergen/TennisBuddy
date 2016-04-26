@@ -6,12 +6,8 @@ Rails.application.routes.draw do
   root 'application#index'
   get '*path' => 'application#index'
 
-  resources :games, :comments
+  resources :users, :games, :comments
 
-  # devise_for :users, :path_prefix => 'my'
-  devise_for :users, controllers: {sessions: "sessions"}, :path_names => { :sign_in => "login", :sign_out => "logout" }
-
-  resources :users
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
