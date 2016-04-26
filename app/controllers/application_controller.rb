@@ -5,8 +5,4 @@ class ApplicationController < ActionController::Base
 
   def index
   end
-
-  def create
-    puts 'inside basic ctrl'
-  end
 end
