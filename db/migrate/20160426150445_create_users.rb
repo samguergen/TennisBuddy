@@ -4,10 +4,11 @@ class CreateUsers < ActiveRecord::Migration
 
       t.string :first_name
       t.string :last_name
-      t.string :age
+      t.string :username
       t.string :email
       t.string :password
       t.string :password_confirmation
+      t.string :age
       t.string :zipcode
       t.string :photo_url
 

@@ -4,11 +4,12 @@ class SessionsController < Devise::SessionsController
   def create
     new_user = User.new(:first_name => user[first_name],
                   :last_name => user[last_name],
+                  :username => user[username],
+                  :email => user[email],
                   :password => user[password],
                   :age => user[age],
                   :zipcode => user[zipcode],
-                  :photo_url => user[photo_url],
-                  :email => user[email])
+                  :photo_url => user[photo_url])
     if new_user.save!
       puts 'SAVED BABY'
       session[:user_id] = new_user.id
