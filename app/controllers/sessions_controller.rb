@@ -11,24 +11,38 @@ class SessionsController < Devise::SessionsController
   #   end
   # end
 
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to '/'
-    else
-      redirect_to '/signup'
-    end
-  end
+def create
+  @user = User.new(:first_name => user[first_name],
+                  :last_name => user[last_name],
+                  :password => Devise.friendly_token[0,20],
+                  :email => user[email])
+  @user.skip_confirmation! # only if you add devise :confirmable
+  @user.save
+  puts 'user saved!'
+  redirect_to '/'
+end
+
+  # def create
+  #   puts 'inside ctrl'
+  #   @user = User.new(user_params)
+  #   if @user.save
+  #     puts "it saved! yoopy"
+  #     redirect_to '/'
+  #   else
+  #     puts "it didnt saved!"
+  #     redirect_to '/signup'
+  #   end
+  # end
 
   def destroy
     session[:user_id] = nil
     redirect_to root_path
   end
 
-  private
+  # private
 
-  def user_params
-    params.require(:user).permit(:password, :first_name, :last_name, :age)
-  end
+  # def user_params
+  #   params.require(:user).permit(:password, :first_name, :last_name, :age)
+  # end
 
 end
