@@ -119,67 +119,66 @@ a:hover:not(.active) {
   display: block;
   overflow: hidden;
 
-    .profile {
-  background-color: green;
-  height: 450px;
+  .profile {
+    background-color: green;
+    height: 450px;
 
+    .page-title {
+      font-weight: bold;
+      font-size: 28px;
+      margin-left: 11%;
+      padding-top: 20px;
+    }
 
-.page-title {
-  font-weight: bold;
-  font-size: 28px;
-  margin-left: 11%;
-  padding-top: 20px;
-}
+    .edit-instruction {
+      font-style: italic;
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 16%;
+    }
 
-.edit-instruction {
-  font-style: italic;
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: 16%;
-}
+    .profile-description {
+      margin: 20px;
+      line-height: 30px;
+    }
 
-.profile-description {
-  margin: 20px;
-  line-height: 30px;
-}
+    input.editable-input.form-control {
+      height: 35px;
+      font-size: 15px;
+      border-radius: 5px;
+    }
 
-input.editable-input.form-control {
-  height: 35px;
-  font-size: 15px;
-  border-radius: 5px;
-}
+    .edit-labels {
+      font-weight: bold;
+      font-size: 20px;
+      color: #1B4536;
+    }
 
-.edit-labels {
-  font-weight: bold;
-  font-size: 20px;
-  color: #1B4536;
-}
+    .first-col {
+      float: left;
+      margin-left: 9%;
+    }
 
-.first-col {
-  float: left;
-  margin-left: 9%;
-}
+    .second-col {
+      float: left;
+      margin-left: 30%;
 
-.second-col {
-  float: left;
-  margin-left: 30%;
+      .profile-games {
+        margin-left: -135%;
+        margin-top: 110px;
+      }
+    }
 
-.profile-games {
-  margin-left: -135%;
-  margin-top: 110px;
-}
-}
+      #edit-form {
+        margin-left: 10%;
+        font-size: 20px;
+      }
+    }
+  }
 
-#edit-form {
-  margin-left: 10%;
-  font-size: 20px;
-}
-}
-}
-
-.editable-buttons {
-  font-size: 25px;
-}
+  .editable-buttons {
+      font-size: 25px;
+  }
 
 button.btn.btn-primary, button.btn.btn-default {
   width: 8%;
