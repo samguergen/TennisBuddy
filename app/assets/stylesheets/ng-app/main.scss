@@ -118,62 +118,63 @@ a:hover:not(.active) {
   height: 450px;
   display: block;
   overflow: hidden;
-}
 
-.main-body .profile {
+    .profile {
   background-color: green;
   height: 450px;
-}
 
-.main-body .profile .page-title {
+
+.page-title {
   font-weight: bold;
   font-size: 28px;
   margin-left: 11%;
   padding-top: 20px;
 }
 
-.main-body .profile .edit-instruction {
+.edit-instruction {
   font-style: italic;
   font-size: 18px;
   font-weight: bold;
   margin-left: 16%;
 }
 
-.main-body .profile .profile-description {
+.profile-description {
   margin: 20px;
   line-height: 30px;
 }
 
-.main-body .profile input.editable-input.form-control {
+input.editable-input.form-control {
   height: 35px;
   font-size: 15px;
   border-radius: 5px;
 }
 
-.main-body .profile .edit-labels {
+.edit-labels {
   font-weight: bold;
   font-size: 20px;
   color: #1B4536;
 }
 
-.main-body .profile .first-col {
+.first-col {
   float: left;
   margin-left: 9%;
 }
 
-.main-body .profile .second-col {
+.second-col {
   float: left;
   margin-left: 30%;
-}
 
-.main-body .profile .second-col .profile-games {
+.profile-games {
   margin-left: -135%;
   margin-top: 110px;
 }
+}
 
-.main-body .profile #edit-form {
+#edit-form {
   margin-left: 10%;
   font-size: 20px;
+}
+}
 }
 
 .editable-buttons {
