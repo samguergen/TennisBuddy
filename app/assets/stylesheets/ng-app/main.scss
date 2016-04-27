@@ -42,46 +42,54 @@ html, body {
 
 nav {
   padding: 5px;
-  background-color: #ceeb37;
+  background-color: rgb(215, 214,81) !important;
   margin: 2px;
   height: 20%;
   list-style-type: none;
   overflow: hidden;
   display: flex;
+
+  a.logo img {
+    width: 245px;
+    margin: auto;
+    order: 1;
+    }
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 70%;
+    padding-top: 40px;
+    margin-top: -150px;
+    font-size: 160%;
+    margin: auto;
+    order: 2;
+    display: flex;
+  }
 }
 
 .main-nav {
-  width: 85%;
-  display: block;
-  float: left;
-  margin-left: 30%;
+    width: 85%;
+    display: block;
+    float: left;
+    margin-left: 30%;
+    margin-bottom: 4%;
+
+    li a {
+      padding: 15px;
+      color: rgb(92, 180, 122) !important;
+      text-shadow: 0px 0px 2px black;
+      text-align: center;
+      text-decoration: none;
+      margin: auto;
+  }
 }
 
-nav a.logo img{
-  width: 245px;
-  margin: auto;
-  order: 1;
-}
-
-nav ul {
-  list-style-type: none;
-  overflow: hidden;
-  width: 70%;
-  padding-top: 40px;
-  margin-top: -150px;
-  font-size: 160%;
-  margin: auto;
-  order: 2;
-  display: flex;
-}
-
-nav ul li a {
-  padding: 15px;
-  color: rgb(92, 180, 122);
-  text-shadow: 0px 0px 2px black;
-  text-align: center;
-  text-decoration: none;
-  margin: auto;
+.navbar-default {
+  border: 2px solid black;
+  .container {
+    margin-top: -50px;
+  }
 }
 
 a:hover {
