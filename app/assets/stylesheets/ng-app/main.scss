@@ -31,6 +31,10 @@ html, body {
   margin-left: 10%
 }
 
+.section .new-game {
+  height: 100%
+}
+
 .wrapper {
   background: url('tennis-ball.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -43,7 +47,6 @@ html, body {
 nav {
   padding: 5px;
   background-color: rgb(215, 214,81) !important;
-  margin: 2px;
   height: 20%;
   list-style-type: none;
   overflow: hidden;
@@ -87,6 +90,10 @@ nav {
 
 .navbar-default {
   border: 2px solid black;
+  height: 20%;
+  position: fixed;
+  width: 100%;
+
   .container {
     margin-top: -50px;
   }
@@ -230,15 +237,17 @@ button.btn.btn-primary, button.btn.btn-default {
   height: 400px;
 }
 
-.home img {
+.homepage {
+  img {
   height: 450px;
   width: 100%;
-}
+  }
 
-.home input.current-location {
-  height: 50px;
-  width: 30%;
-  margin: 10px;
+  input.current-location {
+    height: 50px;
+    width: 30%;
+    margin: 10px;
+  }
 }
 
 .home input.submit-location {
@@ -253,18 +262,16 @@ button.btn.btn-primary, button.btn.btn-default {
   font-size: 18px;
 }
 
-.home .main-content {
+.main-content {
   margin-top: -350px;
   font-weight: bold;
   font-size: 20px;
   text-align: center;
   color: #92ac08;
   text-shadow: 0px 0px 10px black;
-}
-
-.main-content {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 40%;
+
   h2 {
     margin-bottom: 5%;
   }
@@ -280,9 +287,21 @@ button.btn.btn-primary, button.btn.btn-default {
   padding: 15px;
   clear: both;
   color: rgb(92, 180, 122);
-  margin-top: 24%;
   width: 100%;
   border: 2px solid black;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    overflow:hidden;
+    background-color: rgb(215, 214,81);
+    border: 2px solid black;
+    color: rgb(92, 180, 122);
+    text-align: right;
 }
 
 .popover {
