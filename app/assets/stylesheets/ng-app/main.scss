@@ -12,13 +12,19 @@ html {
   font-family: "Palatino Linotype", "Book Antiqua", "serif";
   background-color: black;
   font-size: 16px;
-
 }
 
 html, body {
     margin: 0;
     height: 700px;
     background: url('../../images/tennis-ball.jpg')
+}
+
+.logo-area {
+  img {
+    width: 55%;
+    display: block;
+    }
 }
 
 .section {
@@ -46,6 +52,9 @@ nav {
 
 .main-nav {
   width: 85%;
+  display: block;
+  float: left;
+  margin-left: 30%;
 }
 
 nav a.logo img{
@@ -245,9 +254,15 @@ button.btn.btn-primary, button.btn.btn-default {
   text-shadow: 0px 0px 10px black;
 }
 
-.home .main-content .location-question {
-  display: block;
-  margin-top: 40px;
+.main-content {
+  text-align: center;
+  margin-top: 10%;
+  h2 {
+    margin-bottom: 5%;
+  }
+  input.location-input {
+    margin: 5%;
+  }
 }
 
 .footer {
