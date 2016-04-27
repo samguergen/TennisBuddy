@@ -274,15 +274,16 @@ button.btn.btn-primary, button.btn.btn-default {
 }
 
 .footer {
+  position: fixed;
   text-align: right;
-  background-color: #ceeb37;
+  background-color: rgb(215, 214,81);
   padding: 15px;
   clear: both;
-  height: 20%;
   color: rgb(92, 180, 122);
-  margin-top: 5px;
+  margin-top: 24%;
+  width: 100%;
+  border: 2px solid black;
 }
-
 
 .popover {
   position: absolute;
