@@ -200,42 +200,37 @@ button.btn.btn-primary, button.btn.btn-default {
   height: 450px;
 }
 
-.main-body .login {
-  background-color: red;
+.login {
   height: 450px;
-  padding: 35px;
+  padding-top: 20%;
+  padding-left: 16%;
   display: flex;
+
+  label {
+    font-size: 24px;
+  }
+  input {
+    font-size: 20px;
+  }
+
+  input.login-email {
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+
+  input.login-password {
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+
+  input.login-submit {
+    margin-top: 10%;
+    float: right;
+    margin-right: 7%;
+  }
+
 }
 
-.main-body .login label {
-  font-size: 24px;
-}
-
-.main-body .login input {
-  font-size: 20px;
-}
-
-.main-body .login input.login-email {
-  margin-top: 7%;
-  margin-bottom: 7%;
-}
-
-.main-body .login input.login-password {
-  margin-top: 7%;
-  margin-bottom: 7%;
-}
-
-.main-body .login input.login-submit {
-  margin-top: 10%;
-  float: right;
-  margin-right: 7%;
-}
-
-.main-body .login .login-form {
-  margin: auto;
-  width: 200px;
-  height: 400px;
-}
 
 .homepage {
   img {
