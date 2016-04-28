@@ -1,3 +1,7 @@
 class User < ActiveRecord::Base
-   validates :password, confirmation: true
+  attr_accessible :email, :password, :password_confirmation
+  has_secure_password
+  validates_presence_of :password, :on => :create
+  has_many :games
+  has_many :comments
 end
