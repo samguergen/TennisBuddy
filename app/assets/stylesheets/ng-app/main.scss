@@ -53,6 +53,7 @@ nav {
   overflow: hidden;
   display: flex;
 
+
   a.logo img {
     width: 245px;
     margin: auto;
@@ -62,7 +63,6 @@ nav {
   ul {
     list-style-type: none;
     overflow: hidden;
-    width: 70%;
     padding-top: 40px;
     margin-top: -150px;
     font-size: 160%;
@@ -72,15 +72,9 @@ nav {
   }
 }
 
-.main-nav {
-    width: 85%;
-    display: block;
-    float: left;
-    margin-left: 30%;
-    margin-bottom: 4%;
-
+.nav-menu {
     li a {
-      padding: 15px;
+
       color: rgb(92, 180, 122) !important;
       text-shadow: 0px 0px 2px black;
       text-align: center;
@@ -94,6 +88,9 @@ nav {
   height: 20%;
   position: fixed;
   width: 100%;
+
+    display: block;
+
 
   .container {
     margin-top: -50px;
