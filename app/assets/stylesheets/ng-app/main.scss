@@ -21,13 +21,6 @@ html, body {
     background: url('../../images/tennis-ball.jpg')
 }
 
-.logo-area {
-  img {
-    width: 55%;
-    display: block;
-    }
-}
-
 .section {
   margin-left: 10%
 }
@@ -45,55 +38,42 @@ html, body {
   height: 100%
 }
 
-nav {
-  padding: 5px;
+nav.navbar-default {
   background-color: rgb(215, 214,81) !important;
   height: 20%;
   list-style-type: none;
   overflow: hidden;
   display: flex;
+  border-bottom: 2px solid black;
+  position: fixed;
+  width: 100%;
+  display: block;
 
-
-  a.logo img {
-    width: 245px;
-    margin: auto;
-    order: 1;
+  .navbar-brand {
+  img {
+    width: 35%;
+    display: block;
     }
+  }
 
-  ul {
+  ul.nav-menu {
     list-style-type: none;
     overflow: hidden;
-    padding-top: 40px;
-    margin-top: -150px;
     font-size: 160%;
     margin: auto;
     order: 2;
     display: flex;
-  }
-}
 
-.nav-menu {
     li a {
-
       color: rgb(92, 180, 122) !important;
       text-shadow: 0px 0px 2px black;
       text-align: center;
       text-decoration: none;
       margin: auto;
-  }
-}
-
-.navbar-default {
-  border-bottom: 2px solid black;
-  height: 20%;
-  position: fixed;
-  width: 100%;
-
-    display: block;
-
-
-  .container {
-    margin-top: -50px;
+      float: left;
+      margin-top: 10%;
+      padding: 20px;
+    }
   }
 }
 
