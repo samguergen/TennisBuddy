@@ -41,13 +41,8 @@ html, body {
 nav.navbar-default {
   background-color: rgb(215, 214,81) !important;
   height: 20%;
-  list-style-type: none;
-  overflow: hidden;
-  display: flex;
   border-bottom: 2px solid black;
-  position: fixed;
   width: 100%;
-  display: block;
 
   .navbar-brand {
   img {
@@ -73,12 +68,6 @@ nav.navbar-default {
       float: left;
       margin-top: 10%;
       padding: 20px;
-
-      &:hover {
-        cursor: pointer;
-        font-size: 26px;
-        margin-top: -5px;
-      }
 
       &:hover:not(.active) {
         text-shadow: 0px 0px 5px #81F7F3;
@@ -243,7 +232,7 @@ button.btn.btn-primary, button.btn.btn-default {
   color: #92ac08;
   text-shadow: 0px 0px 10px black;
   text-align: center;
-  margin-top: 40%;
+  margin-top: 30%;
 
   h2 {
     margin-bottom: 5%;
@@ -276,4 +265,14 @@ footer {
 .popover {
   position: absolute;
   z-index: 100;
+}
+
+
+.signup {
+  form#signup-form {
+    margin-top: 5%;
+    input {
+    margin-left: 30%;
+    }
+  }
 }
