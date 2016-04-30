@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   def login
     current_user = User.find_by(:email => params[:email], :password => params[:password])
     if current_user
+      puts 'YAY'
       session[user_id] = current_user.id
       redirect_to '/'
     else
