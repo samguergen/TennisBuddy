@@ -8,10 +8,13 @@ Rails.application.routes.draw do
   root 'application#index'
   get '*path' => 'application#index'
 
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  # get    'login'   => 'sessions#new'
+  # post   'login'   => 'sessions#create'
+  # delete 'logout'  => 'sessions#destroy'
   resources :users, :games, :comments
+
+  post '/users' => 'users#login'
+  delete '/users' => 'users#logout'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

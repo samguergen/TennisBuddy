@@ -35,17 +35,19 @@ ActiveRecord::Schema.define(version: 20160426150445) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "username"
-    t.string   "email"
-    t.string   "password"
-    t.string   "password_confirmation"
-    t.string   "age"
-    t.string   "zipcode"
+    t.string   "first_name",                      null: false
+    t.string   "last_name",                       null: false
+    t.string   "username",                        null: false
+    t.string   "email",                           null: false
+    t.string   "password_digest",                 null: false
+    t.string   "age",                             null: false
+    t.boolean  "deactivated",     default: false
+    t.integer  "zipcode",                         null: false
     t.string   "photo_url"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.integer  "games_id"
+    t.integer  "comments_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
 end
