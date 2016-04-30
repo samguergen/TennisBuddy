@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   # delete 'logout'  => 'sessions#destroy'
   resources :users, :games, :comments
 
-  post '/users' => 'users#login'
-  delete '/users' => 'users#logout'
+  post '/users' => 'users#login', via: :post, as: :login_path
+  delete '/users' => 'users#logout', via: :delete, as: :logout_path
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
