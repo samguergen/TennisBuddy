@@ -5,20 +5,13 @@
     <h2>Log In</h2>
 
 
-<!--     <form action="/login" method="post">
+    <form action="/sessions" method="post">
       <label>Username: </label><br>
       <input type='text' class='login-email' name='user[email]' ng-model="user.email"><br>
       <label>Password: </label><br>
       <input type='password' class='login-password' name='user[password]' ng-model="user.password"><br>
       <input type='submit' class='login-submit' ng-click="login()" value="Log in!">
-    </form> -->
-
-
-    <%= form_tag("/users", method: "post") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
+    </form>
 
 
 </div>
