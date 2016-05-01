@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   # delete 'logout'  => 'sessions#destroy'
   resources :users, :games, :comments
 
+  get '/sessions' => 'sessions#logged',  via: :get, as: :logged_path
   post '/sessions' => 'sessions#login', via: :post, as: :login_path
   delete '/sessions' => 'sessions#logout', via: :delete, as: :logout_path
 

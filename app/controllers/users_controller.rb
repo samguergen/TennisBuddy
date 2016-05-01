@@ -25,21 +25,6 @@ class UsersController < ApplicationController
   def destroy
   end
 
-  def login
-    current_user = User.find_by(:email => params[:email], :password => params[:password])
-    if current_user
-      puts 'YAY'
-      session[user_id] = current_user.id
-      redirect_to '/'
-    else
-      flash[:alert] = "Your login and password could not be authenticated. Please try again"
-      redirect_to '/login'
-    end
-  end
-
-  def logout
-  end
-
   private
 
   def user_params
