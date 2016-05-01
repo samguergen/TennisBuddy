@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
   end
 
   def login
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    @user = User.find_by_email(params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
       # redirect_to sessions_new(:usr => user)
       # redirect_to logged_path(:usr => user)
     else
