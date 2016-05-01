@@ -29,7 +29,7 @@ angular
         })
         .state('profile', {
             url: '/profile',
-            // templateUrl: 'app/views/sessions/login.html.erb',
+            // templateUrl: '<%= asset_path('app/views/sessions/login.html.erb')%>',
             templateUrl: 'profile.html',
             controller: 'HomeCtrl'
         })
