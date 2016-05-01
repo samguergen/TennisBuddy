@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -20,6 +21,5 @@ class SessionsController < ApplicationController
 
   def logout
   end
-
 
 end

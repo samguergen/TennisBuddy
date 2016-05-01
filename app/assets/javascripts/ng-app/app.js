@@ -11,7 +11,7 @@ angular
             url: '/',
             templateUrl: 'home.html',
             controller: 'HomeCtrl'
-        }) // make sure you remove the semicolon
+        })
         .state('signup', {
             url: '/signup',
             templateUrl: 'signup.html',
@@ -29,6 +29,7 @@ angular
         })
         .state('profile', {
             url: '/profile',
+            // templateUrl: 'app/views/sessions/login.html.erb',
             templateUrl: 'profile.html',
             controller: 'HomeCtrl'
         })
