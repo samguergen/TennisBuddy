@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+  get 'sessions/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,8 +15,11 @@ Rails.application.routes.draw do
   # delete 'logout'  => 'sessions#destroy'
   resources :users, :games, :comments
 
-  post '/users' => 'users#login'
-  delete '/users' => 'users#logout'
+  post '/sessions' => 'sessions#login', via: :post, as: :login_path
+  delete '/sessions' => 'sessions#logout', via: :delete, as: :logout_path
+
+  # post '/users' => 'users#login', via: :post, as: :login_path
+  # delete '/users' => 'users#logout', via: :delete, as: :logout_path
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
