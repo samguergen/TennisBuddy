@@ -59,6 +59,8 @@ angular.module('myApp')
 
   $scope.showEditForm = false;
 
+  $scope.logged = false;
+
   $scope.showPopOver = function() {
     // $scope.popOverIsVisible = true;
     console.log('working!');
