@@ -77,6 +77,12 @@ angular.module('myApp')
               };
 
 
+  $scope.usr = {
+    usr.email = "";
+    usr.password = "";
+  }
+
+
 
 //TODO: implement timeout on geolocation
 

@@ -2,11 +2,11 @@
 
 <div ng-include="'profile.html'"></div>
 
-<!-- <div class="main-view-container" ui-view></div> -->
-
-
 <% if session[:user_id] %>
 
+<%= Session ID is session[:user_id] %>
+
+<!-- <img id="tenn"src="../../images/tennis-ball.jpg"/> -->
   <div class="user-name">
     Name: <%= @user.first_name %> <%= @user.last_name %> <br>
     Age: <%= @user.age %> <br>
@@ -15,6 +15,5 @@
   </div>
 
 <% end %>
-
 
 <div ng-include="'footer.html'"></div>

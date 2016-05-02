@@ -29,6 +29,14 @@ html, body {
   height: 100%
 }
 
+.user-name {
+  background: url('../../images/tennis-ball.jpg');
+}
+
+img#tenn {
+  background: url('../../images/tennis-ball.jpg');
+}
+
 .wrapper {
   background: url('tennis-ball.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
