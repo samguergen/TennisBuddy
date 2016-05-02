@@ -2,9 +2,9 @@
 
 <div ng-include="'profile.html'"></div>
 
-<% if session[:user_id] %>
+<% if @user.id %>
 
-<%= Session ID is session[:user_id] %>
+ Session ID is <%= @user.id %>
 
 <!-- <img id="tenn"src="../../images/tennis-ball.jpg"/> -->
   <div class="user-name">

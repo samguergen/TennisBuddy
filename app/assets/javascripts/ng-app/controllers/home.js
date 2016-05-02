@@ -2,6 +2,8 @@ angular.module('myApp')
 .controller('HomeCtrl', ['$scope', function($scope){
   console.log('inside the controller');
 
+  console.log('ng cookie is');
+
   $scope.positionObj = {};
 
   $scope.map = { center: { latitude: 25, longitude: -73 }, zoom: 8 };
@@ -78,8 +80,8 @@ angular.module('myApp')
 
 
   $scope.usr = {
-    usr.email = "";
-    usr.password = "";
+    "email" : "";
+    "password" : "";
   }
 
 
