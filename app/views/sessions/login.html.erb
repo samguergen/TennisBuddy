@@ -1,18 +1,6 @@
 <div ng-include="'navbar.html'"></div>
 
-<div ng-init="user.first_name = '<%= @user.first_name %>'; user.last_name = '<%= @user.last_name %>'; user.age = '<%= @user.age %>'; user.username = '<%= @user.username %>'; user.email = '<%= @user.email %>'; user.zipcode = '<%= @user.zipcode %>'; user.photo_url = '<%= @user.photo_url %>'; user.games = '<%= @user.games %>'; user.comments = '<%= @user.comments %>' " ng-include="'profile.html'"></div>
+<div ng-init="user.first_name = '<%= @user.first_name %>'; user.last_name = '<%= @user.last_name %>'; user.id = '<%= @user.id %>'; user.age = '<%= @user.age %>'; user.username = '<%= @user.username %>'; user.email = '<%= @user.email %>'; user.zipcode = '<%= @user.zipcode %>'; user.photo_url = '<%= @user.photo_url %>'; user.games = '<%= @user.games %>'; user.comments = '<%= @user.comments %>' " ng-include="'profile.html'"></div>
 
-<% if @user.id %>
-
- Session ID is <%= @user.id %>
-
-  <div class="user-name">
-    Name: <%= @user.first_name %> <%= @user.last_name %> <br>
-    Age: <%= @user.age %> <br>
-    Username: <%= @user.username %> <br>
-    Email: <%= @user.email %> <br>
-  </div>
-
-<% end %>
 
 <div ng-include="'footer.html'"></div>
