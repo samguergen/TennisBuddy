@@ -1,6 +1,6 @@
 <div ng-include="'navbar.html'"></div>
 
-<div ng-include="'profile.html'"></div>
+<div ng-init="u = '#{@user}' " ng-include="'profile.html'"></div>
 
 <% if @user.id %>
 
