@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       puts 'inside login func'
-      redirect_to '/new-game'
+      # redirect_to '/new-game', :locals => {:resource => 'Some text'}
     else
       redirect_to '/login'
     end
