@@ -13,18 +13,16 @@
             <li><a ui-sref="profile">My Profile</a></li>
             <li><a ui-sref="signup">Sign Up</a></li>
 
-
-
             <li class="dropdown">
-          <a ui-sref="new-game" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Game Zone <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a ui-sref="new-game">Start a New Game!</a></li>
-            <li><a ui-sref="browse">Browse Games in the Area</a></li>
-            <li><a ui-sref="past-games">Past Games</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+              <a ui-sref="new-game" ng-click="afterLog = false" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Game Zone <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a ui-sref="new-game">Start a New Game!</a></li>
+                  <li><a ui-sref="browse">Browse Games in the Area</a></li>
+                  <li><a ui-sref="past-games">Past Games</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

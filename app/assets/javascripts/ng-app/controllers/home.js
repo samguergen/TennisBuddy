@@ -2,7 +2,9 @@ angular.module('myApp')
 .controller('HomeCtrl', ['$scope', function($scope){
   console.log('inside the controller');
 
-  console.log('ng cookie is');
+  $scope.afterLog = true;
+
+  console.log('afterlog is ', $scope.afterLog);
 
   $scope.positionObj = {};
 
@@ -80,8 +82,8 @@ angular.module('myApp')
 
 
   $scope.usr = {
-    "email" : "";
-    "password" : "";
+    "email" : "",
+    "password" : "",
   }
 
 
