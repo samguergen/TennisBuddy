@@ -1,6 +1,6 @@
 <div ng-include="'navbar.html'"></div>
 
-<div ng-init="u = '<%= @user.first_name %>' " ng-include="'profile.html'"></div>
+<div ng-init="user.first_name = '<%= @user.first_name %>'; user.last_name = '<%= @user.last_name %>'; user.age = '<%= @user.age %>'; user.username = '<%= @user.username %>'; user.email = '<%= @user.email %>'; user.zipcode = '<%= @user.zipcode %>'; user.photo_url = '<%= @user.photo_url %>'; user.games = '<%= @user.games %>'; user.comments = '<%= @user.comments %>' " ng-include="'profile.html'"></div>
 
 <% if @user.id %>
 
