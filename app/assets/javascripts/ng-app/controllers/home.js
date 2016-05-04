@@ -44,11 +44,6 @@ angular.module('myApp')
     'comments': [{'melanie': 'nice game!'}, {}]
   };
 
-  $scope.usr = {
-    "email" : "",
-    "password" : "",
-  }
-
   $scope.requests = [
     'request 1',
     'request 2',
@@ -84,7 +79,10 @@ angular.module('myApp')
               };
 
 
-
+  $scope.usr = {
+    "email" : "";
+    "password" : "";
+  }
 
 
 
