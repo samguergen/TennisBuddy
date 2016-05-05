@@ -2,7 +2,7 @@ angular.module('myApp')
 .controller('HomeCtrl', ['$scope', function($scope){
   console.log('inside the controller');
 
-  $scope.afterLog = true;
+  $scope.afterLog = false;
 
   console.log('afterlog is ', $scope.afterLog);
 
@@ -57,7 +57,6 @@ angular.module('myApp')
   $scope.showEditForm = false;
 
   $scope.showPopOver = function() {
-    // $scope.popOverIsVisible = true;
     console.log('working!');
   };
 
@@ -77,32 +76,11 @@ angular.module('myApp')
   $scope.locate = function() {
     console.log('is lat long working?');
     console.log($scope.positionObj);
-    // console.log(this.test);
               };
-
 
   $scope.usr = {
     "email" : "",
     "password" : "",
   }
-
-
-
-//TODO: implement timeout on geolocation
-
-    // var options = {
-    //               enableHighAccuracy: true
-    //           };
-
-    // navigator.geolocation.getCurrentPosition(function(pos) {
-    //               $scope.position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-    //               $scope.positionObj = JSON.stringify($scope.position);
-    //               console.log('your current longitude and latitudes are....');
-    //               console.log($scope.positionObj);
-    //               alert($scope.positionObj);
-    //           },
-    //           function(error) {
-    //               alert('Unable to get location: ' + error.message);
-    //           }, options);
 
 }]);
