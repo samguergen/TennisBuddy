@@ -1,30 +1,18 @@
 var app = angular.module('tennisBuddy', ['ui.router']);
 
-app.config([
-'$stateProvider',
-'$urlRouterProvider',
-function($stateProvider, $urlRouterProvider) {
-
-  $stateProvider
-    .state('home', {
-      url: '/home',
-      templateUrl: '../views/home.html',
-      controller: 'MainCtrl'
-    });
-
-  $urlRouterProvider.otherwise('home');
-}]);
 
 app.factory('posts', [function(){
   var o = {
-    posts: []
+    posts: [
+      {comments: ''}]
   };
   return o;
 }]);
 
+
 app.controller('MainCtrl', [
-'$scope', 'posts',
-function($scope, posts){
+'$scope', 'posts', '$stateParams',
+function($scope, posts, $stateParams){
   $scope.test = 'Hello world!';
 
   $scope.game = {title: "", description: "", player_1: "", player_2: "", score: 0, winner: "", upvotes: 0};
@@ -43,30 +31,48 @@ $scope.addGame = function(theGame){
   $scope.games.push(theGame);
 };
 
-/*
-$scope.posts = [
-  {title: 'Post Title 1', description: "", upvotes: 5},
-  {title: 'Post Title 2', description: "", upvotes: 2},
-  {title: 'Post Title 3', description: "", upvotes: 15},
-  {title: 'Post Title 4', description: "", upvotes: 9},
-  {title: 'Post Title 5', description: "", upvotes: 4}
-];
-*/
 
 $scope.posts = posts.posts;
+
+$scope.post = posts.posts[$stateParams.id];
 
  $scope.addPost = function(){
   if(!$scope.title || $scope.title === '') { return; }
   $scope.posts.push({
-    title: $scope.title,
-    link: $scope.link,
-    upvotes: 0
-  });
-  $scope.title = '';
-  $scope.link = '';
-};
+  title: $scope.title,
+  link: $scope.link,
+  upvotes: 0,
+  comments: [
+    {author: 'Joe', body: 'Cool post!', upvotes: 0},
+    {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
+  ]
+});
+}
 
   $scope.incrementUpvotes = function(post) {
     post.upvotes += 1;
   };
+}]);
+
+
+app.controller('PostsCtrl', [
+'$scope',
+'$stateParams',
+'posts',
+function($scope, $stateParams, posts){
+
+  $scope.posts = posts.posts;
+
+  $scope.post = posts.posts[$stateParams.id];
+
+  $scope.addComment = function(){
+  if($scope.body === '') { return; }
+  $scope.post.comments.push({
+    body: $scope.body,
+    author: 'user',
+    upvotes: 0
+  });
+  $scope.body = '';
+};
+
 }]);
