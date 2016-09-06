@@ -10,10 +10,10 @@ function($scope){
 
   $scope.games = [
   {title: 'Tennis Game 1', description: "first tennis game", player_1: "", player_2: "", score: 0, winner: "", upvotes: 5},
-  {title: 'Tennis Game 2', description: "", , player_1: "", player_2: "", score: 0, winner: "", upvotes: 2},
-  {title: 'Tennis Game 3', description: "", , player_1: "", player_2: "", score: 0, winner: "", upvotes: 15},
-  {title: 'Tennis Game 4', description: "", , player_1: "", player_2: "", score: 0, winner: "", upvotes: 9},
-  {title: 'Tennis Game 5', description: "", , player_1: "", player_2: "", score: 0, winner: "", upvotes: 4}
+  {title: 'Tennis Game 2', description: "", player_1: "", player_2: "", score: 0, winner: "", upvotes: 2},
+  {title: 'Tennis Game 3', description: "", player_1: "", player_2: "", score: 0, winner: "", upvotes: 15},
+  {title: 'Tennis Game 4', description: "", player_1: "", player_2: "", score: 0, winner: "", upvotes: 9},
+  {title: 'Tennis Game 5', description: "", player_1: "", player_2: "", score: 0, winner: "", upvotes: 4}
 ];
 
 
