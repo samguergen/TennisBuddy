@@ -8,10 +8,39 @@
     <div>
       {{test}}
 
+      Welcome to Tennis Buddy
 
-      <div ng-repeat="post in posts">
-        {{post.title}} - upvotes: {{post.upvotes}}
+
+      <div ng-repeat="game in games | orderBy: '-upvotes'">
+        {{game.title}} - upvotes: {{game.upvotes}}
+        <span ng-click="incrementUpvotes(game)">^</span>
       </div>
+
+      <div ng-repeat="post in posts | orderBy: '-upvotes'">
+        {{post.title}} - upvotes: {{post.upvotes}}
+        <span ng-click="incrementUpvotes(post)">^</span>
+      </div>
+
+
+      <form ng-submit="addPost()">
+        <input type="text" placeholder="Title" ng-model="title"></input>
+        <br>
+        <input type="text" placeholder="Description" ng-model="description"></input>
+        <br>
+        <button type="submit">Post</button>
+      </form>
+
+      <form ng-submit="addGame()">
+        <input type="text" placeholder="Title" ng-model="game.title"></input>
+        <br>
+        <input type="text" placeholder="Description" ng-model="game.description"></input>
+        <br>
+        <input type="text" placeholder="Player 1" ng-model="game.player_1"></input>
+        <br>
+        <input type="text" placeholder="Player 2" ng-model="game.player_2"></input>
+        <br>
+        <button type="submit">Create New Game</button>
+      </form>
 
 
 
@@ -19,3 +48,5 @@
     </div>
   </body>
 </html>
+
+
