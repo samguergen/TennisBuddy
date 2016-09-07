@@ -8,13 +8,13 @@ function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      templateUrl: '../ng-views/home.ejs',
+      templateUrl: '../ng-templates/home.ejs',
       controller: 'MainCtrl'
     })
 
     .state('posts', {
       url: '/posts/{id}',
-      templateUrl: '../ng-views/post.ejs',
+      templateUrl: '../ng-templates/post.ejs',
       controller: 'PostsCtrl'
     });
 
