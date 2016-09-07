@@ -4,7 +4,7 @@ var app = angular.module('tennisBuddy', ['ui.router']);
 app.factory('posts', [function(){
   var o = {
     posts: [
-      {comments: ''}]
+      {comments: []}]
   };
   return o;
 }]);
@@ -53,6 +53,7 @@ $scope.post = posts.posts[$stateParams.id];
     post.upvotes += 1;
   };
 }]);
+
 
 
 app.controller('PostsCtrl', [

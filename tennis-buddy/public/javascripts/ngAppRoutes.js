@@ -4,7 +4,6 @@ angular.module('tennisBuddy')
 '$urlRouterProvider',
 function($stateProvider, $urlRouterProvider) {
 
-
   $stateProvider
     .state('home', {
       url: '/home',
