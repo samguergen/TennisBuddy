@@ -1,9 +1,10 @@
 <div class="page-header">
     <h3>
-      <a ng-show="post.link" href="{{post.link}}">
+      <a ng-show="post.title" href="{{post.title}}">
         {{post.title}}
       </a>
-      <span ng-hide="post.link">
+      <p> {{ post.description }} </p>
+      <span ng-hide="post.title">
         {{post.title}}
       </span>
     </h3>
