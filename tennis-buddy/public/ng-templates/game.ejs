@@ -1,18 +1,20 @@
 <div class="page-header">
     <h3>
-      <a ng-show="post.title" href="{{post.title}}">
-        {{post.title}}
+      <a ng-show="game.title" href="{{game.title}}">
+        {{game.title}}
       </a>
-      <p> {{ post.description }} </p>
-      <span ng-hide="post.title">
-        {{post.title}}
+      <p> {{ game.description }} </p>
+      <p> {{ game.location }} </p>
+      <p> {{ game.player_1 }} vs. {{ game.player_2 }} </p>
+      <span ng-hide="game.title">
+        {{game.title}}
       </span>
     </h3>
   </div>
 
-  Post view page
+  game view page
 
-  <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+  <div ng-repeat="comment in game.comments | orderBy:'-upvotes'">
     <span class="glyphicon glyphicon-thumbs-up"
       ng-click="incrementUpvotes(comment)"></span>
     {{comment.upvotes}} - by {{comment.author}}
@@ -33,5 +35,5 @@
       placeholder="Comment"
       ng-model="body"></input>
     </div>
-    <button type="submit" class="btn btn-primary">Post</button>
+    <button type="submit" class="btn btn-primary">Add Comment</button>
   </form>

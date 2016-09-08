@@ -11,10 +11,10 @@ function($stateProvider, $urlRouterProvider) {
       controller: 'MainCtrl'
     })
 
-    .state('posts', {
-      url: '/posts/{id}',
-      templateUrl: '../ng-templates/post.ejs',
-      controller: 'PostsCtrl'
+    .state('games', {
+      url: '/games/{id}',
+      templateUrl: '../ng-templates/game.ejs',
+      controller: 'GamesCtrl'
     });
 
   $urlRouterProvider.otherwise('home');
