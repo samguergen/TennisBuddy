@@ -4,7 +4,7 @@ var CommentSchema = new mongoose.Schema({
   body: String,
   author: String,
   upvotes: {type: Number, default: 0},
-  post: { type: mongoose.Schema.Types.ObjectId, ref: 'Post' }
+  game: { type: mongoose.Schema.Types.ObjectId, ref: 'Game' }
 });
 
 mongoose.model('Comment', CommentSchema);

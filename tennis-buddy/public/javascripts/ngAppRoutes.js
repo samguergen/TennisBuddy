@@ -8,7 +8,12 @@ function($stateProvider, $urlRouterProvider) {
     .state('home', {
       url: '/home',
       templateUrl: '../ng-templates/home.ejs',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      resolve: {
+      gamePromise: ['games', function(games){
+        return games.getAll();
+      }]
+    }
     })
 
     .state('games', {
@@ -16,6 +21,7 @@ function($stateProvider, $urlRouterProvider) {
       templateUrl: '../ng-templates/game.ejs',
       controller: 'GamesCtrl'
     });
+
 
   $urlRouterProvider.otherwise('home');
 }]);

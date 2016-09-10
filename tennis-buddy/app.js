@@ -4,13 +4,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routes = require('./routes/index');
-var users = require('./routes/users');
+
 var app = express();
 var mongoose = require('mongoose');
 
 require('./models/Games');
 require('./models/Comments');
+
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
 
 mongoose.connect('mongodb://localhost/tennisbud');
 

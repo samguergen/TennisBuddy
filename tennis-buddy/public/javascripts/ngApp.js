@@ -1,13 +1,26 @@
 var app = angular.module('tennisBuddy', ['ui.router']);
 
 
-app.factory('games', [function(){
+app.factory('games', ['$http', function($http){
+
   var o = {
     games: [
       {comments: []}]
   };
-  return o;
+
+ o.getAll = function() {
+    return $http.get('/games').success(function(data){
+      angular.copy(data, o.games);
+    });
+  };
+
+return o;
+
 }]);
+
+
+
+
 
 
 app.controller('MainCtrl', [
@@ -61,5 +74,7 @@ app.controller('GamesCtrl', [
     });
     $scope.body = '';
   };
+
+
 
 }]);
