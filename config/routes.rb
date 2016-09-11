@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :games
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root :to => 'home#index'
 
- resources :games do
+  resources :games do
     resources :comments
   end
 
