@@ -20,14 +20,17 @@ class CommentsController < ApplicationController
     puts 'commenter is '
     puts params[:comment]
     puts params[:comment][:body]
-    @comment = Comment.new(params)
+    @game = Game.find(params[:game_id])
+    @comment = Comment.new({commenter: params[:comment][:commenter], body: params[:comment][:body], game_id: @game.id})
     if @comment.save!
+      puts "comment is "
+      puts @comment.body
+      puts @comment.commenter
       flash[:notice] = "Comment saved"
     else
       flash[:notice] = "A problem has occurred. Your comment couldn't be posted."
     end
-    redirect_to games_path
-    
+    return redirect_to games_path
   end
 
   def destroy
@@ -40,5 +43,11 @@ class CommentsController < ApplicationController
 
 
 end
+
+  private
+
+    def comment_params
+      params.require(:comment).permit(:commenter, :body)
+    end
 
 end
