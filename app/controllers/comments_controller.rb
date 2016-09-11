@@ -14,6 +14,18 @@ class CommentsController < ApplicationController
   def edit
   end
 
+  def destroy
+    puts 'inside destroy'
+    @game = Game.find(params[:game_id])
+    puts 'the game is'
+    puts @game
+    @comment = @game.comments.find(params[:id])
+    puts 'the comment about to be destroy is '
+    puts @comment
+    @comment.destroy
+    redirect_to game_path(@game)
+  end
+
   def create
     puts 'params are '
     puts params
@@ -32,15 +44,6 @@ class CommentsController < ApplicationController
     end
     return redirect_to games_path
   end
-
-  def destroy
-    @game = Game.find(params[:game_id])
-    @comment = @game.comments.find(params[:id])
-    @comment.destroy!
-    redirect_to game_path(@game)
-  end
-
-
 
 end
 

@@ -28,9 +28,8 @@
   </p>
 
   <p>
-  <%= link_to 'Destroy Comment', @comment,
-               :confirm => 'Are you sure?',
-               :method => :delete %>
+    <a data-confirm="Are you sure?" data-method="delete" href="/games/<%= @game.id %>/comments/<%=comment.id%>" rel="nofollow">Destroy Comment</a>
+
   </p>
 <% end %>
 
