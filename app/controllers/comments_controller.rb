@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  unlocked_params = ActiveSupport::HashWithIndifferentAccess.new(params)
 
   def index
     @comments = Comment.all
@@ -16,8 +15,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-
-    @comment = Comment.new(unlocked_params)
+    puts 'params are '
+    puts params
+    puts 'commenter is '
+    puts params[:comment]
+    puts params[:comment][:body]
+    @comment = Comment.new(params)
     if @comment.save!
       flash[:notice] = "Comment saved"
     else
