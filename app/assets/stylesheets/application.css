@@ -34,11 +34,11 @@ html {
 html, body {
     margin: 0;
     height: 700px;
-    background: url('../../images/tennis-ball.jpg')
+    background: url('../images/tennis-ball.jpg')
 }
 
 .section {
-  margin-left: 10%
+  margin-left: 10%;
 }
 
 .section .new-game {
@@ -269,7 +269,7 @@ button.btn.btn-primary, button.btn.btn-default {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 70px;
@@ -296,4 +296,15 @@ footer {
     margin-left: 30%;
     }
   }
+}
+
+
+.navwrap {
+  display: flexbox;
+  position: fixed;
+}
+
+li.navlinx {
+  text-decoration: none;
+  padding: 2%;
 }

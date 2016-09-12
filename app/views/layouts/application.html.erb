@@ -6,9 +6,9 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: #EEEEEE;">
+<body >
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navwrap">
   <div class="container-fluid">
     <div class="navbar-header">
         <a class="navbar-brand" ui-sref="home">
@@ -17,24 +17,23 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-            <li><a ui-sref="login">Login</a></li>
-            <li><a ui-sref="profile">My Profile</a></li>
-            <li><a ui-sref="signup">Sign Up</a></li>
-            <li><a ng-click="tryIt()" ui-sref="new-game">New Game</a></li>
+            <li class="navlinx"><a ui-sref="login">Login</a></li>
+            <li class="navlinx"><a ui-sref="profile">My Profile</a></li>
+            <li class="navlinx"><a ui-sref="signup">Sign Up</a></li>
+            <li class="navlinx"><a ng-click="tryIt()" ui-sref="new-game">New Game</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 
-
 <%= yield %>
-
 
 
 <footer>
     Copyright 2016
 </footer>
 
+<script src='../../../node_modules/angular/angular.min.js'></script>
 </body>
 </html>
