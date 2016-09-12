@@ -310,6 +310,7 @@ footer {
 
 li.navlinx {
   text-decoration: none;
-  padding: 2%;
+  font-size: 16px;
+  padding-left: 5px;
 }
 
