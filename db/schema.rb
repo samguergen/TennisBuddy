@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20160911233733) do
     t.string   "title"
     t.text     "description"
     t.string   "score"
+    t.integer  "creator_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160911233733) do
     t.string   "provider"
     t.string   "uid"
     t.string   "oauth_expires_at"
+    t.integer  "game_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
