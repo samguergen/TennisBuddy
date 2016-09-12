@@ -18,7 +18,9 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-            <li class="navlinx"><a ui-sref="login">Login</a></li>
+            <li class="navlinx"><a ng-click="showLogin = true" ui-sref="login">Login</a></li>
+               <!-- <div ng-show="showLogin == true">
+                  <form>Login form</form></div> -->
             <li class="navlinx"><a ui-sref="profile">My Bawler Zone</a></li>
             <li class="navlinx"><a ui-sref="signup">Sign Up</a></li>
       </ul>

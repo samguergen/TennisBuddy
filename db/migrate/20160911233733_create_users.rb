@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.string :oauth_expires_at
+      t.references :game
 
 
       t.timestamps null: false
