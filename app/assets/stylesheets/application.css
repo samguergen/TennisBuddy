@@ -269,7 +269,7 @@ button.btn.btn-primary, button.btn.btn-default {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     height: 70px;
@@ -302,6 +302,10 @@ footer {
 .navwrap {
   display: flexbox;
   position: fixed;
+}
+
+.navbar-right {
+  margin-left: 50% !important;
 }
 
 li.navlinx {
