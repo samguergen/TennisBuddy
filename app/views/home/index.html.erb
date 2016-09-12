@@ -1,1 +1,18 @@
 home
+
+<div class="container" ng-show="wantsNewGame = true">
+
+    <div class="homepage">
+      <div class="main-content">
+      <div class="location-question">
+        <h1>Time for a Game</h1>
+        Where are you located? <br>
+        <form action="#">
+        <input type="text" class="location-input" class="current-location" name="current-location" ng-model="location"><br>
+        <input class="submit-location" type="submit" value="Submit my Location" ng-click="submitLocation()"><br>
+      </form>
+        </div>
+      </div>
+    </div>
+
+</div>
