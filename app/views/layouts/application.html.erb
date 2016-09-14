@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <link href="../../../app/assets/stylesheets/bootstrap.css">
 </head>
-<body >
+<body ng-app="myApp" ng-controller="MainCtrl">
 
   <nav class="navbar navbar-default navwrap">
   <div class="container-fluid">
@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="navlinx"><a ng-click="showLogin = true" href="#">Login</a></li>
+        <li class="navlinx"><a ng-click="showLogin = true" href="#"> {{ intro}} Login</a></li>
         <li class="navlinx"><a href="#">Signup</a></li>
         <li class="navlinx"><a href="#">Baller Zone</a></li>
       </ul>
@@ -35,5 +35,7 @@
     Copyright 2016
 </footer>
 
+
+<!-- <script src="../../../app/assets/javascripts/ng/ngApp.js"></script> -->
 </body>
 </html>
