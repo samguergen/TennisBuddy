@@ -4,25 +4,17 @@
 
 <div class="table-responsive col-xs-12 col-sm-6 col-md-8">
 <table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Creator</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+
 
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.title %> <br>
-          <%= game.description %></td>
-        <td><%= game.player_1 %></td>
-        <td><%= link_to 'Show', game %></td>
+        <td><div class="game-title"><%= link_to game.title, game %> </div><br>
+          <div class="game-description"><%= game.description %></div>
+        </td>
+          <td>by: </td>
 
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %> | <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
