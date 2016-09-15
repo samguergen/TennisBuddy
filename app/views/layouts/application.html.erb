@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="navlinx"><a ng-click="openLoginBox(); showLogin = true" href="#">Login</a></li>
+        <li class="navlinx"><a ng-click="showLogin = !showLogin" href="#">Login</a></li>
         <li class="navlinx"><a href="#">Signup</a></li>
         <li class="navlinx"><a href="#">Baller Zone</a></li>
       </ul>
@@ -28,7 +28,13 @@
 </nav>
 
 <div class="login-box" ng-if="showLogin == true">
-
+  <form action="POST">
+    <p style="font-size: 25px">Log In</p>
+    <hr>
+    <p class="labels"><input type="text" placeholder="login"></input></p>
+    <p class="labels"><input type="password" placeholder="password"></input></p>
+    <button class="btn-success" ng-click="login()">Log in</button>
+  </form>
 </div>
 
 <%= yield %>
