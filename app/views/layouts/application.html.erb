@@ -19,8 +19,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="navlinx"><a ng-click="showLogin = !showLogin" href="#">Login</a></li>
-        <li class="navlinx"><a href="#">Signup</a></li>
+        <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false" href="#">Login</a></li>
+        <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false" href="#">Signup</a></li>
         <li class="navlinx"><a href="#">Baller Zone</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -28,13 +28,32 @@
 </nav>
 
 <div class="login-box" ng-if="showLogin == true">
-  <form action="POST">
+
+  <form action="/sessions/login" method="post">
     <p style="font-size: 25px">Log In</p>
     <hr>
-    <p class="labels"><input type="text" placeholder="login"></input></p>
+    <p class="labels"><input type="text" placeholder="email"></input></p>
     <p class="labels"><input type="password" placeholder="password"></input></p>
     <button class="btn-success" ng-click="login()">Log in</button>
   </form>
+
+</div>
+
+<div class="signup-box" ng-if="showSignup == true">
+
+  <form action="/users/create" method="post">
+    <p style="font-size: 25px">Create an account</p>
+    <hr>
+    <p class="labels"><input type="text" placeholder="email/login"></input></p>
+    <p class="labels"><input type="password" placeholder="password"></input></p>
+    <p class="labels"><input type="text" placeholder="first name"></input></p>
+    <p class="labels"><input type="text" placeholder="last name"></input></p>
+    <p class="labels"><input type="text" placeholder="age"></input></p>
+    <p class="labels"><input type="text" placeholder="about you"></input></p>
+
+    <button class="btn-success" ng-click="login()">Sign up</button>
+  </form>
+
 </div>
 
 <%= yield %>

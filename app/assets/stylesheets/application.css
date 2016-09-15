@@ -336,14 +336,14 @@ li.navlinx {
     border-radius: 5px;
     position: absolute;
     top: 7%;
-    left: 32%;
+    left: 56%;
     background: beige;
     padding: 3%;
     padding-left: 90px;
 
 }
 
-.login-box .btn-success {
+.login-box, .signup-box .btn-success {
   margin-top: 10px;
 }
 
@@ -351,4 +351,22 @@ p.labels {
     font-size: 18px;
     line-height: 30px;
     margin-top: 25px;
+}
+
+.signup-box  {
+  height: 530px;
+  width: 35%;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 7%;
+  left: 62%;
+  background: #9dcc69;
+  padding: 3%;
+  padding-left: 90px;
+}
+
+.login-box, .signup-fox input {
+  padding: 5px;
+  width: 300px;
 }

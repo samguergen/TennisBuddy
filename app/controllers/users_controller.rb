@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  def new
-  end
 
   def create
     @user = User.new(user_params)
@@ -20,6 +18,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :password, :first_name, :last_name, :age, :gender)
+    params.require(:user).permit(:email, :age, :password, :password_confirmation)
   end
+
 end
