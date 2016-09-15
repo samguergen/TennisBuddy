@@ -325,10 +325,6 @@ li.navlinx {
   height: 700px;
 }
 
-.all-content {
-
-}
-
 .login-box {
     height: 300px;
     width: 35%;
@@ -343,6 +339,10 @@ li.navlinx {
 
 }
 
+.login-box form {
+  padding: 28px;
+}
+
 .login-box, .signup-box .btn-success {
   margin-top: 10px;
 }
@@ -354,7 +354,7 @@ p.labels {
 }
 
 .signup-box  {
-  height: 530px;
+  height: 650px;
   width: 35%;
   border: 2px solid black;
   border-radius: 5px;
@@ -366,7 +366,7 @@ p.labels {
   padding-left: 90px;
 }
 
-.login-box, .signup-fox input {
+.login-box, .signup-box input {
   padding: 5px;
   width: 300px;
 }

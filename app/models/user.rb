@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  attr_accessor :password, :password_confirmation
   belongs_to :game
   has_many :games
   has_many :comments
