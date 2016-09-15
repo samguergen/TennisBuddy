@@ -12,6 +12,9 @@
   <nav class="navbar navbar-default navwrap">
   <div class="container-fluid">
     <div class="navbar-header">
+      <% if session[:user_id] %>
+      <%= welcome back @user.first_name %>
+      <% end %>
         <a class="navbar-brand" ui-sref="home">
           <%= image_tag("logo.png") %>
         </a>
@@ -29,7 +32,7 @@
 
 <div class="login-box" ng-if="showLogin == true">
 
-  <form action="/sessions/login" method="post">
+  <form action="/login" method="post">
     <p style="font-size: 25px">Log In</p>
     <hr>
     <p class="labels"><input type="text" placeholder="email"></input></p>

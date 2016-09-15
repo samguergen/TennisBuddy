@@ -1,7 +1,12 @@
 
 <div class="all-content container">
 
-  <div class="welcome-intro"> Welcome to Tennis Buddy! </div>
+  <div class="welcome-intro">
+    <% if session[:user_id] %>
+    <%= session[:user_id] %>
+    <% end %>
+    Welcome to Tennis Buddy!
+  </div>
 
   <div class="section-wrapper">
 
