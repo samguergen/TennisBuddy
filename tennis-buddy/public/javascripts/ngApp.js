@@ -14,6 +14,19 @@ app.factory('games', ['$http', function($http){
     });
   };
 
+  o.create = function(game) {
+    return $http.post('/games', game).success(function(data){
+      o.games.push(data);
+    });
+  };
+
+  o.upvote = function(game) {
+    return $http.put('/games/' + game._id + '/upvote')
+      .success(function(data){
+        game.upvotes += 1;
+      });
+  };
+
 return o;
 
 }]);
@@ -34,7 +47,8 @@ app.controller('MainCtrl', [
 
    $scope.addGame = function(){
       if(!$scope.title || $scope.title === '') { return; }
-      $scope.games.push({
+
+      games.create({
         title: $scope.title,
         description: $scope.description,
         location: $scope.location,
@@ -43,16 +57,34 @@ app.controller('MainCtrl', [
         score: '',
         winner: '',
         upvotes: 0,
-        comments: [
-          {author: 'Joe', body: 'Cool game!', upvotes: 0},
-          {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
-        ]
       });
+      $scope.title = '';
+      $scope.description = '';
+      $scope.location = '';
+
+      // $scope.games.push({
+      //   title: $scope.title,
+      //   description: $scope.description,
+      //   location: $scope.location,
+      //   player_1: '',
+      //   player_2: '',
+      //   score: '',
+      //   winner: '',
+      //   upvotes: 0,
+      //   comments: [
+      //     {author: 'Joe', body: 'Cool game!', upvotes: 0},
+      //     {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
+      //   ]
+      // });
     }
 
-  $scope.incrementUpvotes = function(game) {
+  $scope.incrementUpvote = function(game) {
     game.upvotes += 1;
   };
+
+  $scope.incrementUpvotes = function(game) {
+  games.upvote(game);
+};
 
 }]);
 
