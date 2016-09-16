@@ -12,9 +12,7 @@
   <nav class="navbar navbar-default navwrap">
   <div class="container-fluid">
     <div class="navbar-header">
-      <% if session[:user_id] %>
-      <%= welcome back @user.first_name %>
-      <% end %>
+
         <a class="navbar-brand" ui-sref="home">
           <%= image_tag("logo.png") %>
         </a>
@@ -59,6 +57,10 @@
   </form>
 
 </div>
+
+<% if @current_user %>
+  Signed in as <%= @current_user.first_name %> %>
+<% end %>
 
 <%= yield %>
 
