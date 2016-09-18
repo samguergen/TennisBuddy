@@ -8,6 +8,7 @@ angular
       $scope.reloadRoute = function() {
         console.log("inside reloadroute");
          $window.location.reload();
+         $window.location.href = '/games'
       }
 
     }]);
