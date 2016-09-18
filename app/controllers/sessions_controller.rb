@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     puts 'user is '
     puts @user
     if @user && @user.authenticate(params[:password])
-      puts 'logged in'
+      puts 'matrix'
       session[:user_id] = @user.id
       puts "successfully logged in"
       redirect_to '/'
