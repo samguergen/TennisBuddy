@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       puts 'matrix'
       session[:user_id] = @user.id
       puts "successfully logged in"
-      redirect_to '/'
+      puts session[:user_id]
+      redirect_to root_path(sess: session[:user_id])
     else
       flash[:alert] = "You did not log in"
       puts "Not logged in"

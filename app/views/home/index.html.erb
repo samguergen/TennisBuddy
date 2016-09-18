@@ -2,11 +2,14 @@
 <div class="all-content container">
 
   <div class="welcome-intro">
-    <% if session[:user_id] %>
-    <%= session[:user_id] %>
-    <% end %>
+    <% if params[:sess] %>
+    <%= session[:user_id]  %> well
+    <% else %>
     Welcome to Tennis Buddy!
+    <% end %>
   </div>
+
+ sesh: <%= params[:sess] %>
 
   <div class="section-wrapper">
 
