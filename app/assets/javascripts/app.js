@@ -5,6 +5,8 @@ angular
       console.log('init main ng controller');
       $scope.showLogin = false;
       $scope.showSignup = false;
+      $scope.desiredLoc = "";
+      $scope.openGameForm = true;
 
       $scope.reloadRoute = function() {
         console.log("inside reloadroute");
@@ -12,9 +14,11 @@ angular
          $window.location.href = '/games'
       }
 
-      $scope.openGameReq = function(){
+      $scope.openGameFo = function(){
 
       }
+
+
 
 
 

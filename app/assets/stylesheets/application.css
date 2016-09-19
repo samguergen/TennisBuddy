@@ -261,8 +261,8 @@ button.btn.btn-primary, button.btn.btn-default {
   input.location-input { margin: 5%;}
 
   .location-question {
-    margin-top: -500px;
-    margin-bottom: 220px;
+    margin-top: -500px !important;
+    margin-bottom: 130px !important;
   }
 }
 
@@ -391,4 +391,7 @@ p.labels {
   width: 500px;
 }
 
-
+.game-form {
+  width: 300px;
+  display: none;
+}

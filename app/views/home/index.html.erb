@@ -21,15 +21,32 @@
   </div>
 
 
-    <div style="display: hidden" ng-if="openLocationReq == true" ng-style="myStyle">
+    <div ng-show="openLocationReq == true" ng-style="myStyle">
       <div class="main-content">
       <div class="location-question">
         <h1>Time for a Game</h1>
         Where are you located? <br>
         <form action="#">
-        <input type="text" class="location-input" class="current-location" name="current-location" ng-model="location"><br>
-        <input class="submit-location" type="submit" value="Submit my Location" ng-click="openGameReq()"><br>
+        <input type="text" class="location-input" class="current-location" name="current-location" ng-model="desiredLoc"><br>
+        <input class="submit-location" type="submit" value="Submit my Location" ng-click="openLocationReq = false; openGameForm = true; "><br>
       </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-form" ng-show="openGameForm == true" ng-style="myStyle">
+      <div class="main-content">
+      <div class="">
+        <h1>GAME REQUEST</h1>
+        Game title:  <br>
+        Game location:  <br>
+        Player 1:  <br>
+        Player 2:  <br>
+        Location: {{ desiredLoc}} <br>
+        <form method="POST" action="/games">
+          <input type="text" class="" class="current-location" name="current-location" ng-model="desiredLoc"><br>
+          <input class="submit-location" type="submit" value="Create Game Request"><br>
+        </form>
         </div>
       </div>
     </div>
