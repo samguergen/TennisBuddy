@@ -16,12 +16,12 @@
 
     <div class="section find-game"><a href="#" ng-click="reloadRoute()">Find a game</a></div>
 
-    <div class="section start-game"><a href="#" ng-click="openLocationReq = true">Start a game</div>
+    <div class="section start-game"><a href="#" ng-click="openLocationReq = true; myStyle={display:'block'}">Start a game</div>
 
   </div>
 
 
-    <div ng-if="openLocationReq == true">
+    <div style="display: hidden" ng-if="openLocationReq == true" ng-style="myStyle">
       <div class="main-content">
       <div class="location-question">
         <h1>Time for a Game</h1>
@@ -32,8 +32,9 @@
       </form>
         </div>
       </div>
-
     </div>
+
+
 
 
 </div>

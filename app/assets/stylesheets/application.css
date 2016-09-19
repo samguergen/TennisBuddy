@@ -34,6 +34,7 @@ html {
 html, body {
     margin: 0;
     background: url('../images/tennis-ball.jpg')
+    background-size: 100% 100%;
 }
 
 html {
@@ -260,7 +261,8 @@ button.btn.btn-primary, button.btn.btn-default {
   input.location-input { margin: 5%;}
 
   .location-question {
-    margin-top: -15%;
+    margin-top: -500px;
+    margin-bottom: 220px;
   }
 }
 
@@ -270,7 +272,7 @@ footer {
     bottom: 0;
     height: 30px;
     width: 100%;
-    margin-bottom: -4%;
+    /*margin-bottom: -4%; */
     overflow:hidden;
     background-color: rgb(215, 214,81);
     border-top: 2px solid black;
@@ -318,6 +320,12 @@ li.navlinx {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 700px;
+}
+
+
+.section-wrapper {
+  margin-top: -150px;
+  padding-bottom: 50px;
 }
 
 .login-box {
@@ -382,3 +390,5 @@ p.labels {
   margin-top: 30px;
   width: 500px;
 }
+
+
