@@ -11,27 +11,28 @@
 
  sesh: <%= params[:sess] %>
 
-  <div class="section-wrapper">
+
+  <div class="section-wrapper" ng-hide="openLocationReq == true">
 
     <div class="section find-game"><a href="#" ng-click="reloadRoute()">Find a game</a></div>
 
-    <div class="section start-game"><a href="/games/new">Start a game</div>
+    <div class="section start-game"><a href="#" ng-click="openLocationReq = true">Start a game</div>
 
   </div>
 
-<!--
-    <div class="homepage" ng-show="wantsNewGame = true">
+
+    <div ng-if="openLocationReq == true">
       <div class="main-content">
       <div class="location-question">
         <h1>Time for a Game</h1>
         Where are you located? <br>
         <form action="#">
         <input type="text" class="location-input" class="current-location" name="current-location" ng-model="location"><br>
-        <input class="submit-location" type="submit" value="Submit my Location" ng-click="submitLocation()"><br>
+        <input class="submit-location" type="submit" value="Submit my Location" ng-click="openGameReq()"><br>
       </form>
         </div>
       </div>
-        -->
+
     </div>
 
 

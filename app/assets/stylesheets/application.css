@@ -33,8 +33,14 @@ html {
 
 html, body {
     margin: 0;
-    height: 700px;
     background: url('../images/tennis-ball.jpg')
+}
+
+html {
+    height:100%;
+}
+body {
+    min-height:100%;
 }
 
 .section {
@@ -184,9 +190,7 @@ button.btn.btn-primary, button.btn.btn-default {
   padding: 35px;
 }
 
-.main-body .browse {
-  height: 450px;
-}
+.main-body .browse { height: 450px;}
 
 .angular-google-map-container {
   height: 450px;
@@ -196,12 +200,8 @@ button.btn.btn-primary, button.btn.btn-default {
   height: 450px;
   display: flex;
 
-  label {
-    font-size: 24px;
-  }
-  input {
-    font-size: 20px;
-  }
+  label { font-size: 24px;}
+  input { font-size: 20px;}
 
   input.login-email {
     margin-top: 7%;
@@ -255,13 +255,9 @@ button.btn.btn-primary, button.btn.btn-default {
   text-align: center;
   margin-top: 27%;
 
-  h2 {
-    margin-bottom: 5%;
-  }
+  h2 { margin-bottom: 5%;}
 
-  input.location-input {
-    margin: 5%;
-  }
+  input.location-input { margin: 5%;}
 
   .location-question {
     margin-top: -15%;
@@ -272,8 +268,9 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 70px;
+    height: 30px;
     width: 100%;
+    margin-bottom: -4%;
     overflow:hidden;
     background-color: rgb(215, 214,81);
     border-top: 2px solid black;
@@ -304,9 +301,7 @@ footer {
   position: fixed;
 }
 
-.navbar-right {
-  margin-left: 50% !important;
-}
+.navbar-right { margin-left: 50% !important;}
 
 li.navlinx {
   text-decoration: none;
@@ -339,13 +334,9 @@ li.navlinx {
 
 }
 
-.login-box form {
-  padding: 28px;
-}
+.login-box form { padding: 28px;}
 
-.login-box, .signup-box .btn-success {
-  margin-top: 10px;
-}
+.login-box, .signup-box .btn-success { margin-top: 10px;}
 
 p.labels {
     font-size: 18px;
@@ -369,4 +360,25 @@ p.labels {
 .login-box, .signup-box input {
   padding: 5px;
   width: 300px;
+}
+
+.location-question {
+  margin-top: -600px;
+  border: 2px solid black;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: beige;
+  height: 300px;
+}
+
+.location-question h1 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.location-question input {
+  margin: 20px;
+  margin-top: 30px;
+  width: 500px;
 }

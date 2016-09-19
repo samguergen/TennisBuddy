@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       puts "successfully logged in"
       puts session[:user_id]
-      redirect_to root_path(sess: session[:user_id])
+      redirect_to root_path({sess: session[:user_id], user: @user})
     else
       flash[:alert] = "You did not log in"
       puts "Not logged in"
