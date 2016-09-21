@@ -11,28 +11,78 @@
 
  sesh: <%= params[:sess] %>
 
+{{ sorted }}
+
+<button ng-click="ha = true"></button>
+<div ng-show="ha == true" >
+<ul >
+<li ng-repeat="s in sorted | filter: '0'">{{ s }}</li>
+  <ul ng-repeat="s in sorted | filter: 1">
+    <li >{{ s }} </li>
+</ul>
+</ul>
+</div>
+
 
   <div class="section-wrapper" ng-hide="openLocationReq == true">
 
     <div class="section find-game"><a href="#" ng-click="reloadRoute()">Find a game</a></div>
 
-    <div class="section start-game"><a href="#" ng-click="openLocationReq = true; myStyle={display:'block'}">Start a game</div>
+    <div class="section start-game" id="myBtn"><a href="#" ng-click="openLocationReq = true; startModal(1); myStyle={display:'block'}">Start a game</div>
 
   </div>
 
+  <div id="myModal" class="modal">
 
-    <div ng-show="openLocationReq == true" ng-style="myStyle">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">x</span>
+    <p>
+
       <div class="main-content">
       <div class="location-question">
         <h1>Time for a Game</h1>
         Where are you located? <br>
         <form action="#">
         <input type="text" class="location-input" class="current-location" name="current-location" ng-model="desiredLoc"><br>
-        <input class="submit-location" type="submit" value="Submit my Location" ng-click="openLocationReq = false; openGameForm = true; "><br>
+        <input class="submit-location" type="submit" value="Submit my Location" ng-click="startModal(2) "><br>
       </form>
         </div>
       </div>
-    </div>
+
+    </p>
+  </div>
+
+
+<div id="mySecondModal" class="modal second-modal">
+
+  <div class="modal-content">
+    <span class="secondClose">x</span>
+    <p>
+
+      <div class="main-content">
+      <div class="">
+        <h1>GAME REQUEST</h1>
+        Game title:  <br>
+        Game location:  <br>
+        Player 1:  <br>
+        Player 2:  <br>
+        Location: {{ desiredLoc}} <br>
+        <form method="POST" action="/games">
+          <input type="text" class="" class="current-location" name="current-location" ng-model="desiredLoc"><br>
+          <input class="submit-location" type="submit" value="Create Game Request"><br>
+        </form>
+        </div>
+      </div>
+
+    </p>
+  </div>
+
+</div>
+
+<!--
+
+
 
     <div class="game-form" ng-show="openGameForm == true" ng-style="myStyle">
       <div class="main-content">
@@ -51,7 +101,6 @@
       </div>
     </div>
 
-
-
+-->
 
 </div>
