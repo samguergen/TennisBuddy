@@ -62,8 +62,8 @@ angular
     var splat = [];
     for (var i in arr){
       splat = arr[i].split(",");
-      if (splat[2] == ""){ splat[2] = 0}
-      else {splat[2] = parseInt(splat[2])};
+      if (splat[splat.length - 1] == ""){ splat[splat.length - 1] = 0}
+      else {splat[splat.length - 1] = parseInt(splat[splat.length - 1])};
       $scope.arr2D.push(splat);
     };
 
@@ -71,14 +71,41 @@ angular
     $scope.sorted = $scope.arr2D.sort(compareLastColumn);
 
     function compareLastColumn(a, b) {
-      if (a[2] === b[2]) {
+      if (a[a.length-1] === b[a.length-1]) {
           return 0;
       }
       else {
-          return (a[2] < b[2]) ? -1 : 1;
+          return (a[a.length-1] < b[a.length-1]) ? -1 : 1;
       }
     }
 
+    var bigger = [$scope.sorted[1]];
+
+
+    for (var i in $scope.sorted){
+
+      console.log('hey', $scope.sorted[i]);
+      console.log('third elem', $scope.sorted[i][$scope.sorted.length-1]);
+      /*
+      if (!isNaN($scope.sorted[i][$scope.sorted.length-1]) ) {
+        console.log('has a priority');
+
+        if ($scope.sorted[i][$scope.sorted.length-1] == $scope.sorted[i-1][$scope.sorted.length-1]){
+          console.log('inside first cond');
+          bigger[-1].push($scope.sorted[i]);
+        }
+
+        else if ($scope.sorted[i][$scope.sorted.length-1] > $scope.sorted[i-1][$scope.sorted.length-1]){
+          console.log('inside second cond');
+          bigger.push($scope.sorted[i]);
+        }
+        else {
+          console.log('do nothing');
+        }
+      } */
+    }
+
+    console.log('bigger is ', bigger);
   }
 
   $scope.init();
