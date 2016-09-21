@@ -79,33 +79,32 @@ angular
       }
     }
 
-    var bigger = [$scope.sorted[1]];
-
-
+  //places elements with same priority level within the inner array.
+    var bigger = [[$scope.sorted[1]]];
     for (var i in $scope.sorted){
 
-      console.log('hey', $scope.sorted[i]);
-      console.log('third elem', $scope.sorted[i][$scope.sorted.length-1]);
-      /*
-      if (!isNaN($scope.sorted[i][$scope.sorted.length-1]) ) {
-        console.log('has a priority');
+      var lastElem = $scope.sorted[i].length-1;
 
-        if ($scope.sorted[i][$scope.sorted.length-1] == $scope.sorted[i-1][$scope.sorted.length-1]){
-          console.log('inside first cond');
-          bigger[-1].push($scope.sorted[i]);
+      if (!isNaN($scope.sorted[i][lastElem]) ) {
+
+        if ($scope.sorted[i-1] &&($scope.sorted[i][lastElem] == $scope.sorted[i-1][lastElem])){
+          console.log('equals last', $scope.sorted[i][lastElem], $scope.sorted[i-1][lastElem]);
+          bigger[bigger.length-1].push($scope.sorted[i]);
         }
 
-        else if ($scope.sorted[i][$scope.sorted.length-1] > $scope.sorted[i-1][$scope.sorted.length-1]){
+        else if ($scope.sorted[i-1] &&($scope.sorted[i][lastElem] > $scope.sorted[i-1][lastElem])){
           console.log('inside second cond');
-          bigger.push($scope.sorted[i]);
+          bigger.push([$scope.sorted[i]]);
         }
         else {
           console.log('do nothing');
         }
-      } */
+
+      }
     }
 
     console.log('bigger is ', bigger);
+    $scope.bigger = bigger;
   }
 
   $scope.init();

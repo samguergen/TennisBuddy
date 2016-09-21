@@ -11,15 +11,13 @@
 
  sesh: <%= params[:sess] %>
 
-{{ sorted }}
+{{ bigger }}
 
 <button ng-click="ha = true"></button>
 <div ng-show="ha == true" >
-<ul >
-<li ng-repeat="s in sorted | filter: '0'">{{ s }}</li>
-  <ul ng-repeat="s in sorted | filter: 1">
-    <li >{{ s }} </li>
-</ul>
+
+<ul ng-repeat="big in bigger"> {{ big}}
+  <!--<li ng-repeat="b in big">{{ b }}</li> -->
 </ul>
 </div>
 
