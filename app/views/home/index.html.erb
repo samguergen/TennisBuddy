@@ -11,14 +11,17 @@
 
  sesh: <%= params[:sess] %>
 
-{{ bigger }}
 
-<button ng-click="ha = true"></button>
-<div ng-show="ha == true" >
+<!-- tried to create nested ul for every group of priority, but ul would chain one after another instead of being nested/recursive.-->
 
-<ul ng-repeat="big in bigger"> {{ big}}
-  <!--<li ng-repeat="b in big">{{ b }}</li> -->
-</ul>
+<button style="height:50px; width: 100px" ng-click="ha = true">Click me</button>
+<div ng-show="ha == true" ui-tree>
+    <ul ui-tree-nodes="" ng-model="bigger"><li ui-tree-node ng-repeat="big in bigger"> Level: {{ $index }},
+    <ul ng-repeat="b in big">
+      <li> {{b}}
+      </li></ul></div>
+     <!--  <ul ng-repeat="b in big"> {{ b}} </ul></ul> -->
+
 </div>
 
 

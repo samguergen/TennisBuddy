@@ -1,5 +1,5 @@
 angular
-    .module('myApp', ['ui.router'])
+    .module('myApp', ['ui.tree'])
     .controller('MainCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
 
       console.log('init main ng controller');
