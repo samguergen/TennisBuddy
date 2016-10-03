@@ -1,0 +1,48 @@
+
+  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">x</span>
+    <p>
+
+      <div class="main-content">
+      <div class="location-question">
+        <h1>Time for a Game</h1>
+        Where are you located? <br>
+        <form action="#">
+        <input type="text" class="location-input" class="current-location" name="current-location" ng-model="desiredLoc"><br>
+        <input class="submit-location" type="submit" value="Submit my Location" ng-click="startModal(2) "><br>
+      </form>
+        </div>
+      </div>
+
+    </p>
+  </div>
+
+
+<div id="mySecondModal" class="modal second-modal">
+
+  <div class="modal-content">
+    <span class="secondClose">x</span>
+    <p>
+
+      <div class="main-content">
+      <div class="">
+        <h1>GAME REQUEST</h1>
+        Game title:  <br>
+        Game location:  <br>
+        Player 1:  <br>
+        Player 2:  <br>
+        Location: {{ desiredLoc}} <br>
+        <form method="POST" action="/games">
+          <input type="text" class="" class="current-location" name="current-location" ng-model="desiredLoc"><br>
+          <input class="submit-location" type="submit" value="Create Game Request"><br>
+        </form>
+        </div>
+      </div>
+
+    </p>
+  </div>
+
+</div>

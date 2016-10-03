@@ -1,5 +1,15 @@
-<h1>New Game</h1>
+<div class="game-req">
+  <h1>GAME REQUEST</h1>
+  Game title:  <br>
+  Game location:  <br>
+  Player 1:  <br>
+  Player 2:  <br>
+  Location: {{ desiredLoc}} <br>
+  <form method="POST" action="/games">
+    <input type="text" class="" class="current-location" name="current-location" ng-model="desiredLoc"><br>
+    <input class="submit-location" type="submit" value="Create Game Request"><br>
+  </form>
+</div>
 
-<%= render 'form' %>
 
 <%= link_to 'Back', games_path %>
