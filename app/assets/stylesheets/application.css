@@ -343,9 +343,9 @@ li.navlinx {
   background-image: url(tennis-ball.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 700px;
+/*  height: 700px;*/
+  min-height: 100%;
 }
-
 
 .section-wrapper {
   margin-top: -350px;

@@ -83,7 +83,6 @@
   order: 1;
   display: flex;
   flex-direction: column;
-
 }
 
 .gamereq-inputs {
@@ -91,18 +90,12 @@
   display: flex;
   flex-direction: column;
   margin-left: 10%;
+  margin-top: -109px;
 }
 
 .gamereq-inputs input{
   order: 2;
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
- /* padding: 5px;
-  width: 300px; */
-}
-
-.gamereq-input {
-
-
+  margin: 5px;
 }
