@@ -45,6 +45,9 @@
   margin-right: auto;
   margin-left: auto;
   align-items: center;
+  background: url('fitnessandtennis.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .gamereq-wrapper .gamereq {
@@ -56,6 +59,7 @@
   margin-top: 70px;
   width: 80%;
   height: 400px;
+  background: rgba(0,0,0,0.5);
 }
 
 .gamereq-wrapper .gamereq h2{
@@ -83,6 +87,7 @@
   order: 1;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .gamereq-inputs {
