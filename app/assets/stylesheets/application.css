@@ -35,13 +35,28 @@ html, body {
     margin: 0;
     background: url('../images/tennis-ball.jpg')
     background-size: 100% 100%;
+    height:100%;
 }
 
-html {
+/*html {
     height:100%;
 }
 body {
     min-height:100%;
+}*/
+
+.body-inner-wrap {
+  min-height:100%;
+  margin-bottom: -50px;
+}
+
+.body-inner-wrap:after {
+  content: "";
+  display: block;
+}
+
+footer, .body-inner-wrap:after {
+  height: 50px;
 }
 
 .section {
@@ -114,13 +129,15 @@ nav.navbar-default {
 
 .main-body {
   margin-top: 5px;
-  height: 450px;
+  /*height: 450px;*/
+  height: 100%;
   display: block;
   overflow: hidden;
 
   .profile {
     background-color: green;
-    height: 450px;
+    /*height: 450px;*/
+    height: 100%;
 
     .page-title {
       font-weight: bold;
@@ -267,19 +284,26 @@ button.btn.btn-primary, button.btn.btn-default {
 }
 
 footer {
-    position: absolute;
+    /*position: absolute;
     left: 0;
     bottom: 0;
     height: 30px;
     width: 100%;
-    /*margin-bottom: -4%; */
+    margin-bottom: -70px;
     overflow:hidden;
     background-color: rgb(215, 214,81);
     border-top: 2px solid black;
     color: rgb(92, 180, 122);
     text-shadow: 0px 0px 2px black;
-    padding: 15px;
+    padding: 10px;
+    text-align: right;*/
+    background-color: rgb(215, 214,81);
+    border-top: 2px solid black;
+    color: rgb(92, 180, 122);
+    text-shadow: 0px 0px 2px black;
     text-align: right;
+
+
 }
 
 .popover {
