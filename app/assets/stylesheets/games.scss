@@ -38,3 +38,71 @@
     font-size: 20px;
   }
 }
+
+.gamereq-wrapper {
+  display:flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+}
+
+.gamereq-wrapper .gamereq {
+  display:flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid black;
+  margin-top: 70px;
+  width: 80%;
+  height: 400px;
+}
+
+.gamereq-wrapper .gamereq h2{
+  color: #d7d651;
+  font-weight: bold;
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+
+.gamereq-wrapper .gamereq #gamereq-form {
+  margin-right: auto;
+  margin-left: auto;
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+}
+
+.gamereq-labels {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Aria;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.gamereq-inputs {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.gamereq-inputs input{
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+ /* padding: 5px;
+  width: 300px; */
+}
+
+.gamereq-input {
+
+
+}

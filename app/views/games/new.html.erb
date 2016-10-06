@@ -1,15 +1,34 @@
-<div class="game-req">
-  <h1>GAME REQUEST</h1>
-  Game title:  <br>
-  Game location:  <br>
-  Player 1:  <br>
-  Player 2:  <br>
-  Location: {{ desiredLoc}} <br>
-  <form method="POST" action="/games">
-    <input type="text" class="" class="current-location" name="current-location" ng-model="desiredLoc"><br>
-    <input class="submit-location" type="submit" value="Create Game Request"><br>
-  </form>
+<div class="gamereq-wrapper">
+  <div class="gamereq">
+
+    <h2>GAME REQUEST</h2>
+      <form method="POST" action="/games" id="gamereq-form">
+
+      <div class="gamereq-labels">
+        <div class="gamereq-label">Desired location:</div><br>
+        <div class="gamereq-label">Player 1:</div><br>
+        <div class="gamereq-label">Player 2: </div><br>
+        <div class="gamereq-label">Game title:</div><br>
+        <div class="gamereq-label">Description:</div><br>
+      </div>
+
+      <div class="gamereq-inputs">
+        <input class="" name="game[location]"/>{{game.location}}<br>
+        <input class="" name="game[player_1]"/><br>
+        <input class="" placeholder="awaiting" /><br>
+        <input type="text" class="" class="gamereq-input" name="game[title]" ng-model="game.title"><br>
+        <input type="text" class="" class="gamereq-input" name="game[description]" ng-model="game.description"><br>
+
+        <input class="submit-gamereq" type="submit" value="Create Game Request"><br>
+      </div>
+    </form>
+
+    <div class="previous-btn">
+      <%= link_to 'Back', games_path %>
+    </div>
+
+  </div>
 </div>
 
 
-<%= link_to 'Back', games_path %>
+

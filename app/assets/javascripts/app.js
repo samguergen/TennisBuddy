@@ -42,12 +42,6 @@ angular
             modal.style.display = "none";
         }
 
-      // $scope.reloadRoute = function() {
-      //   console.log("inside reloadroute");
-      //    $window.location.reload();
-      //    $window.location.href = '/games'
-      // }
-
       $scope.reloadRoute = function(endpoint) {
         console.log("inside reloadroute");
          $window.location.reload();
