@@ -1,5 +1,5 @@
 
-<div class="all-content container">
+<div class="all-content">
 
   <div class="welcome-intro">
     <% if params[:sess] %>
@@ -12,31 +12,16 @@
  sesh: <%= params[:sess] %>
 
 
-<!-- tried to create nested ul for every group of priority, but ul would chain one after another instead of being nested/recursive.-->
-
-<button style="height:50px; width: 100px" ng-click="ha = true">Click me</button>
-<div ng-show="ha == true" ui-tree>
-    <ul ui-tree-nodes="" ng-model="bigger"><li ui-tree-node ng-repeat="big in bigger"> Level: {{ $index }},
-    <ul ng-repeat="b in big">
-      <li> {{b}}
-      </li></ul></div>
-     <!--  <ul ng-repeat="b in big"> {{ b}} </ul></ul> -->
-
-</div>
-
-
   <div class="section-wrapper" ng-hide="openLocationReq == true">
 
-    <div class="section find-game"><a href="#" ng-click="reloadRoute('games')">Find a game</a></div>
-
     <div class="section start-game"><a href="#" ng-click="reloadRoute('games/new')">Start a game</a></div>
+
+    <div class="section find-game"><a href="#" ng-click="reloadRoute('games')">Find a game</a></div>
 
     <!-- <div class="section start-game" id="myBtn"><a href="#" ng-click="openLocationReq = true; startModal(1); myStyle={display:'block'}">Start a game</div> -->
 
   </div>
 
-<div ng-include="../games/_startgame.html.erb"></div>
-
-
+<!-- <div ng-include="../games/_startgame.html.erb"></div> -->
 
 </div>

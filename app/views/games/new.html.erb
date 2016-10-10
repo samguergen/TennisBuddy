@@ -1,4 +1,4 @@
-<div class="gamereq-wrapper">
+<div class="gamereq-wrapper" ng-app="myApp" ng-controller="MainCtrl" ng-init="reloadRoute('games/new')">
   <div class="gamereq">
 
     <h2>GAME REQUEST</h2>
@@ -19,7 +19,7 @@
         <input type="text" class="" class="gamereq-input" name="game[title]" ng-model="game.title"><br>
         <input type="text" class="gamereq-input-descr" class="gamereq-input" name="game[description]" ng-model="game.description"><br>
 
-        <input class="submit-gamereq" type="submit" value="Create Game Request"><br>
+        <input class="btn btn-success submit-gamereq" type="submit" value="Create Game Request"><br>
       </div>
     </form>
 

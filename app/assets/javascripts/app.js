@@ -52,4 +52,6 @@ angular
 
       }
 
+      $scope.navLinksOpen = false;
+
     }]);
