@@ -5,6 +5,7 @@ angular
       console.log('init main ng controller');
       $scope.showLogin = false;
       $scope.showSignup = false;
+      $scope.showProfile = false;
       $scope.desiredLoc = "";
       $scope.openGameForm = true;
 

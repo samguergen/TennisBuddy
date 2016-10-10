@@ -26,9 +26,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="navlinx"><a href="#" ng-click="reloadRoute('games/new')">Start a game</a></li>
         <li class="navlinx"><a href="#" ng-click="reloadRoute('games')">Find a game</a></li>
-        <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false" href="#">Login</a></li>
-        <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false" href="#">Signup</a></li>
-        <li class="navlinx"><a href="/users">My profile</a></li>
+        <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false; ; showProfile = false" href="#">Login</a></li>
+        <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
+        <li class="navlinx"><a ng-click="showProfile = !showProfile; showLogin = false; showSignup = false" href="#">My profile</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -61,6 +61,12 @@
 
     <button class="btn-success" ng-click="login()">Sign up</button>
   </form>
+
+</div>
+
+<div class="profile-box" ng-if="showProfile == true">
+
+
 
 </div>
 
