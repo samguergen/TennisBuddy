@@ -65,6 +65,43 @@
 </div>
 
 <div class="profile-box" ng-if="showProfile == true">
+  <div class="profile-top">
+    Johnny B. Goode
+  </div>
+
+  <div class="profile-main">
+    <div class="pm-left">
+      nickname: Jon <br>
+      member since: 2016 <br>
+      age: 27 <br>
+      description: blablablab <br>
+
+    </div>
+    <div class="pm-center">
+      <div class="user-photo">
+        <!-- <img src="../../assets/images/anon_logo.png"/> -->
+      </div>
+      <div class="message-link">
+        <input type="button" ng-click="sendMessage()">Send a message</input>
+      </div>
+
+    </div>
+    <div class="pm-right">
+      <div class="player-info">
+        games played: 9
+        games won: 4
+        best score: 8-1
+      </div>
+      <div class="play-buttons">
+        <input type="button" ng-show="lookingToPlay = true">Looking for Game Partner</input>
+        <input type="button" ng-show="lookingToPlay = false">Not Looking to Play</input>
+      </div>
+
+    </div>
+
+  </div>
+
+
 
 
 
