@@ -335,12 +335,16 @@ li.navlinx {
     background: beige;
     padding: 3%;
     padding-left: 90px;
-
 }
 
 .login-box form { padding: 28px;}
 
 .login-box, .signup-box .btn-success { margin-top: 10px;}
+
+.login-box, .signup-box input {
+  padding: 5px;
+  width: 300px;
+}
 
 p.labels {
     font-size: 18px;
@@ -361,9 +365,31 @@ p.labels {
   padding-left: 90px;
 }
 
-.login-box, .signup-box input {
-  padding: 5px;
-  width: 300px;
+.signup-box form.signup-form {
+  margin-left: -30px;
+}
+
+.profile-box {
+  height: 470px;
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  background: green;
+  padding: 3%;
+  padding-left: 90px;
+/*  height: 500px;
+  width: 75%;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 7%;
+  left: 16%;
+  background: green;
+  padding: 3%;
+  padding-left: 90px;*/
 }
 
 .location-question {
