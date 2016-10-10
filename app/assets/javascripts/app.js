@@ -48,9 +48,6 @@ angular
          $window.location.href = '/'+ endpoint;
       }
 
-      $scope.openGameFo = function(){
-
-      }
 
       $scope.navLinksOpen = false;
 

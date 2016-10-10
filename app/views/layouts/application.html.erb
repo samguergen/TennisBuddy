@@ -25,8 +25,8 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li class="navlinx"><a href="#" ng-click="reloadRoute('games/new')">Start a game</a></li>
-        <li class="navlinx"><a href="#" ng-click="reloadRoute('games')">Find a game</a></li> |
-        <li class="navlinx"><a ng-click="navLinksOpen = true" href="#">Login</a></li>
+        <li class="navlinx"><a href="#" ng-click="reloadRoute('games')">Find a game</a></li>
+        <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false" href="#">Login</a></li>
         <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false" href="#">Signup</a></li>
         <li class="navlinx"><a href="/users">My profile</a></li>
       </ul>
