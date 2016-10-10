@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-tree/2.22.1/angular-ui-tree.min.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-tree/2.22.1/angular-ui-tree.min.js" type="text/javascript"></script>
 </head>
-<body ng-app="myApp" ng-controller="MainCtrl">
-  <div class="body-inner-wrap">
+<body class="page-body" ng-app="myApp" ng-controller="MainCtrl">
+  <main class="body-inner-wrap">
 
   <nav class="navbar navbar-default navwrap">
   <div class="container-fluid">
@@ -24,11 +24,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false" href="#">Login</a></li>
-        <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false" href="#">Signup</a></li> -->
+        <li class="navlinx"><a href="#" ng-click="reloadRoute('games/new')">Start a game</a></li>
+        <li class="navlinx"><a href="#" ng-click="reloadRoute('games')">Find a game</a></li> |
         <li class="navlinx"><a ng-click="navLinksOpen = true" href="#">Login</a></li>
         <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false" href="#">Signup</a></li>
-        <li class="navlinx"><a href="/users">Baller Zone</a></li>
+        <li class="navlinx"><a href="/users">My profile</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -75,8 +75,6 @@
     Copyright 2016
 </footer>
 
-
-<!-- <script src="../../../app/assets/javascripts/ng/ngApp.js"></script> -->
-</div><!--body-inner-wrap-->
+</main><!--body-inner-wrap-->
 </body>
 </html>

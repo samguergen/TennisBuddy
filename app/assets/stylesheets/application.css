@@ -38,14 +38,17 @@ html, body {
     height:100%;
 }
 
-/*html {
-    height:100%;
+.page-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-body {
-    min-height:100%;
-}*/
 
 .body-inner-wrap {
+  flex: 1;
+}
+
+/*.body-inner-wrap {
   min-height:100%;
   margin-bottom: -50px;
 }
@@ -57,7 +60,7 @@ body {
 
 footer, .body-inner-wrap:after {
   height: 50px;
-}
+}*/
 
 .section {
   margin-left: 10%;
@@ -284,19 +287,7 @@ button.btn.btn-primary, button.btn.btn-default {
 }
 
 footer {
-    /*position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 30px;
-    width: 100%;
-    margin-bottom: -70px;
-    overflow:hidden;
-    background-color: rgb(215, 214,81);
-    border-top: 2px solid black;
-    color: rgb(92, 180, 122);
-    text-shadow: 0px 0px 2px black;
-    padding: 10px;
-    text-align: right;*/
+    height: 40px;
     background-color: rgb(215, 214,81);
     border-top: 2px solid black;
     color: rgb(92, 180, 122);
@@ -343,13 +334,7 @@ li.navlinx {
   background-image: url(tennis-ball.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-/*  height: 700px;*/
   min-height: 100%;
-}
-
-.section-wrapper {
-  margin-top: -350px;
-  padding-bottom: 50px;
 }
 
 .login-box {
