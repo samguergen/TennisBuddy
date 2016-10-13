@@ -71,10 +71,11 @@
 
   <div class="profile-main">
     <div class="pm-left">
-      nickname: Jon <br>
-      member since: 2016 <br>
-      age: 27 <br>
-      description: blablablab <br>
+      <div class="content-header">Personal Info:</div>
+        <span class="user-label">nickname:</span> Jon <br>
+        <span class="user-label">member since: </span> 2016 <br>
+        <span class="user-label">age: </span> 27 <br>
+        <span class="user-label">description: </span> blablablab <br>
 
     </div>
     <div class="pm-center">
@@ -82,19 +83,20 @@
         <!-- <img src="../../assets/images/anon_logo.png"/> -->
       </div>
       <div class="message-link">
-        <input type="button" ng-click="sendMessage()">Send a message</input>
+        <button class="btn-success" ng-click="sendMessage()">Send a message</button>
       </div>
 
     </div>
     <div class="pm-right">
       <div class="player-info">
-        games played: 9
-        games won: 4
-        best score: 8-1
+        <div class="content-header">Player Info:</div>
+          <span class="user-label">games played: </span> 9 <br>
+          <span class="user-label">games won: </span> 4 <br>
+          <span class="user-label">best score: </span> 8-1 <br>
       </div>
       <div class="play-buttons">
-        <input type="button" ng-show="lookingToPlay = true">Looking for Game Partner</input>
-        <input type="button" ng-show="lookingToPlay = false">Not Looking to Play</input>
+        <button class="btn-success" ng-show="lookingToPlay = true">Looking to Play</button>
+        <button class="btn-danger" ng-show="lookingToPlay = false">Not Looking to Play</button>
       </div>
 
     </div>
