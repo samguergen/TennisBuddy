@@ -23,11 +23,22 @@
 
 .game-title {
   font-size: 18px;
+  cursor: pointer;
 }
 
-.game-title a:hover {
-    color: #e2e2e2;
-    text-decoration: none;
+.game-title:hover {
+  color: #e2e2e2;
+  text-decoration: none;
+  background: black;
+}
+
+.game-edit-delete {
+  width: 20%;
+}
+
+.game-edit-delete a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 .show-wrapper {
