@@ -65,6 +65,7 @@
 </div>
 
 <div class="profile-box" ng-if="showProfile == true">
+  <div class="profile-wrapper">
   <div class="profile-top">
     Johnny B. Goode
   </div>
@@ -95,12 +96,13 @@
           <span class="user-label">best score: </span> 8-1 <br>
       </div>
       <div class="play-buttons">
-        <button class="btn-success" ng-show="lookingToPlay = true">Looking to Play</button>
-        <button class="btn-danger" ng-show="lookingToPlay = false">Not Looking to Play</button>
+        <!-- <div class="looking-to-play" ng-show="lookingToPlay = false">Looking to Play</div> -->
+        <div class="not-looking-to-play" ng-show="lookingToPlay = false">Not Looking to Play</div>
       </div>
 
     </div>
 
+  </div>
   </div>
 
 
