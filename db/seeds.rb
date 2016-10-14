@@ -33,51 +33,55 @@ first_comment = Comment.create({
   })
 
 
-# second_user = User.create({
-#   first_name: "Leila",
-#   last_name: "Malawi",
-#   age: 29,
-#   gender: "female",
-#   description: "Awesome human. I am just a great person. Hit me up if you ever want to play",
-#   email: "leila@gmail.com",
-#   password: "234234",
-#   password_confirmation: "234234"
-# })
+second_user = {
+  first_name: "Leila",
+  last_name: "Malawi",
+  age: 29,
+  gender: "female",
+  description: "Awesome human. I am just a great person. Hit me up if you ever want to play",
+  email: "leila@gmail.com",
+  password: "234234",
+  password_confirmation: "234234"
+}
 
-# second_game = Game.create({
-#   title: "Afternoon game anyone?",
-#   description: "Looking to play for at least 2 hours. Females only pls.",
-#   score: "no scores yet",
-#   user_id: second_user.id
-# })
+User.create(second_user)
 
-# second_comment = Comment.create({
-#   commenter: "Emma",
-#   body: "I wish I had arms so I could play with you..",
-#   game_id: second_game.id
-#   })
+second_game = Game.create({
+  title: "Afternoon game anyone?",
+  description: "Looking to play for at least 2 hours. Females only pls.",
+  score: "no scores yet",
+  creator_id: second_user
+})
+
+second_comment = Comment.create({
+  commenter: "Emma",
+  body: "I wish I had arms so I could play with you..",
+  game_id: second_game
+  })
 
 
-# third_user = User.create({
-#   first_name: "Yulia",
-#   last_name: "Eskanov",
-#   age: 19,
-#   gender: "female",
-#   description: "Me looking for player of tennis, please email me for play",
-#   email: "yulia@vkontakt.ru",
-#   password: "234234",
-#   password_confirmation: "234234"
-# })
+third_user = {
+  first_name: "Yulia",
+  last_name: "Eskanov",
+  age: 19,
+  gender: "female",
+  description: "Me looking for player of tennis, please email me for play",
+  email: "yulia@vkontakt.ru",
+  password: "234234",
+  password_confirmation: "234234"
+}
 
-# third_game = Game.create({
-#   title: "Me would like play",
-#   description: "I want to play in rich suburb of NY. Please be fre to play tennis with me in rich suburb.",
-#   score: "no scores yet",
-#   user_id: third_user.id
-# })
+User.create(third_user)
 
-# third_comment = Comment.create({
-#   commenter: "Olga",
-#   body: "I want to play with you, comrade.",
-#   game_id: third_game.id
-#   })
+third_game = Game.create({
+  title: "Me would like play",
+  description: "I want to play in rich suburb of NY. Please be fre to play tennis with me in rich suburb.",
+  score: "no scores yet",
+  creator_id: third_user
+})
+
+third_comment = Comment.create({
+  commenter: "Olga",
+  body: "I want to play with you, comrade.",
+  game_id: third_game
+  })
