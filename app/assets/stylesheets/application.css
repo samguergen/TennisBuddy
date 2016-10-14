@@ -330,7 +330,7 @@ li.navlinx {
     border: 2px solid black;
     border-radius: 5px;
     position: absolute;
-    top: 7%;
+    top: 12%;
     left: 56%;
     background: beige;
     padding: 3%;
@@ -358,7 +358,7 @@ p.labels {
   border: 2px solid black;
   border-radius: 5px;
   position: absolute;
-  top: 7%;
+  top: 15%;
   left: 62%;
   background: #9dcc69;
   padding: 3%;
@@ -427,9 +427,9 @@ p.labels {
   margin-right: auto;
   margin-left: auto;
   background-image: url('anon_logo.png');
-  background-size: cover;
-  width: 320px;
-  height: 300px;
+  background-size: 100% 100%;
+  width: 250px;
+  height: 250px;
 }
 
 .profile-box .profile-main .pm-center .message-link{
@@ -452,7 +452,7 @@ p.labels {
   font-size: 14px;
   width: 320px;
   height: 300px;
-  background: beige;
+  background: #b7c123;
 }
 
 .content-header {
