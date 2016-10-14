@@ -3,18 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .content-container {
-  /*padding-top: 140px;
-  padding-left: 50px;
-  background-image: url(tennis-ball.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;*/
-  height: 700px;
+
+  height: 400px;
   color: black !important;
 }
 
 .waiting {
   margin-left: 1.5%;
   font-style: italic;
+  margin-top: -50px;
+  margin-bottom: 50px;
 }
 
 .table {
@@ -117,6 +115,6 @@
 
 
 .lower-footer {
-  margin-top: 490px;
+  margin-top: 400px;
   margin-left: -50px;
 }
