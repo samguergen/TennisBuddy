@@ -81,7 +81,6 @@
     </div>
     <div class="pm-center">
       <div class="user-photo">
-        <!-- <img src="../../assets/images/anon_logo.png"/> -->
       </div>
       <div class="message-link">
         <button class="btn-success" ng-click="sendMessage()">Send a message</button>
@@ -114,7 +113,7 @@
 <%= yield %>
 
 
-<footer ng-style="footerStyle">
+<footer ng-class="{ 'lower-footer': lower}">
     Copyright 2016
 </footer>
 

@@ -1,5 +1,5 @@
 
-<div class="all-content">
+<div class="all-content" ng-init="footerStyle={margin-top: '0px'}">
 
   <div class="welcome-intro">
     <% if params[:sess] %>
@@ -18,10 +18,7 @@
 
     <div class="section find-game"><a href="#" ng-click="reloadRoute('games')">Find a game</a></div>
 
-    <!-- <div class="section start-game" id="myBtn"><a href="#" ng-click="openLocationReq = true; startModal(1); myStyle={display:'block'}">Start a game</div> -->
-
   </div>
 
-<!-- <div ng-include="../games/_startgame.html.erb"></div> -->
 
 </div>
