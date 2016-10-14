@@ -476,9 +476,24 @@ p.labels {
 
 .profile-box .profile-main .pm-right .not-looking-to-play {
   margin-left: 5%;
+  margin-top: 50px;
   height: 50px;
   width: 150px;
   background: #00ff69;
+  margin: auto;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.profile-box .profile-main .pm-right .looking-to-play {
+  margin-top: 20px;
+  margin-left: 19%;
+  height: 50px;
+  width: 150px;
+  background: blue
   margin: auto;
   margin-top: 20px;
   padding-top: 10px;
