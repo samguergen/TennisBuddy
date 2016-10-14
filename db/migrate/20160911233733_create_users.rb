@@ -9,7 +9,6 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :age
       t.string :gender
       t.string :description
-      t.string :uid
       t.references :game
 
       t.timestamps null: false
