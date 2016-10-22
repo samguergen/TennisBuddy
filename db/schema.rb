@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160911233733) do
     t.string   "title"
     t.text     "description"
     t.string   "score"
-    t.integer  "creator_id"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
