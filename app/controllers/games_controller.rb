@@ -19,7 +19,9 @@ class GamesController < ApplicationController
     puts @game.description
     puts 'the user id for game is'
     puts @game.user_id
-    # @user_game = User.find(@game.user_id)
+    @user_game = User.find(@game.user_id)
+    puts 'the user obj in relation is '
+    puts @user_game
   end
 
   # GET /games/new
