@@ -18,7 +18,7 @@ class GamesController < ApplicationController
     puts @game.title
     puts @game.description
     puts @game.user_id
-    @user_game = User.find(@game.user_id)
+    # @user_game = User.find(@game.user_id)
   end
 
   # GET /games/new
