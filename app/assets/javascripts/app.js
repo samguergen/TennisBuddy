@@ -4,7 +4,7 @@ angular
 
       console.log('init main ng controller');
       $scope.showLogin = false;
-      console.log('show login is ', $scope.showLogin);
+      // console.log('show login is ', $scope.showLogin);
       $scope.showSignup = false;
       $scope.showProfile = false;
       $scope.lookingToPlay = false;
