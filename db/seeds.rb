@@ -61,26 +61,29 @@ first_user = {
 
 first_create = User.create(first_user)
 
-first_create.games.create(title: "Morning Game in Manhattan",
-  description: "Anyone is up for an early morning game in Central Park?",
-  score: "no scores yet");
-
-# first_game = {
-#   title: "Morning Game in Manhattan",
+# first_create.games.create(title: "Morning Game in Manhattan",
 #   description: "Anyone is up for an early morning game in Central Park?",
-#   score: "no scores yet",
-#   user_id: userObj
-# }
+#   score: "no scores yet");
+
+first_game = {
+  title: "Morning Game in Manhattan",
+  description: "Anyone is up for an early morning game in Central Park?",
+  score: "no scores yet",
+  # user_id: first_create
+}
+
+
+first_create.games.create(first_game);
 
 # Game.create(first_game)
 
-# first_comment = {
-#   commenter: "Julie",
-#   body: "This looks like a great game",
-#   game_id: first_game
-#   }
+first_comment = {
+  commenter: "Julie",
+  body: "This looks like a great game",
+  game_id: first_game
+  }
 
-# Comment.create(first_comment)
+Comment.create(first_comment)
 
 
 # second_user = {

@@ -17,6 +17,7 @@ class GamesController < ApplicationController
     puts @game
     puts @game.title
     puts @game.description
+    puts 'the user id for game is'
     puts @game.user_id
     # @user_game = User.find(@game.user_id)
   end

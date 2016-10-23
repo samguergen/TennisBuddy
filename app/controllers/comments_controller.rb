@@ -36,7 +36,7 @@ class CommentsController < ApplicationController
     else
       flash[:notice] = "A problem has occurred. Your comment couldn't be posted."
     end
-    return redirect_to games_path
+    return redirect_to game_path(@game)
   end
 
 end
