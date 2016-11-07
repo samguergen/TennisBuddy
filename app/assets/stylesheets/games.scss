@@ -133,9 +133,9 @@
 .game-detail-wrapper {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: -5%;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -8%;
   border: 1px solid brown;
   background: beige;
   padding: 10px;
@@ -170,11 +170,13 @@
     }
     .left {
       border: 1px solid brown;
-      .game-info {
+      .info {
         border: 1px solid brown;
+        height: 50%;
       }
       .scores {
         border: 1px solid brown;
+        height: 50%;
       }
     }
     .middle {
@@ -182,10 +184,11 @@
     }
     .right {
       border: 1px solid brown;
-    }
-
-    p {
-      font-size: 16px;
+      .comms {
+        .commenter {
+          font-size: 10px;
+        }
+      }
     }
   }
 }
