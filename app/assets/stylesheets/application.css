@@ -373,6 +373,15 @@ p.labels {
     padding-left: 90px;
 }
 
+.signup-box hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 40%;
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-left: 0px;
+}
+
 .signup-box .first-col {
   float: left;
   width: 50%;
@@ -380,6 +389,10 @@ p.labels {
 
 .signup-box .second-col {
   float: left;
+}
+
+.signup-box .btn-success {
+  margin-left: 38%;
 }
 
 .signup-box form.signup-form {
