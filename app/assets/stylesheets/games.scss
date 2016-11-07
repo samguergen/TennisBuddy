@@ -129,3 +129,63 @@
   margin-top: 400px;
   margin-left: -50px;
 }
+
+.game-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -5%;
+  border: 1px solid brown;
+  background: beige;
+  padding: 10px;
+  .game-detail-head {
+    display: flex;
+    flex-direction: row;
+    .title {
+      border: 1px solid brown;
+      font-size: 22px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align:center;
+    }
+    .player-img, .potential-img {
+      border: 1px solid brown;
+      width: 20%;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .game-detail-body {
+    display: flex;
+    flex-direction: row;
+    .left, .middle, .right {
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .left {
+      border: 1px solid brown;
+      .game-info {
+        border: 1px solid brown;
+      }
+      .scores {
+        border: 1px solid brown;
+      }
+    }
+    .middle {
+      border: 1px solid brown;
+    }
+    .right {
+      border: 1px solid brown;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
