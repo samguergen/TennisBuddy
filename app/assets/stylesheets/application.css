@@ -351,7 +351,7 @@ p.labels {
 }
 
 .signup-box  {
-  height: 650px;
+  /*height: 650px;
   width: 35%;
   border: 2px solid black;
   border-radius: 5px;
@@ -360,7 +360,26 @@ p.labels {
   left: 62%;
   background: #9dcc69;
   padding: 3%;
-  padding-left: 90px;
+  padding-left: 90px;*/
+    height: 450px;
+    width: 65%;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: absolute;
+    top: 11%;
+    left: 30%;
+    background: #9dcc69;
+    padding: 3%;
+    padding-left: 90px;
+}
+
+.signup-box .first-col {
+  float: left;
+  width: 50%;
+}
+
+.signup-box .second-col {
+  float: left;
 }
 
 .signup-box form.signup-form {

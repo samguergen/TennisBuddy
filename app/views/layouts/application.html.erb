@@ -48,13 +48,17 @@
   <form class="signup-form" action="/users" method="post">
     <p style="font-size: 25px">Create an account</p>
     <hr>
-    <p class="labels"><input type="text" name="user[email]" placeholder="email/login"></input></p>
-    <p class="labels"><input type="password" name="user[password]" placeholder="password"></input></p>
-    <p class="labels"><input type="password" name="user[password_confirmation]" placeholder="password confirmation"></input></p>
-    <p class="labels"><input type="text" name="user[first_name]" placeholder="first name"></input></p>
-    <p class="labels"><input type="text" name="user[last_name]" placeholder="last name"></input></p>
-    <p class="labels"><input type="text" name="user[age]" placeholder="age"></input></p>
-    <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
+    <div class="first-col">
+      <p class="labels"><input type="text" name="user[email]" placeholder="email/login"></input></p>
+      <p class="labels"><input type="password" name="user[password]" placeholder="password"></input></p>
+      <p class="labels"><input type="password" name="user[password_confirmation]" placeholder="password confirmation"></input></p>
+      <p class="labels"><input type="text" name="user[first_name]" placeholder="first name"></input></p>
+      <p class="labels"><input type="text" name="user[last_name]" placeholder="last name"></input></p>
+    </div>
+    <div class="second-col">
+      <p class="labels"><input type="text" name="user[age]" placeholder="age"></input></p>
+      <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
+    </div>
 
     <button class="btn-success" ng-click="login()">Sign up</button>
   </form>
