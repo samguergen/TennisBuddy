@@ -130,6 +130,17 @@
   margin-left: -50px;
 }
 
+textarea#comment_body {
+    height: 60px;
+    width: 200px;
+}
+
+
+.game-detail-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .game-detail-wrapper {
   display: flex;
   flex-direction: column;
@@ -150,6 +161,9 @@
       margin-right: auto;
       text-align:center;
     }
+    .player-img {
+      background-image: url('player1.png');
+    }
     .player-img, .potential-img {
       border: 1px solid brown;
       width: 20%;
@@ -159,6 +173,7 @@
     }
   }
   .game-detail-body {
+    margin-top: 5%;
     display: flex;
     flex-direction: row;
     .left, .middle, .right {
@@ -169,26 +184,38 @@
       flex-direction: column;
     }
     .left {
-      border: 1px solid brown;
       .info {
-        border: 1px solid brown;
         height: 50%;
       }
-      .scores {
-        border: 1px solid brown;
+      .score {
         height: 50%;
+        margin-top: 2%;
+        .score-game {
+          padding: 2% 0 2% 15%;
+        }
       }
     }
     .middle {
       border: 1px solid brown;
     }
     .right {
-      border: 1px solid brown;
       .comms {
+        overflow: scroll;
         .commenter {
           font-size: 10px;
+          input#comment_commenter {
+            width: 60%;
+          }
+          input[type="submit"] {
+            width: 30%;
+          }
         }
       }
     }
   }
+}
+
+.edit-back {
+  margin-left: 45%;
+  width: 25%;
 }

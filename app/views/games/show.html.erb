@@ -3,7 +3,10 @@
   <div class="game-detail-wrapper">
     <div class="game-detail-section">
       <div class="game-detail-head">
-        <div class="player-img"></div>
+        <div class="player-img">
+
+          <!-- <img src="../../assets/images/player1.png"/> -->
+        </div>
         <div class="title"><%= @game.title %></div>
         <div class="potential-img"></div>
       </div>
@@ -11,17 +14,21 @@
       <div class="game-detail-body">
         <div class="left">
           <div class="info">
-            <span class="label"> Player: </span><br> <%= @user_game.first_name %>  <%= @user_game.last_name %><br>
-            <span class="label">Description: </span><br> <%= @game.description %><br>
-            <span class="label">Date created: </span><br> <%= @game.created_at.strftime('%m/%d/%Y') %><br>
+            <strong>Details</strong><br>
+            <%= @game.description %><br>
+            by: <%= @user_game.first_name %> <%= @user_game.last_name %><br>
+
+            created on: <%= @game.created_at.strftime('%m/%d/%Y') %><br>
           </div>
           <div class="score">
-            <strong>Scores:</strong><br>
-            First game: N/A<br>
-            Second game: N/A<br>
-            Third game: N/A<br>
-            Total score: <%= @game.score %> <br>
-            Winner : N/A <br>
+            <strong>Scores</strong><br>
+            <div class="score-game">
+              <span class="game-detail-label"> First game:</span> N/A<br>
+              <span class="game-detail-label">Second game:</span> N/A<br>
+              <span class="game-detail-label">Third game:</span> N/A<br>
+            </div>
+            <span class="game-detail-label">Total score:</span> <%= @game.score %> <br>
+            <span class="game-detail-label">Winner: </span> N/A <br>
             <button class="btn-success" class="add-score">Add new score</button>
           </div>
         </div>
@@ -37,7 +44,7 @@
                 <%= comment.body %> <br>
                 <div class="commenter"> by: <%= comment.commenter %>, at: <%= comment.created_at.strftime('%m/%d/%Y') %>
                 <a data-confirm="Are you sure?" data-method="delete" href="/games/<%= @game.id %>/comments/<%=comment.id%>" rel="nofollow">Delete</a> </div>
-                <hr>
+                <!-- <hr> -->
               </p>
             <% end %>
           </div>
@@ -47,12 +54,15 @@
               <div class="field">
                 <%= f.text_area :body %>
               </div>
-              <div class="field">
-                your name : <%= f.text_field :commenter %>
-              </div>
-              <div class="actions">
-                <%= f.submit %>
-              </div>
+              <span class="field">
+                your name : <br>
+                <%= f.text_field :commenter %>
+              </span>
+              <span class="actions">
+                <!--<%= f.submit %>-->
+                <button class="btn-success">Add</button>
+                <!-- <input type="submit" name="commit" value="Add"> </input> -->
+              </span>
             <% end %>
           </div>
         </div>
@@ -60,9 +70,8 @@
   </div>
 
 
-
-  <%= link_to 'Edit', edit_game_path(@game) %> |
-  <%= link_to 'Back', games_path %>
-
-  <!-- </div> -->
+  <div class="edit-back">
+    <%= link_to 'Edit', edit_game_path(@game) %> |
+    <%= link_to 'Back', games_path %>
+  </div>
 </div>
