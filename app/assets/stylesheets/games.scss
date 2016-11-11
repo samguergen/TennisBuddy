@@ -154,12 +154,21 @@ textarea#comment_body {
     display: flex;
     flex-direction: row;
     .title {
-      border: 1px solid brown;
-      font-size: 22px;
+      line-height: 1.4;
+      font-size: 32px;
       width: 40%;
       margin-left: auto;
       margin-right: auto;
       text-align:center;
+    }
+    .location-img {
+      background: url('gmap.jpg');
+      height: 55%;
+      border: 1px solid brown;
+    }
+    .suggested-locs {
+     /* height: 45%;
+      border: 1px solid brown; */
     }
     .player-img {
       background: url('anonymous.jpg');
@@ -170,7 +179,8 @@ textarea#comment_body {
     .player-img, .potential-img {
       background-size: cover;
       width: 20%;
-      height: 100px;
+      border-radius: 100%;
+      height: 150px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -188,12 +198,12 @@ textarea#comment_body {
     }
     .left {
       .info {
-        height: 50%;
+        height: 40%;
       }
       .score {
         height: 50%;
         .score-game {
-          padding: 2% 0 2% 15%;
+          padding: 4% 0 4% 15%;
         }
       }
     }
@@ -205,8 +215,9 @@ textarea#comment_body {
         overflow-y: scroll;
         .commenter {
           font-size: 10px;
+          margin-left: 15%;
           input#comment_commenter {
-            width: 60%;
+            width: 80%;
           }
           input[type="submit"] {
             width: 30%;
@@ -225,4 +236,9 @@ textarea#comment_body {
 .gd-hr {
   border: 1px solid brown;
   width: 55%;
+}
+
+.add-score {
+  margin-top: 4%;
+  margin-left: 35%;
 }
