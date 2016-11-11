@@ -162,10 +162,9 @@ textarea#comment_body {
       text-align:center;
     }
     .player-img {
-      background-image: url('player1.png');
+      background: url('anonymous.jpg');
     }
     .player-img, .potential-img {
-      border: 1px solid brown;
       width: 20%;
       height: 100px;
       margin-left: auto;
@@ -189,7 +188,6 @@ textarea#comment_body {
       }
       .score {
         height: 50%;
-        margin-top: 2%;
         .score-game {
           padding: 2% 0 2% 15%;
         }
