@@ -164,7 +164,11 @@ textarea#comment_body {
     .player-img {
       background: url('anonymous.jpg');
     }
+    .potential-img {
+      background: url('hillary.jpg');
+    }
     .player-img, .potential-img {
+      background-size: cover;
       width: 20%;
       height: 100px;
       margin-left: auto;
