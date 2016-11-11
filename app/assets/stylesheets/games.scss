@@ -200,7 +200,7 @@ textarea#comment_body {
     }
     .right {
       .comms {
-        overflow: scroll;
+        overflow-y: scroll;
         .commenter {
           font-size: 10px;
           input#comment_commenter {
@@ -218,4 +218,9 @@ textarea#comment_body {
 .edit-back {
   margin-left: 45%;
   width: 25%;
+}
+
+.gd-hr {
+  border: 1px solid brown;
+  width: 55%;
 }

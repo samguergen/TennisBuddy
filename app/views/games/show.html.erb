@@ -18,7 +18,8 @@
             <%= @game.description %><br>
             by: <%= @user_game.first_name %> <%= @user_game.last_name %><br>
 
-            created on: <%= @game.created_at.strftime('%m/%d/%Y') %><br>
+            created on: <%= @game.created_at.strftime('%m/%d/%Y') %>
+            <hr class="gd-hr">
           </div>
           <div class="score">
             <strong>Scores</strong><br>
@@ -44,9 +45,9 @@
                 <%= comment.body %> <br>
                 <div class="commenter"> by: <%= comment.commenter %>, at: <%= comment.created_at.strftime('%m/%d/%Y') %>
                 <a data-confirm="Are you sure?" data-method="delete" href="/games/<%= @game.id %>/comments/<%=comment.id%>" rel="nofollow">Delete</a> </div>
-                <!-- <hr> -->
               </p>
             <% end %>
+            <hr class="gd-hr">
           </div>
           <div class="new-comms ">
             <p>Let them know you want to play:</p>
