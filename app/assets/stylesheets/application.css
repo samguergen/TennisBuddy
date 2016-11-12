@@ -73,18 +73,25 @@ img#tenn {
 }
 
 nav.navbar-default {
-  background-color: rgb(215, 214,81) !important;
+  /*background-color: rgb(215, 214,81) !important;*/
+  /*background-color: #608F28;*/
+  background-color: #2A3D12;
+  color: rgb(215, 214,81) !important;
   height: 60px !important;
   border-bottom: 2px solid black;
   width: 100%;
-
+/*
   .navbar-brand {
   img {
     margin-top: -33px;
     width: 35%;
     display: block;
-    }
+    }*/
   }
+
+nav.navbar-default li a:hover{
+  background-color: #608F28;
+}
 
   .navbar-right {
     list-style-type: none;
@@ -95,7 +102,8 @@ nav.navbar-default {
     display: flex;
 
     li a {
-      color: rgb(92, 180, 122) !important;
+      /*color: rgb(92, 180, 122) !important;*/
+      color: #608F28;
       text-shadow: 0px 0px 2px black;
       text-align: center;
       text-decoration: none;
@@ -114,6 +122,7 @@ nav.navbar-default {
 
 a:hover {
   cursor: pointer;
+  background-color: rgb(215, 214,81);
 }
 
 .active {
@@ -278,7 +287,8 @@ button.btn.btn-primary, button.btn.btn-default {
 
 footer {
     height: 40px;
-    background-color: rgb(215, 214,81);
+    /*background-color: rgb(215, 214,81);*/
+    background-color: #2A3D12;
     border-top: 2px solid black;
     color: rgb(92, 180, 122);
     text-shadow: 0px 0px 2px black;
@@ -316,6 +326,10 @@ li.navlinx {
   padding-left: 5px;
   margin-left: 50px;
   padding-top: 7px;
+}
+
+li.navlinx:hover {
+  background-color: rgb(215, 214,81);
 }
 
 .content-container {
