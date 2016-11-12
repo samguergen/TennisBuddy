@@ -286,13 +286,20 @@ button.btn.btn-primary, button.btn.btn-default {
 }
 
 footer {
-    height: 40px;
+    height: 10%;
     /*background-color: rgb(215, 214,81);*/
     background-color: #2A3D12;
     border-top: 2px solid black;
     color: rgb(92, 180, 122);
     text-shadow: 0px 0px 2px black;
     text-align: right;
+    padding-top: 1%;
+    padding-right: 2%;
+    /*margin-top: 1%;*/
+}
+
+footer a {
+  color: black;
 }
 
 .popover {
@@ -325,7 +332,7 @@ li.navlinx {
   font-size: 16px;
   padding-left: 5px;
   margin-left: 50px;
-  padding-top: 7px;
+  padding-top: 4px;
 }
 
 li.navlinx:hover {
@@ -404,6 +411,8 @@ p.labels {
 .signup-box .first-col {
   float: left;
   width: 50%;
+  width: 53%;
+  MARGIN-LEFT: -4%;
 }
 
 .signup-box .second-col {
