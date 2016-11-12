@@ -199,11 +199,12 @@ textarea#comment_body {
     .left {
       .info {
         height: 40%;
+        padding-right: 3%;
       }
       .score {
         height: 50%;
         .score-game {
-          padding: 4% 0 4% 15%;
+          padding: 4% 0 8% 15%;
         }
       }
     }
@@ -211,6 +212,7 @@ textarea#comment_body {
       border: 1px solid brown;
     }
     .right {
+    padding-left: 3%;
       .comms {
         overflow-y: scroll;
         .commenter {
