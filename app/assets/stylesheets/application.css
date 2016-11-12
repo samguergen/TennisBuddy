@@ -111,6 +111,11 @@ nav.navbar-default {
   }
 }
 
+
+a:hover {
+  cursor: pointer;
+}
+
 .active {
   background-color:#4CAF50;
 }

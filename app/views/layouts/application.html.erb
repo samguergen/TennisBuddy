@@ -14,15 +14,15 @@
   <div class="container-fluid">
     <div class="navbar-header">
 
-        <a class="navbar-brand" ui-sref="home">
+        <a class="navbar-brand" ng-click="reloadRoute('/')">
           <%= image_tag("logo.png") %>
         </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul class="nav navbar-nav navbar-right">
-        <li class="navlinx"><a href="#" ng-click="reloadRoute('games/new')">Start a game</a></li>
-        <li class="navlinx"><a href="#" ng-click="reloadRoute('games')">Find a game</a></li>
+        <li class="navlinx"><a href="#" ng-click="reloadRoute('/games/new')">Start a game</a></li>
+        <li class="navlinx"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></li>
         <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false; ; showProfile = false" href="#">Login</a></li>
         <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
         <li class="navlinx"><a ng-click="showProfile = !showProfile; showLogin = false; showSignup = false" href="#">My profile</a></li>
