@@ -38,7 +38,7 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  margin-top: -200px;
+  margin-top: -100px;
 }
 
 .section-wrapper .section {
@@ -50,14 +50,17 @@
   width: 300px;
   margin: 10px;
   background-image: url(tennis-3.gif);
+  background-image: url(tennisracquet.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: -50px;
 }
 
 .section-wrapper .section .start-game{
   order: 1;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -50px;
 }
 
 .section-wrapper .section .find-game{

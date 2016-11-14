@@ -21,6 +21,10 @@
     border-radius: 4px;
 }
 
+a:visited {
+  color: #000 !important;
+}
+
 html {
   font-size: 14px;
   min-height:100%;
@@ -338,6 +342,14 @@ li.navlinx {
 li.navlinx:hover {
   background-color: rgb(215, 214,81);
 }
+
+li.navlinx a:link {
+  color: white;
+ }
+
+ li.navlinx a:visited {
+  color: white !important;
+ }
 
 .content-container {
   padding-top: 140px;
