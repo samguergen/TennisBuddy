@@ -38,11 +38,11 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  margin-top: -100px;
+  margin-top: -160px;
 }
 
 .section-wrapper .section {
-  height: 180px;
+  height: 202px;
   border-radius: 3%;
   padding: 30px;
   text-align: center;
@@ -63,10 +63,11 @@
   margin-bottom: -50px;
 }
 
-.section-wrapper .section .find-game{
+.section-wrapper .find-game{
   order:2;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px !important;
 }
 
 .return-home {
