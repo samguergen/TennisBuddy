@@ -71,6 +71,6 @@
 
   <div class="edit-back">
     <%= link_to 'Edit', edit_game_path(@game) %> |
-    <%= link_to 'Back', games_path %>
+    <a href="#" ng-click="reloadRoute('/games')">Back</a>
   </div>
 </div>

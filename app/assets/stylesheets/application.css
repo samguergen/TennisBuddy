@@ -77,21 +77,16 @@ img#tenn {
 }
 
 nav.navbar-default {
-  /*background-color: rgb(215, 214,81) !important;*/
-  /*background-color: #608F28;*/
   background-color: #2A3D12;
   color: rgb(215, 214,81) !important;
   height: 60px !important;
   border-bottom: 2px solid black;
   width: 100%;
-/*
-  .navbar-brand {
-  img {
-    margin-top: -33px;
-    width: 35%;
-    display: block;
-    }*/
-  }
+}
+
+.navbar-brand img {
+  margin-top: -95px !important;
+}
 
 nav.navbar-default li a:hover{
   background-color: #608F28;

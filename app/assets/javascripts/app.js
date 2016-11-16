@@ -15,4 +15,10 @@ angular
          $window.location.href = endpoint;
       }
 
+      // $scope.init = function(){
+      //   console.log('reload once');
+      //   $window.location.reload();
+      // }
+      // $scope.init();
+
     }]);
