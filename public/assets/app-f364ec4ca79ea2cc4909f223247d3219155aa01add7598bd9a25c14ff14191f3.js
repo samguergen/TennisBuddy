@@ -1,0 +1,1 @@
+angular.module("myApp",[]).controller("MainCtrl",["$scope","$location","$window",function(o,n,l){console.log("init main ng controller"),o.showLogin=!1,o.showSignup=!1,o.showProfile=!1,o.lookingToPlay=!1,o.openGameForm=!0,o.reloadRoute=function(o){console.log("inside reloadroute"),l.location.reload(),l.location.href=o}}]);
