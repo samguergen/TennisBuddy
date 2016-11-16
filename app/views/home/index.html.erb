@@ -3,14 +3,12 @@
 
   <div class="welcome-intro">
     <% if params[:sess] %>
-    <%= session[:user_id]  %> well
+      <%= session[:user_id]  %> well
     <% else %>
-    Welcome to Tennis Buddy!
+      <div class="bubble">Welcome!</div>
     <% end %>
   </div>
 
-
- sesh: <%= params[:sess] %>
 
 
   <div class="section-wrapper" ng-hide="openLocationReq == true">

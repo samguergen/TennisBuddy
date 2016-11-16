@@ -294,14 +294,12 @@ footer {
     height: 10%;
     background-color: #2A3D12;
     border-top: 2px solid black;
-    color: rgb(92, 180, 122);
-    color: white;
+    color: #aba104 !important;
     font-weight: bold;
     text-shadow: 0px 0px 2px black;
     text-align: right;
     padding-top: 1%;
     padding-right: 2%;
-    /*margin-top: 1%;*/
 }
 
 footer a {
@@ -346,12 +344,12 @@ li.navlinx:hover {
 }
 
 li.navlinx a:link {
-  color: white !important;
+  color: #aba104 !important;
   font-weight: bold;
  }
 
  li.navlinx a:visited {
-  color: white !important;
+  color: #aba104 !important;
   font-weight: bold;
  }
 
