@@ -99,9 +99,9 @@ nav.navbar-default li a:hover{
     margin: auto;
     order: 2;
     display: flex;
+    margin-top: -67px !important;
 
     li a {
-      /*color: rgb(92, 180, 122) !important;*/
       color: #608F28;
       text-shadow: 0px 0px 2px black;
       text-align: center;
@@ -625,4 +625,23 @@ p.labels {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .navbar-right .navlinx {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .navbar-right .navlinx {
+    margin-left: 30px;
+  }
+
+  .navbar-right .navlinx:first-child, .navbar-right .navlinx:nth-child(2) {
+    display: none;
+  }
+
 }

@@ -8,9 +8,9 @@
   <link href="../../../app/assets/stylesheets/bootstrap.css">
 </head>
 <body class="page-body" ng-app="myApp" ng-controller="MainCtrl">
-  <main class="body-inner-wrap">
+  <main class="body-inner-wrap" >
 
-  <nav class="navbar navbar-default navwrap navbar-fixed-top">
+  <nav class="navbar navbar-default navwrap navbar-fixed-top" ng-init="showProfile = false; showLogin = false; showSignup = false;">
   <div class="container-fluid">
     <div class="navbar-header">
 
@@ -23,8 +23,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games/new')">Start a game</a></li>
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></li>
-        <li class="navlinx"><a ng-click="showLogin = !showLogin; showSignup = false; ; showProfile = false" href="#">Login</a></li>
-        <li class="navlinx"><a ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
+        <li class="navlinx"><a style="margin-top: 15px !important;" ng-click="showLogin = !showLogin; showSignup = false; ; showProfile = false" href="#">Login</a></li>
+        <li class="navlinx"><a style="margin-top: 15px !important;" ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
         <li class="navlinx"><a ng-click="showProfile = !showProfile; showLogin = false; showSignup = false" href="#">My profile</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
