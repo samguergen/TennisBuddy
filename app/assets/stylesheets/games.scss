@@ -53,7 +53,7 @@
   margin-right: auto;
   margin-left: auto;
   align-items: center;
-  background: image-url('fitnessandtennis.jpg');
+  background: image-url('fitnessandtennis');
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -163,7 +163,7 @@ textarea#comment_body {
       text-align:center;
     }
     .location-img {
-      background: image-url('gmap.jpg');
+      background: image-url('gmap');
       height: 55%;
       border: 1px solid brown;
     }
@@ -172,10 +172,10 @@ textarea#comment_body {
       border: 1px solid brown; */
     }
     .player-img {
-      background: image-url('anonymous.jpg');
+      background: image-url('anonymous');
     }
     .potential-img {
-      background: image-url('hillary.jpg');
+      background: image-url('hillary');
     }
     .player-img, .potential-img {
       background-size: cover;

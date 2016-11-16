@@ -37,7 +37,7 @@ html {
 
 html, body {
     margin: 0;
-    background: image-url('../images/tennis-ball.jpg');
+    background: image-url('../images/tennis-ball');
     background-size: 100% 100%;
     height:100%;
 }
@@ -60,15 +60,15 @@ html, body {
 }
 
 .user-name {
-  background: image-url('../../images/tennis-ball.jpg');
+  background: image-url('../../images/tennis-ball');
 }
 
 img#tenn {
-  background: image-url('../../images/tennis-ball.jpg');
+  background: image-url('../../images/tennis-ball');
 }
 
 .wrapper {
-  background: image-url('tennis-ball.jpg') no-repeat center center fixed;
+  background: image-url('tennis-ball') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -356,7 +356,7 @@ li.navlinx a:link {
 .content-container {
   padding-top: 140px;
   padding-left: 50px;
-  background-image: image-url(tennis-ball.jpg);
+  background-image: image-url(tennis-ball);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 100%;
