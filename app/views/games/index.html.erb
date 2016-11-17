@@ -5,24 +5,26 @@
 <div class="table-map">
 
 <div class="table-responsive col-xs-12 col-sm-6 col-md-8">
-<table class="table">
+  <table class="table">
 
-  <tbody>
-    <% @games.each do |game| %>
-      <tr>
-        <td><div class="game-title" ng-click="reloadRoute('/games/<%=game.id %>')"><%=  game.title %> </div><br>
-          <div class="game-description"><%= game.description %></div>
-        </td>
-          <td>by: </td>
+    <tbody>
+      <% @games.each do |game| %>
+        <tr>
+          <td><div class="game-title" ng-click="reloadRoute('/games/<%=game.id %>')"><%=  game.title %> </div><br>
+            <div class="game-description"><%= game.description %></div>
+          </td>
+            <td>by: </td>
 
-        <td class="game-edit-delete"><%= link_to 'Edit', edit_game_path(game) %> | <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table></div>
+          <td class="game-edit-delete"><%= link_to 'Edit', edit_game_path(game) %> | <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table></div>
+
+  <div id="map"></div>
 </div> <!-- table-map -->
 
-<div id="map"></div>
+
 
 <br>
 

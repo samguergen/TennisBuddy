@@ -30,13 +30,13 @@
 
 .table-game {
   display: flex;
-  .table-responsive, .map {
+  .table-responsive, #map {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
     padding: 5px;
   }
-  .map {
+  #map {
     height: 50%;
   }
 }
@@ -244,6 +244,12 @@ textarea#comment_body {
     }
     .middle {
       border: 1px solid brown;
+      .location-img {
+        #showmap {
+          height: 100px;
+          width: 100px;
+        }
+      }
     }
     .right {
     padding-left: 3%;

@@ -32,7 +32,9 @@
           </div>
         </div>
         <div class="middle">
-          <div class="location-img"></div>
+          <div class="location-img">
+            <div id="showmap"></div>
+          </div>
           <div class="suggested-locs"></div>
         </div>
         <div class="right">
@@ -74,3 +76,18 @@
     <a href="#" ng-click="reloadRoute('/games')">Back</a>
   </div>
 </div>
+
+
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('showmap'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
