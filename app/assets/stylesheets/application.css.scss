@@ -624,14 +624,34 @@ p.labels {
 }
 
 
-@media screen and (max-width: 1050px) {
-  .navlinx {
-    margin-left: 0px;
+@media screen and (min-width: 1160px) {
+  .navbar-right {
+      margin-top: -17px !important;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1050px) {
+  li.navlinx {
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-left: 5px;
+    padding-top: 4px;
+    white-space: nowrap;
+  }
+}
 
+@media screen and (max-width: 935px) {
+  .navbar-right {
+    margin-top: -117px !important;
+  }
+}
+
+@media screen and (max-width: 910px) {
+
+  .navbar-right {
+    margin-top: -117px !important;
+  }
   .navbar-right .navlinx {
     margin-left: 0px;
   }
