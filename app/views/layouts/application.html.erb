@@ -4,10 +4,9 @@
   <title>Tennis Buddy</title>
   <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "app" %>
   <%= csrf_meta_tags %>
   <link href="../../../app/assets/stylesheets/bootstrap.css">
-  <link href="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js" rel="stylesheet">
+  <!-- <link href="https://opensource.keycdn.com/angularjs/1.5.8/angular.min.js" rel="stylesheet"> -->
 </head>
 <body class="page-body" ng-app="myApp" ng-controller="MainCtrl">
   <main class="body-inner-wrap" >
@@ -115,7 +114,8 @@
 <%= yield %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script src="../../javascripts/app.js"></script>
+<script src="../../../app/assets/javascripts/app.js"></script>
+<!-- <script src="../../assets/javascripts/app.js"></script> -->
 
 
 <footer ng-class="{ 'lower-footer': lower}">
