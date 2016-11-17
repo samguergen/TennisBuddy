@@ -3,6 +3,7 @@ angular
     .controller('MainCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
 
       console.log('init main ng controller');
+      console.log('angular installed? ', angular);
 
       $scope.showLogin = false;
       $scope.showSignup = false;
