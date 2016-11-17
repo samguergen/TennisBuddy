@@ -94,14 +94,14 @@
 
 .bubble {
   position: relative;
-  width: 415px;
-  height: 300px;
+  width: 555px;
   padding: 0px;
   background: #FFFFFF;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   border: 3px solid black;
+  top: 40px;
 }
 
 .bubble:after {
@@ -138,4 +138,10 @@
   font-weight: bold;
   font-family: Comic Sans;
   line-height: 1.5;
+  ul {
+    list-style-type: decimal;
+    li {
+      padding: 1%;
+    }
+  }
 }
