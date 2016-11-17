@@ -3,24 +3,26 @@
 
   <div class="welcome-intro">
     <% if params[:sess] %>
-
       <%= session[:user_id]  %>
     <% else %>
-      <div class="bub">Welcome!</div>
     <% end %>
   </div>
 
-
-
   <div class="section-wrapper" ng-hide="openLocationReq == true">
-
-<!--     <div class="section start-game"><a href="#" ng-click="reloadRoute('/games/new')">Start a game</a></div>
-
-    <div class="section find-game"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></div> -->
-
-    <div class="bubble"></div>
-
+    <div class="bubble">
+      <div class="bubble-content">
+        <p>Here is how to play:</p>
+        <p>
+          1) Click on "Find a Game" to view the list of proposed games in your area.</br>
+          2) Select the most inviting game and view details.</br>
+          3) Select your top 3 from the list of available tennis courts in the area in game detail section.</br>
+          4) Select a preferred time window.</br>
+          5) Send an email/comment on the game's wall to inform the host. This will include your selected preferences.</br>
+          6) Wait for host's approval. Time and location will be sent via email to both parties based on matching preferences.</br>s
+          7) Once the game has ended, each player should record the scores on the game's wall.
+        </p>
+      </div>
+    </div>
   </div>
-
 
 </div>
