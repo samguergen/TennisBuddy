@@ -15,8 +15,13 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     puts 'now the game is'
     puts @game
-    puts @game.title
-    puts @game.description
+    puts 'coords are '
+    puts @game.coordinates
+    @coords = @game.coordinates.split(',')
+    puts 'each coord is '
+    puts @coords[0]
+    puts @coords[1]
+
     @user_game = User.find(@game.user_id)
     puts 'the user obj in relation is '
     puts @user_game

@@ -20,11 +20,10 @@ angular
       }
 
       $scope.initialize = function(coor) {
-        var coords = [40.78694, -73.97528];
-        console.log('inside initMap in show page');
-        console.log(coords);
-        console.log('real coords are ', coor);
-        var uluru = {lat: coords[0], lng: coords[1]};
+        console.log('inside initialize in show page');
+        console.log('real coords are ');
+        console.log(coor);
+        var uluru = {lat: coor, lng: coor};
         // var uluru = {lat: -25.363, lng: 131.044};
         var map = new google.maps.Map(document.getElementById('showmap'), {
           // zoom: 4,

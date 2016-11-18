@@ -36,7 +36,8 @@
             <div id="showmap"></div>
           </div>
           <div class="suggested-locs">Coords are: <%= @game.coordinates %><br>
-            <div ng-click="initialize(<%= @game.coordinates %>)">Display map</div>
+            <%= @coords %>
+            <div ng-click="initialize(<%= @coords %>)">Display map</div>
           </div>
         </div>
         <div class="right">
