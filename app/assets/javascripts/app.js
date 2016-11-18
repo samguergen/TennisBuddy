@@ -21,12 +21,9 @@ angular
 
       $scope.initialize = function(coor) {
         console.log('inside initialize in show page');
-        console.log('real coords are ');
-        console.log(coor);
-        var uluru = {lat: coor, lng: coor};
-        // var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: parseFloat(coor[0]), lng: parseFloat(coor[1])};
+        console.log(uluru);
         var map = new google.maps.Map(document.getElementById('showmap'), {
-          // zoom: 4,
           zoom: 14,
           center: uluru
         });
