@@ -13,11 +13,12 @@
       </div>
 
       <div class="gamereq-inputs">
-        <input class="" name="game[location]"/>{{game.location}}<br>
-        <input class="" name="game[player_1]"/><br>
-        <input class="" placeholder="awaiting" /><br>
-        <input type="text" class="" class="gamereq-input" name="game[title]" ng-model="game.title"><br>
-        <input type="text" class="gamereq-input-descr" class="gamereq-input" name="game[description]" ng-model="game.description"><br>
+        <input name="game[location]"/>{{game.location}}<br>
+        <input name="game[player_1]"/><br>
+        <input  placeholder="awaiting" /><br>
+        <input type="text" class="gamereq-input" name="game[title]" ng-model="game.title"><br>
+        <input type="text" class="gamereq-input gamereq-input-descr" name="game[description]" ng-model="game.description"><br>
+        <input type="text" class="gamereq-input" name="game[description]" ng-model="game.description"><br>
 
         <input class="btn btn-success submit-gamereq" type="submit" value="Create Game Request"><br>
       </div>
