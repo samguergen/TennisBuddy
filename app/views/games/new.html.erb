@@ -19,12 +19,15 @@
         <input  placeholder="awaiting" /><br>
         <input type="text" class="gamereq-input" name="game[title]" ng-model="game.title"><br>
         <input type="text" class="gamereq-input gamereq-input-descr" name="game[description]" ng-model="game.description"><br>
-        <input type="text" class="gamereq-input" name="game[coordinates]" ng-model="game.description">
-        <button class="btn-success" ng-click="convertToCoord()">convert to coordinates</button>
+        <!-- <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.coordinates">
+        <button class="btn-success" ng-click="get_coords(game.coordinates)">convert to coordinates</button> -->
 
         <input class="btn btn-success submit-gamereq" type="submit" value="Create Game Request"><br>
       </div>
     </form>
+
+    
+    <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.coordinates"> <button class="btn-success" ng-click="get_coords(game.coordinates)">convert to coordinates</button>
 
     <div class="previous-btn">
       <%= link_to 'Back', games_path %>

@@ -10,6 +10,7 @@ angular
       $scope.showProfile = false;
       $scope.lookingToPlay = false;
       $scope.openGameForm = true;
+      // $scope.game.coordinates = false;
 
       console.log('vars are ', $scope.showLogin, $scope.showProfile, $scope.showProfile);
 
@@ -32,5 +33,28 @@ angular
           map: map
         });
       }
+
+      $scope.get_coords = function(address) {
+        console.log('inside get_coords func');
+        console.log('address is ', address);
+        var gc      = new google.maps.Geocoder(),
+            opts    = { 'address' : address };
+
+        gc.geocode(opts, function (results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {   
+                var loc     = results[0].geometry.location,
+                    lat     = loc.$a,
+                    long    = loc.ab;
+
+                // Success.  Do stuff here.
+                console.log('lat/longs are ', loc, lat);
+                console.log('success');
+            }
+            else {
+                // Ruh roh.  Output error stuff here
+                console.log('error');
+            }
+        });
+    }
 
     }]);
