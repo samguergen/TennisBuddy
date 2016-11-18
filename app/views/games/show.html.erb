@@ -33,10 +33,9 @@
         </div>
         <div class="middle">
           <div class="location-img">
-            <div id="showmap"></div>
+            <div id="showmap"><div class="display-map" ng-click="initialize(<%= @coords %>); hideNow = true" ng-hide="hideNow == true">Display map</div></div>
           </div>
-          <div class="suggested-locs">Coords are: <%= @coords %><br>
-            <div ng-click="initialize(<%= @coords %>)">Display map</div>
+          <div class="suggested-locs">coordinates: <%= @game.coordinates %><br>
           </div>
         </div>
         <div class="right">

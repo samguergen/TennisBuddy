@@ -24,7 +24,7 @@ angular
         var uluru = {lat: parseFloat(coor[0]), lng: parseFloat(coor[1])};
         console.log(uluru);
         var map = new google.maps.Map(document.getElementById('showmap'), {
-          zoom: 14,
+          zoom: 10,
           center: uluru
         });
         var marker = new google.maps.Marker({

@@ -196,10 +196,6 @@ textarea#comment_body {
       height: 55%;
       border: 1px solid brown;
     }
-    .suggested-locs {
-     /* height: 45%;
-      border: 1px solid brown; */
-    }
     .player-img {
       background: image-url('anonymous');
     }
@@ -249,6 +245,10 @@ textarea#comment_body {
           width: 300px;
         }
       }
+      .suggested-locs {
+        text-align:center;
+        font-style: italic;
+      }
     }
     .right {
     padding-left: 3%;
@@ -282,4 +282,11 @@ textarea#comment_body {
 .add-score {
   margin-top: 4%;
   margin-left: 35%;
+}
+
+.display-map {
+ text-align:center; 
+ font-weight: bold;
+ font-size: 14px;
+ cursor: pointer;
 }
