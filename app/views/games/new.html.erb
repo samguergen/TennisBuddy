@@ -10,6 +10,7 @@
         <div class="gamereq-label">Player 2: </div><br>
         <div class="gamereq-label">Game title:</div><br>
         <div class="gamereq-label">Description:</div><br>
+        <div class="gamereq-label">Desired Area:</div><br>
       </div>
 
       <div class="gamereq-inputs">
@@ -18,7 +19,8 @@
         <input  placeholder="awaiting" /><br>
         <input type="text" class="gamereq-input" name="game[title]" ng-model="game.title"><br>
         <input type="text" class="gamereq-input gamereq-input-descr" name="game[description]" ng-model="game.description"><br>
-        <input type="text" class="gamereq-input" name="game[description]" ng-model="game.description"><br>
+        <input type="text" class="gamereq-input" name="game[coordinates]" ng-model="game.description">
+        <button class="btn-success" ng-click="convertToCoord()">convert to coordinates</button>
 
         <input class="btn btn-success submit-gamereq" type="submit" value="Create Game Request"><br>
       </div>
