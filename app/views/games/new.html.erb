@@ -11,14 +11,7 @@
         <div class="gamereq-label">Game title:</div><br>
         <div class="gamereq-label">Description:</div><br>
       </div>
-
-  <!--   <div style="width: 300px">
-    <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.coordinates"> 
-    <input type="text" class="town-country gamereq-input" ng-model="game.townCountry"> 
-    <button class="btn-success" ng-click="getLatLng(game.coordinates, game.townCountry)">convert to coordinates</button>
-  </div> -->
-
-      <!-- <div class="gamereq-inputs" ng-submit="getLatLng(game.coordinates, game.townCountry)"> -->
+      
       <form name="someform" ng-submit="someform.$valid && createGame(someform)" novalidate>
       <div class="gamereq-inputs">
         <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.address" placeholder="street address"> 

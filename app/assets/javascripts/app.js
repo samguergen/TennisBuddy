@@ -10,10 +10,7 @@ angular
       $scope.showProfile = false;
       $scope.lookingToPlay = false;
       $scope.openGameForm = true;
-      // $scope.game = {};
       $scope.game = {title: "", description: "", player_1: "", address: "", townCountry: "", coordinates: ""};
-
-      // console.log('vars are ', $scope.showLogin, $scope.showProfile, $scope.showProfile);
 
       $scope.reloadRoute = function(endpoint) {
          $window.location.reload();
@@ -35,10 +32,11 @@ angular
 
 
     $scope.createGame = function(userInput) {
-      console.log('userInput is ', userInput);
-      alert('userInput is ', userInput);
-      console.log('game from ngModel is ', $scope.game);
-      console.log('description is ', $scope.game.description);
+      console.log('userInput and ngmodel are ', userInput, $scope.game);
+      $scope.getLatLng(userInput.address, userInput.townCountry);
+      var gamePostObj = {title: userInput.title, description: userInput.description, player_1: userInput.player_1, coordinates: $scope.latLng.toString()};
+      console.log('game post obj is ', gamePostObj);
+      // $scope.createGameReq(gamePostObj);
     }
 
     // $scope.getCoords = function(address, townCountry){
@@ -66,21 +64,28 @@ angular
         $scope.lat = latitude;
         $scope.lng = longitude;
         console.log('latitude is ', latitude, 'lng is ', longitude);
+        $scope.latLng = latitude + ", " + longitude;
+        console.log('scope lat lng is ', $scope.latLng);
         } 
       });
+      // console.log('scope lat lng is ', $scope.latLng);
+    }
+
+    $scope.createGameReq = function(newGame){
+      console.log('inside sendGameReq');
+      console.log(newGame);
       $http({
-            method: 'POST',
-            url: 'http://localhost:3000/game',
-            data: game,
-            // data: {'game': {'name': 'John Smith', 'message': 'Hello'}},
-            headers: {'Content-Type': 'application/json'}
-        }).then(function mySucces(response) {
+        method: 'POST',
+        url: 'http://localhost:3000/games',
+        data: newGame,
+        // data: {'game': {'name': 'John Smith', 'message': 'Hello'}},
+        headers: {'Content-Type': 'application/json'}
+      }).then(function mySucces(response) {
         $scope.myResponse = response.data;
         console.log('response is ', response.data);
-        }, function myError(response) {
-            $scope.myWelcome = response.statusText;
-        });
-
+      }, function myError(response) {
+        $scope.theError = response.statusText;
+      });
     }
 
     }]);
