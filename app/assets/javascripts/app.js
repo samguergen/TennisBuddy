@@ -1,6 +1,6 @@
 angular
     .module('myApp', [])
-    .controller('MainCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
+    .controller('MainCtrl', ['$scope', '$location', '$window', '$http', function($scope, $location, $window, $http){
 
       console.log('init main ng controller');
       console.log('angular installed? ', angular);
@@ -55,6 +55,19 @@ angular
                 console.log('error');
             }
         });
+    }
+
+    $scope.getCoords = function(address, townCountry){
+      // console.log('address is ', address);
+      var slugAddress = address.replace(/ |,/g , '+');
+      var slugTownCountry = townCountry.replace(/ |,/g , '+');
+      var allSlug = slugAddress + ',' + slugTownCountry;
+      console.log('allSlug is ', allSlug);
+      var apiEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + allSlug + '&key=YOUR_API_KEY'
+      console.log('api endpoint is ', apiEndpoint);
+
+      $http.post('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY')
+
     }
 
     }]);
