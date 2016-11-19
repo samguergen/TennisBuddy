@@ -58,15 +58,13 @@ angular
     }
 
     $scope.getCoords = function(address, townCountry){
-      // console.log('address is ', address);
       var slugAddress = address.replace(/ |,/g , '+');
       var slugTownCountry = townCountry.replace(/ |,/g , '+');
       var allSlug = slugAddress + ',' + slugTownCountry;
-      console.log('allSlug is ', allSlug);
-      var apiEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + allSlug + '&key=YOUR_API_KEY'
+      var apiEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + allSlug + '&key=AIzaSyC5TZNWeG6UJI4Gw8fTsaaHkd3rV7Qy5p8'
       console.log('api endpoint is ', apiEndpoint);
 
-      $http.post('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY')
+      $http.post(apiEndpoint)
 
     }
 
