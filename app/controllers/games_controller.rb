@@ -21,9 +21,13 @@ class GamesController < ApplicationController
     puts @coords[0]
     puts @coords[1]
 
-    @user_game = User.find(@game.user_id)
-    puts 'the user obj in relation is '
-    puts @user_game
+    if @game.user_id != nil
+      @user_game = User.find(@game.user_id)
+      puts 'the user obj in relation is '
+      puts @user_game
+    else
+      puts "No user_id found"
+    end
   end
 
   # GET /games/new

@@ -14,9 +14,12 @@
           <div class="info">
             <strong>Details</strong><br>
             <%= @game.description %><br>
-            by: <%= @user_game.first_name %> <%= @user_game.last_name %><br>
-
-            created on: <%= @game.created_at.strftime('%m/%d/%Y') %>
+            <% if @game.user_id != nil %>
+              by: <%= @user_game.first_name %> <%= @user_game.last_name %><br>
+              created on: <%= @game.created_at.strftime('%m/%d/%Y') %>
+            <% else %>
+              by: anonymous
+            <% end %>
             <hr class="gd-hr">
           </div>
           <div class="score">
