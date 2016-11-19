@@ -32,8 +32,6 @@ angular
 
 
     $scope.createGame = function(userInput) {
-      // console.log('userInput and ngmodel are ', userInput, $scope.game);
-      // $scope.getLatLng(userInput.address, userInput.townCountry);
       $scope.getLatLng(userInput);
     }
 
@@ -49,42 +47,14 @@ angular
       if (status == google.maps.GeocoderStatus.OK) {
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
-        $scope.lat = latitude;
-        $scope.lng = longitude;
-        console.log('latitude is ', latitude, 'lng is ', longitude);
         $scope.latLng = latitude + ", " + longitude;
-        console.log('scope.latLng is ', $scope.latLng);
-        // var gamePostObj = {title: $scope.game.title, description: $scope.game.description, player_1: $scope.game.player_1, coordinates: $scope.latLng.toString()};
+        // console.log('scope.latLng is ', $scope.latLng);
         var gamePostObj = {title: userInput.title, description: userInput.description, player_1: userInput.player_1, coordinates: $scope.latLng.toString()};
         console.log('game post obj is ', gamePostObj);
+        $scope.createGameReq(gamePostObj);
         } 
       }); 
     }
-
-
-    // $scope.getLatLng = function(address, townCountry) {
-    //   var slugAddress = address.replace(/ |,/g , '+');
-    //   var slugTownCountry = townCountry.replace(/ |,/g , '+');
-    //   var allSlug = slugAddress + ',' + slugTownCountry;
-    //   var geocoder = new google.maps.Geocoder();
-
-    //   geocoder.geocode( { 'address': allSlug}, function(results, status) {
-
-    //   if (status == google.maps.GeocoderStatus.OK) {
-    //     var latitude = results[0].geometry.location.lat();
-    //     var longitude = results[0].geometry.location.lng();
-    //     $scope.lat = latitude;
-    //     $scope.lng = longitude;
-    //     console.log('latitude is ', latitude, 'lng is ', longitude);
-    //     $scope.latLng = latitude + ", " + longitude;
-    //     console.log('scope lat lng is ', $scope.latLng);
-    //     } 
-    //   });
-    //   // return $scope.latLng;
-    //   // console.log('scope lat lng is ', $scope.latLng);
-    //   var gamePostObj = {title: $scope.game.title, description: $scope.game.description, player_1: $scope.game.player_1, coordinates: $scope.latLng.toString()};
-    //   console.log('game post obj is ', gamePostObj);
-    // }
 
     $scope.createGameReq = function(newGame){
       console.log('inside sendGameReq');
