@@ -48,7 +48,6 @@ angular
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
         $scope.latLng = latitude + ", " + longitude;
-        // console.log('scope.latLng is ', $scope.latLng);
         var gamePostObj = {title: userInput.title, description: userInput.description, player_1: userInput.player_1, coordinates: $scope.latLng.toString()};
         console.log('game post obj is ', gamePostObj);
         $scope.createGameReq(gamePostObj);
@@ -56,13 +55,13 @@ angular
       }); 
     }
 
-    $scope.createGameReq = function(newGame){
+    $scope.createGameReq = function(gamePostObj){
       console.log('inside sendGameReq');
-      console.log(newGame);
+      console.log(gamePostObj);
       $http({
         method: 'POST',
         url: 'http://localhost:3000/games',
-        data: newGame,
+        data: gamePostObj,
         // data: {'game': {'name': 'John Smith', 'message': 'Hello'}},
         headers: {'Content-Type': 'application/json'}
       }).then(function mySucces(response) {
