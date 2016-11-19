@@ -50,6 +50,7 @@ angular
         $scope.latLng = latitude + ", " + longitude;
         var gamePostObj = {title: userInput.title, description: userInput.description, player_1: userInput.player_1, coordinates: $scope.latLng.toString()};
         console.log('game post obj is ', gamePostObj);
+        console.log('coor datatype is ', typeof(gamePostObj.coordinates), Array.isArray(gamePostObj.coordinates));
         $scope.createGameReq(gamePostObj);
         } 
       }); 
