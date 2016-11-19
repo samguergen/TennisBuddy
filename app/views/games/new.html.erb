@@ -32,6 +32,9 @@
     <button class="btn-success" ng-click="getLatLng(game.coordinates, game.townCountry)">convert to coordinates</button>
   </div>
 
+  <div ng-click="displayLatLng = true">Click to display lat/lng</div>
+  <h1 ng-show="displayLatLng == true">lat is {{lat}} , long is {{lng}}</h1>
+
     <div class="previous-btn">
       <%= link_to 'Back', games_path %>
     </div>

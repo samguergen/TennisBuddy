@@ -2,7 +2,6 @@ angular
     .module('myApp', [])
     .controller('MainCtrl', ['$scope', '$location', '$window', '$http', function($scope, $location, $window, $http){
 
-      console.log('init main ng controller');
       console.log('angular installed? ', angular);
 
       $scope.showLogin = false;
@@ -10,18 +9,17 @@ angular
       $scope.showProfile = false;
       $scope.lookingToPlay = false;
       $scope.openGameForm = true;
-      // $scope.game.coordinates = false;
+      // $scope.lat = 0;
+      // $scope.lng = 0;
 
       console.log('vars are ', $scope.showLogin, $scope.showProfile, $scope.showProfile);
 
       $scope.reloadRoute = function(endpoint) {
-        console.log("inside reloadroute");
          $window.location.reload();
          $window.location.href = endpoint;
       }
 
       $scope.initialize = function(coor) {
-        console.log('inside initialize in show page');
         var uluru = {lat: parseFloat(coor[0]), lng: parseFloat(coor[1])};
         console.log(uluru);
         var map = new google.maps.Map(document.getElementById('showmap'), {
@@ -64,7 +62,7 @@ angular
       var apiEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + allSlug + '&key=AIzaSyC5TZNWeG6UJI4Gw8fTsaaHkd3rV7Qy5p8'
       console.log('api endpoint is ', apiEndpoint);
 
-      $http.post(apiEndpoint)
+      // $http.post(apiEndpoint)
 
     }
 
@@ -79,11 +77,9 @@ angular
       if (status == google.maps.GeocoderStatus.OK) {
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
+        $scope.lat = latitude;
+        $scope.lng = longitude;
         console.log('latitude is ', latitude, 'lng is ', longitude);
-
-
-        // initialize(latitude,longitude);
-
         } 
       }); 
     }
