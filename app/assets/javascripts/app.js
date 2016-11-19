@@ -68,4 +68,24 @@ angular
 
     }
 
+    $scope.getLatLng = function(address, townCountry) {
+      var slugAddress = address.replace(/ |,/g , '+');
+      var slugTownCountry = townCountry.replace(/ |,/g , '+');
+      var allSlug = slugAddress + ',' + slugTownCountry;
+      var geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode( { 'address': allSlug}, function(results, status) {
+
+      if (status == google.maps.GeocoderStatus.OK) {
+        var latitude = results[0].geometry.location.lat();
+        var longitude = results[0].geometry.location.lng();
+        console.log('latitude is ', latitude, 'lng is ', longitude);
+
+
+        // initialize(latitude,longitude);
+
+        } 
+      }); 
+    }
+
     }]);
