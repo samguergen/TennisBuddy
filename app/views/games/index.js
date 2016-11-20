@@ -1,0 +1,1 @@
+alert("Your game couldn't be posted")
