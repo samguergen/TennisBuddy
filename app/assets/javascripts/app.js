@@ -2,9 +2,7 @@ angular
     .module('myApp', [])
     .controller('MainCtrl', ['$scope', '$location', '$window', '$http', function($scope, $location, $window, $http){
        $http.defaults.headers.common["X-Requested-With"];
-
-      console.log('angular installed? ', angular);
-
+      // console.log('angular installed? ', angular);
       $scope.showLogin = false;
       $scope.showSignup = false;
       $scope.showProfile = false;
@@ -50,29 +48,21 @@ angular
         $scope.latLng = latitude + ", " + longitude;
         var gamePostObj = {title: userInput.title, description: userInput.description, player_1: userInput.player_1, coordinates: $scope.latLng.toString()};
         console.log('game post obj is ', gamePostObj);
-        console.log('coor datatype is ', typeof(gamePostObj.coordinates), Array.isArray(gamePostObj.coordinates));
+
         $scope.createGameReq(gamePostObj);
         } 
       }); 
     }
 
-
-
     $scope.createGameReq = function(gamePostObj){
-      console.log('inside sendGameReq');
-      console.log(gamePostObj, typeof(gamePostObj));
       var hostUrl = $window.location.origin + "/games";
-      console.log('hostname is ', hostUrl);
       $http({
         method: 'POST',
         url: hostUrl ,
-        // url: "http://localhost:3000/games" ,
         data: gamePostObj,
-        // data: {'game': {'name': 'John Smith', 'message': 'Hello'}},
         headers: {'Content-Type': 'application/json'}
       }).then(function mySucces(response) {
         $scope.myResponse = response.data;
-        console.log('response is ', response.data);
       }, function myError(response) {
         $scope.theError = response.statusText;
       });
