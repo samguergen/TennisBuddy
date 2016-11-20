@@ -56,18 +56,22 @@ angular
       }); 
     }
 
+
+
     $scope.createGameReq = function(gamePostObj){
       console.log('inside sendGameReq');
       console.log(gamePostObj);
+      var hostUrl = $window.location.origin + "/games";
+      console.log('hostname is ', hostUrl);
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/games',
+        url: hostUrl ,
         data: gamePostObj,
         // data: {'game': {'name': 'John Smith', 'message': 'Hello'}},
         headers: {'Content-Type': 'application/json'}
       }).then(function mySucces(response) {
         $scope.myResponse = response.data;
-        console.log('response is ', response.data);
+        // console.log('response is ', response.data);
       }, function myError(response) {
         $scope.theError = response.statusText;
       });
