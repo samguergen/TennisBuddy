@@ -14,24 +14,19 @@
       
       <form name="someform" ng-submit="someform.$valid && createGame(someform)" novalidate>
       <div class="gamereq-inputs">
-        <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.address" placeholder="street address"> 
-        <input type="text" class="town-country gamereq-input" ng-model="game.townCountry" placeholder="city/state and country"> 
+        <span>
+        <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.address" placeholder="street address" style="width:220px"> 
+        <input type="text" class="town-country gamereq-input" ng-model="game.townCountry" placeholder="city/state and country" style="    width: 80px; margin-left: 67%; margin-top: -11%;"> 
+      </span>
 
         <input name="game[player_1]"/ ng-model="game.player_1" placeholder="player 1"><br>
+        <input name="game[player_2]"/ ng-model="game.player_2" placeholder="player 2"><br>
         <!-- <input  placeholder="awaiting" /><br> -->
         <input type="text" class="gamereq-input" name="game[title]" ng-model="game.title" placeholder="game title"><br>
         <input type="text" class="gamereq-input gamereq-input-descr" name="game[description]" ng-model="game.description" placeholder="description"><br>
         <input class="btn-success" ng-click="createGame(game)" value="Create Game"/>
       </div>
     </form>
-      
-
-<!--         <input class="btn btn-success submit-gamereq" type="submit" value="Create Game Request"><br>
-      </div> -->
-    <!-- </form> -->
-
-  <!-- <div ng-click="displayLatLng = true">Click to display lat/lng</div>
-  <h1 ng-show="displayLatLng == true">lat is {{lat}} , long is {{lng}}</h1> -->
 
     <div class="previous-btn">
       <%= link_to 'Back', games_path %>

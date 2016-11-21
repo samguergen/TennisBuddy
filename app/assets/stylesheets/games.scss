@@ -129,7 +129,7 @@
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: -28%;
+  margin-top: -51%;
   margin-left: 25%;
 }
 
@@ -146,6 +146,7 @@
     flex-direction: column;
     margin: 5px;
     width: 300px;
+    padding: 5px;
     padding-left: 10px;
   }
 
@@ -153,6 +154,7 @@
     width: 120px;
     margin-left: 20%;
     margin-top: 5%;
+    cursor: pointer;
   }
 }
 
