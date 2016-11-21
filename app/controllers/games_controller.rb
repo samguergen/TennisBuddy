@@ -51,14 +51,14 @@ class GamesController < ApplicationController
     respond_to do |format|
       if @game.save
         puts 'game has been saved to db, about to redirect to game show'
-        format.html { redirect_to game_path(@game), notice: 'Game was successfully created.' }
+        format.html { redirect_to games_path, notice: 'Game was successfully created.' }
         format.json { render :show, status: :created, location: @game }
       else
         # format.js
         format.html { render :new }
         format.json { render json: @game.errors, status: :unprocessable_entity }
       end
-      redirect_to games_path
+      # redirect_to games_path
     end
   end
 

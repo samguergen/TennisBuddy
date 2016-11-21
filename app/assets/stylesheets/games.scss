@@ -302,15 +302,15 @@ textarea#comment_body {
  cursor: pointer;
 }
 
-.other-linx {
+.other-linx-btn {
+  margin-left: 51%;
   background-color: rgba(60, 118, 61, 0.3);
   padding: 1%;
   margin-top: -5%;
-  margin-bottom: 5%;
-  margin-left: 51%;
-  width: 151px;
+  width: 150px;
   text-align: center;
   cursor: pointer;
+  float: left;
   a:link {
     text-decoration: none;
   }
@@ -329,13 +329,12 @@ textarea#comment_body {
 
 .return-home {
   margin-left: 67%;
-  margin-top: -93px;
 }
 
 .cannot-find {
   position: absolute;
-  margin-top: -80px;
-  font-size: 14px;
-  margin-left: 49%;
+  margin-left: 53%;
+  margin-top: -8%;
 }
+
 
