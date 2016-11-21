@@ -129,8 +129,9 @@
   display: flex;
   flex-direction: column;
   color: white;
-  margin-top: -51%;
   margin-left: 25%;
+  margin-top: -32%;
+  line-height: 1.4;
 }
 
 .gamereq-inputs {
@@ -146,9 +147,23 @@
     flex-direction: column;
     margin: 5px;
     width: 300px;
-    padding: 5px;
+    padding: 6px;
     padding-left: 10px;
   }
+
+.coordz {
+  float:left;
+  width:220px;
+  position: absolute;
+  textarea {float:left;}
+}
+.town-country {
+  float:left;
+  width: 80px;
+  position: absolute;
+  margin-left: 20%;
+  textarea {float:left;}
+}  
 
   .btn-success {
     width: 120px;
@@ -161,6 +176,17 @@
 .gamereq-input-descr {
   padding: 20px;
 }
+
+
+/*
+.coordz {
+  width:220px;
+}
+.town-country {
+  width: 80px; margin-left: 67%; margin-top: -11%;
+}
+*/
+
 
 
 .lower-footer {

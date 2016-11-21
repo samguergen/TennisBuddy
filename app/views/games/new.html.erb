@@ -12,11 +12,11 @@
         <div class="gamereq-label">Description:</div><br>
       </div>
       
-      <form name="someform" ng-submit="someform.$valid && createGame(someform)" novalidate>
+      <form style="float: left; margin-top: 9%; "name="someform" ng-submit="someform.$valid && createGame(someform)" novalidate>
       <div class="gamereq-inputs">
-        <span>
-        <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.address" placeholder="street address" style="width:220px"> 
-        <input type="text" class="town-country gamereq-input" ng-model="game.townCountry" placeholder="city/state and country" style="    width: 80px; margin-left: 67%; margin-top: -11%;"> 
+        <span style="margin-bottom: -30px;">
+        <input type="text" class="coordz gamereq-input" name="game[coordinates]" ng-model="game.address" placeholder="street address"> 
+        <input type="text" class="town-country gamereq-input" ng-model="game.townCountry" placeholder="city/state and country"> 
       </span>
 
         <input name="game[player_1]"/ ng-model="game.player_1" placeholder="player 1"><br>
