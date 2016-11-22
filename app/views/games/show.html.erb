@@ -38,13 +38,14 @@
             <button ng-click="openScoreBox = true;" ng-hide="openScoreBox == true" class="btn-success add-score">Add new score</button>
             <div class="score-form" style="margin-left: 20%">
             <form 
-            name="scoreForm" ng-show="openScoreBox == true" style="width: 100px; height: 100px; display: inline" ng-submit="someform.$valid && addScore(scoreForm)" novalidate>
+            name="scoreForm" ng-show="openScoreBox == true" ng-hide="scoreAdded == true" style="width: 100px; height: 100px; display: inline" ng-submit="someform.$valid && addScore(scoreForm)" novalidate>
               First: <br>
               <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br> 
               Second: <br>
               <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
               Third: <br>
               <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
+              <button ng-click="scoreAdded = true" ng-hide="scoreAdded == true" class="btn-success">Save score</button>
             </form>
           </div>
           </div> <!-- score -->

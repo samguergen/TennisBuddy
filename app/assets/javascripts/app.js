@@ -23,9 +23,11 @@ angular
       }
 
       $scope.addScore = function(scoreInput){
+        console.log('inside addScore func, scoreInput is ', scoreInput);
         var totalPlayer1 = scoreInput.player_1.first + scoreInput.player_1.second + scoreInput.player_1.third;
         var totalPlayer2 = scoreInput.player_2.first + scoreInput.player_2.second + scoreInput.player_2.third;
         (totalPlayer1 > totalPlayer2) ? ($scope.winner = totalPlayer1) : ($scope.winner = totalPlayer1);
+        console.log($scope.winner);
       }
 
 
