@@ -17,17 +17,17 @@ angular
         coordinates: ""
       };
       $scope.score = {
-        player_1: {first: 0, second: 0, third: 0},
-        player_2: {first: 0, second: 0, third: 0},
+        player_1: {name: "", first: 0, second: 0, third: 0, total: 0},
+        player_2: {name: "", first: 0, second: 0, third: 0, total: 0},
         winner: ""
       }
 
-      $scope.addScore = function(scoreInput){
-        console.log('inside addScore func, scoreInput is ', scoreInput);
-        var totalPlayer1 = scoreInput.player_1.first + scoreInput.player_1.second + scoreInput.player_1.third;
-        var totalPlayer2 = scoreInput.player_2.first + scoreInput.player_2.second + scoreInput.player_2.third;
-        (totalPlayer1 > totalPlayer2) ? ($scope.winner = totalPlayer1) : ($scope.winner = totalPlayer1);
-        console.log($scope.winner);
+      $scope.addScore = function(){
+        console.log('inside addScore func, $scope.score is ', $scope.score);
+        $scope.score.player_1.total = $scope.score.player_1.first + $scope.score.player_1.second + $scope.score.player_1.third;
+        $scope.score.player_2.total = $scope.score.player_2.first + $scope.score.player_2.second + $scope.score.player_2.third;
+        ($scope.score.player_1.total > $scope.score.player_2.total) ? ($scope.score.winner = $scope.score.player_1.name) : ($scope.score.winner = $scope.score.player_2.name);
+        console.log('winner is ', $scope.score.winner);
       }
 
 

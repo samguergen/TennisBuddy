@@ -24,30 +24,30 @@
           </div>
           <div class="score">
             <strong>Scores</strong><br>
-            <div ng-show="" class="score-game">
-              <span class="game-detail-label"> First game:</span> {{ score.first }}<br>
-              <span class="game-detail-label">Second game:</span> {{ score.second }}<br>
-              <span class="game-detail-label">Third game:</span> {{ score.third }}<br>
-              <span class="game-detail-label">Total score:</span>
+            <div ng-show="scoreAdded == true" class="score-game">
+              <span class="game-detail-label"> First game: Player 1: {{ score.player_1.first }} - Player 2: {{ score.player_2.first }} </span><br>
+              <span class="game-detail-label">Second game: Player 1: {{ score.player_1.second }} - Player 2: {{ score.player_2.second }} </span><br>
+              <span class="game-detail-label">Third game:Player 1: {{ score.player_1.third }} - Player 2: {{ score.player_2.third }} </span><br>
+              <span class="game-detail-label">Total scores:</span>
+              Player 1: {{ score.player_1.total }} - Player 2: {{ score.player_2.total }} </span><br>
               <!-- <%= @game.score %> <br> -->
-              {{ score.total }}
               <span class="game-detail-label">Winner: </span>  
               {{ score.winner }} <br>
             </div> <!-- score-game -->
             
             <button ng-click="openScoreBox = true;" ng-hide="openScoreBox == true" class="btn-success add-score">Add new score</button>
-            <div class="score-form" style="margin-left: 20%">
+            <div class="score-form" ng-show="openScoreBox == true" style="margin-left: 20%">
             <form 
-            name="scoreForm" ng-show="openScoreBox == true" ng-hide="scoreAdded == true" style="width: 100px; height: 100px; display: inline" ng-submit="someform.$valid && addScore(scoreForm)" novalidate>
+            name="scoreForm" ng-show="openScoreBox == true" ng-hide="scoreAdded == true" style="width: 100px; height: 100px; display: inline" novalidate>
               First: <br>
-              <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br> 
+              <input type="text" ng-model="score.player_1.first" placeholder="Player 1"></input> - <input type="text" ng-model="score.player_2.first" placeholder="Player 2"></input> <br> 
               Second: <br>
-              <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
+              <input type="text" placeholder="Player 1" ng-model="score.player_1.second"></input> - <input type="text" placeholder="Player 2" ng-model="score.player_2.second"></input> <br>
               Third: <br>
-              <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
-              <button ng-click="scoreAdded = true" ng-hide="scoreAdded == true" class="btn-success">Save score</button>
+              <input type="text" placeholder="Player 1" ng-model="score.player_1.third"></input> - <input type="text" placeholder="Player 2" ng-model="score.player_2.third"></input> <br>
+              <button ng-click="addScore(); scoreAdded = true" ng-hide="scoreAdded == true" class="btn-success">Save score</button>
             </form>
-          </div>
+          </div> <!-- score-form -->
           </div> <!-- score -->
         </div> <!-- left -->
         <div class="middle">
