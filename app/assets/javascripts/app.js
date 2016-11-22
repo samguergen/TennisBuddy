@@ -8,7 +8,26 @@ angular
       $scope.showProfile = false;
       $scope.lookingToPlay = false;
       $scope.openGameForm = true;
-      $scope.game = {title: "", description: "", player_1: "", address: "", townCountry: "", coordinates: ""};
+      $scope.game = {
+        title: "", 
+        description: "", 
+        player_1: "", 
+        address: "", 
+        townCountry: "", 
+        coordinates: ""
+      };
+      $scope.score = {
+        player_1: {first: 0, second: 0, third: 0},
+        player_2: {first: 0, second: 0, third: 0},
+        winner: ""
+      }
+
+      $scope.addScore = function(scoreInput){
+        var totalPlayer1 = scoreInput.player_1.first + scoreInput.player_1.second + scoreInput.player_1.third;
+        var totalPlayer2 = scoreInput.player_2.first + scoreInput.player_2.second + scoreInput.player_2.third;
+        (totalPlayer1 > totalPlayer2) ? ($scope.winner = totalPlayer1) : ($scope.winner = totalPlayer1;) 
+      }
+
 
       $scope.reloadRoute = function(endpoint) {
          $window.location.reload();
