@@ -24,26 +24,29 @@
           </div>
           <div class="score">
             <strong>Scores</strong><br>
-            <div class="score-game">
+            <div ng-show="" class="score-game">
               <span class="game-detail-label"> First game:</span> {{ score.first }}<br>
               <span class="game-detail-label">Second game:</span> {{ score.second }}<br>
               <span class="game-detail-label">Third game:</span> {{ score.third }}<br>
-            </div>
-            <span class="game-detail-label">Total score:</span>
-             <!-- <%= @game.score %> <br> -->
-             {{ score.total }}
-            <span class="game-detail-label">Winner: </span>  {{ score.winner }} <br>
+              <span class="game-detail-label">Total score:</span>
+              <!-- <%= @game.score %> <br> -->
+              {{ score.total }}
+              <span class="game-detail-label">Winner: </span>  
+              {{ score.winner }} <br>
+            </div> <!-- score-game -->
+            
             <button ng-click="openScoreBox = true;" ng-hide="openScoreBox == true" class="btn-success add-score">Add new score</button>
-            <form name="scoreForm" ng-show="openScoreBox == true" style="width: 100px; height: 100px" ng-submit="someform.$valid && addScore(scoreForm)" novalidate>
-              First: <br>
-              <input type="text" placeholder="Player 1"></input> - Player 2: <input type="text" placeholder="Player 2"></input>
-              Second: <br> 
-              <input type="text" placeholder="Player 1"></input> - Player 2: <input type="text" placeholder="Player 2"></input>
-              Third: <br>
-              <input type="text" placeholder="Player 1"></input> - Player 2: <input type="text" placeholder="Player 2"></input>
+            <form 
+            name="scoreForm" ng-show="openScoreBox == true" style="width: 100px; height: 100px; display: inline" ng-submit="someform.$valid && addScore(scoreForm)" novalidate>
+              First:
+              <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
+              Second:
+              <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
+              Third:
+              <input type="text" placeholder="Player 1"></input> - <input type="text" placeholder="Player 2"></input> <br>
             </form>
-          </div>
-        </div>
+          </div> <!-- score -->
+        </div> <!-- left -->
         <div class="middle">
           <div class="location-img">
             <div id="showmap"><div class="display-map" ng-click="initialize(<%= @coords %>); hideNow = true" ng-hide="hideNow == true">Display map</div></div>

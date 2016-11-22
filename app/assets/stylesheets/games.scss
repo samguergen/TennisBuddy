@@ -1,6 +1,4 @@
-// Place all the styles related to the Games controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Game index page */
 
 .content-container {
 
@@ -80,6 +78,8 @@
   }
 }
 
+/* Game create page */
+
 .gamereq-wrapper {
   display:flex;
   flex-direction: column;
@@ -111,7 +111,6 @@
   margin-left: auto;
   padding: 20px;
 }
-
 
 .gamereq-wrapper .gamereq #gamereq-form {
   margin-right: auto;
@@ -177,23 +176,14 @@
   padding: 20px;
 }
 
-
-/*
-.coordz {
-  width:220px;
-}
-.town-country {
-  width: 80px; margin-left: 67%; margin-top: -11%;
-}
-*/
-
-
-
 .lower-footer {
   clear: both;
   margin-top: 400px;
   margin-left: -50px;
 }
+
+
+/* Game Show Page */
 
 textarea#comment_body {
     height: 60px;
@@ -273,6 +263,9 @@ textarea#comment_body {
         height: 50%;
         .score-game {
           padding: 4% 0 8% 15%;
+        }
+        input[type="text"] {
+          width: 60px;
         }
       }
     }
