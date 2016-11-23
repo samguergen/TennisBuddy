@@ -24,16 +24,49 @@
           </div>
           <div class="score">
             <strong>Scores</strong><br>
-            <div ng-show="scoreAdded == true" class="score-game">
+            <table ng-show="scoreAdded == true" class="score-game">
+              <thead>
+                <th>Game Rounds</th>
+                <th>Player 1</th>
+                <th>Player 2</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>First Game:</td>
+                  <td>{{ score.player_1.first }}</td>
+                  <td>{{ score.player_2.first }}</td>
+                </tr>
+                <tr>
+                  <td>Second Game:</td>
+                  <td>{{ score.player_1.second }}</td>
+                  <td>{{ score.player_2.second }}</td>
+                </tr>
+                <tr>
+                  <td>Third Game:</td>
+                  <td>{{ score.player_1.third }}</td>
+                  <td>{{ score.player_2.third }}</td>
+                </tr>
+                <tr>
+                  <td>Total:</td>
+                  <td>{{ score.player_1.total }}</td>
+                  <td>{{ score.player_2.total }}</td>
+                </tr>
+                <tr>
+                  <td>Winner:</td>
+                  <td colspan="2">{{ score.winner }}</td>
+                </tr>
+              </tbody>
+              <!--
               <span class="game-detail-label"> First game: Player 1: {{ score.player_1.first }} - Player 2: {{ score.player_2.first }} </span><br>
               <span class="game-detail-label">Second game: Player 1: {{ score.player_1.second }} - Player 2: {{ score.player_2.second }} </span><br>
               <span class="game-detail-label">Third game:Player 1: {{ score.player_1.third }} - Player 2: {{ score.player_2.third }} </span><br>
               <span class="game-detail-label">Total scores:</span>
               Player 1: {{ score.player_1.total }} - Player 2: {{ score.player_2.total }} </span><br>
-              <!-- <%= @game.score %> <br> -->
+               <%= @game.score %> <br>
               <span class="game-detail-label">Winner: </span>  
-              {{ score.winner }} <br>
-            </div> <!-- score-game -->
+              {{ score.winner }} <br> 
+            -->
+            </table> <!-- score-game -->
             
             <button ng-click="openScoreBox = true;" ng-hide="openScoreBox == true" class="btn-success add-score">Add new score</button>
             <div class="score-form" ng-show="openScoreBox == true" style="margin-left: 20%">
