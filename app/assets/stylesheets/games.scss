@@ -259,13 +259,27 @@ textarea#comment_body {
         height: 40%;
         padding-right: 3%;
       }
+      .info-details {
+        padding: 5%;
+        font-size: 14px;
+        font-weight: bold;
+      }
       .score {
         height: 50%;
+        .score-title {
+          margin-bottom: 2%;
+          font-size: 16px;
+          font-weight: bold;
+        }
         .score-game {
           padding: 4% 0 8% 15%;
         }
-        input[type="text"] {
+        input[type="integer"] {
           width: 60px;
+        }
+        .save-score {
+          margin-top: 10%;
+          margin-left: 20%;
         }
       }
     }
@@ -357,5 +371,4 @@ textarea#comment_body {
   margin-left: 53%;
   margin-top: -8%;
 }
-
 
