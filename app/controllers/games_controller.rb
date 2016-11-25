@@ -86,6 +86,15 @@ class GamesController < ApplicationController
     end
   end
 
+  def addscore
+    puts 'inside addscore'
+    @game = Game.find(params[:id])
+    puts game_params
+    puts data
+    @game.update_attributes(:score => param[:score])
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game

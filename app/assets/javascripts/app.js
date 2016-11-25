@@ -19,7 +19,8 @@ angular
       $scope.score = {
         player_1: {name: "player_1", first: 0, second: 0, third: 0, total: 0},
         player_2: {name: "player_2", first: 0, second: 0, third: 0, total: 0},
-        winner: ""
+        winner: "",
+        // scoreStr: score.player_1.total + " vs " + score.player_2.total
       }
 
       $scope.addScore = function(){
@@ -41,17 +42,23 @@ angular
 
       $scope.persistScore = function() {
         console.log('inside persistScore func');
+        console.log('score winner ',$scope.score.scoreStr);
+        console.log('data type is ', typeof($scope.score));
         var hostUrl = $window.location.origin + "/games";
+        console.log('data is ', $scope.score);
         $http({
           method: 'POST',
           url: hostUrl,
-          data: $scope.score,
+          data: $scope.score.toString(),
           headers: {'Content-Type': 'application/json'}
         }).then(function mySucces(response) {
-          console.log('response is ');
+          console.log('response is success');
           $scope.myResponse = response.data;
         }, function myError(response) {
+          console.log('response is error');
+          console.log(response);
           $scope.theError = response.statusText;
+          console.log(response.statusText);
         });
       }
 

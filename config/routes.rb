@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#login'
   get '/logout' => 'sessions#logout'
 
+  post '/addscore' => 'games#addscore'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
