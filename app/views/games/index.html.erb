@@ -15,8 +15,8 @@
 
     <tbody>
       <% @games.each do |game| %>
-        <tr>
-          <td><div class="game-title" ng-click="reloadRoute('/games/<%=game.id %>')"><%=  game.title %> </div><br>
+        <tr ng-click="reloadRoute('/games/<%=game.id %>')">
+          <td><div class="game-title"><%=  game.title %> </div><br>
             <div class="game-description"><%= game.description %></div>
           </td>
             <td>by: <%= game.id %></td>
