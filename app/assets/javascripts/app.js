@@ -39,6 +39,22 @@ angular
         console.log('winner is ', $scope.score.winner);
       }
 
+      $scope.persistScore = function() {
+        console.log('inside persistScore func');
+        var hostUrl = $window.location.origin + "/games";
+        $http({
+          method: 'POST',
+          url: hostUrl,
+          data: $scope.score,
+          headers: {'Content-Type': 'application/json'}
+        }).then(function mySucces(response) {
+          console.log('response is ');
+          $scope.myResponse = response.data;
+        }, function myError(response) {
+          $scope.theError = response.statusText;
+        });
+      }
+
 
       $scope.reloadRoute = function(endpoint) {
          $window.location.reload();

@@ -57,6 +57,7 @@
                 </tr>
               </tbody>
             </table> <!-- score-game -->
+            <button ng-show="scoreAdded == true" ng-click="persistScore();" class="btn-success add-score">Save score to database</button>
             
             <button ng-click="openScoreBox = true;" ng-hide="openScoreBox == true" class="btn-success add-score">Add new score</button>
             <div class="score-form" ng-show="openScoreBox == true" style="margin-left: 20%">
