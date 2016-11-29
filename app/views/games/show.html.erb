@@ -27,8 +27,11 @@
             <div style="background: yellow" class="existing-scores">
               <% if @game.score != nil %>
               <%= @game.score.html_safe? %>
-              <%= @game.score.to_param() %>
-              
+              <%= @game.score %>
+              <% for score in @game.score %>
+              <%= score %>
+              <% end %>              
+
               <% end %>
             </div>
             <table ng-show="scoreAdded == true" class="table responsive-table score-game">
