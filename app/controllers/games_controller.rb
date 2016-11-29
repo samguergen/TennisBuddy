@@ -89,14 +89,16 @@ class GamesController < ApplicationController
   def addscore
     puts 'inside addscore, score params is '
     puts score_params
-    # puts 'score params score '
-    # puts score_params.score
     puts 'score is'
     puts params[:score]
-    puts 'game is '
-    puts @game
-    puts 'score alone is'
-    puts @score
+    puts 'params are'
+    puts params
+    puts 'original url is'
+    puts request.referrer
+    puts 'oid is '
+    puts params[:oid]
+    puts 'id is '
+    puts params[:id]
     render nothing: true
     # thegame = Game.find(params[:id])
     # puts game_params

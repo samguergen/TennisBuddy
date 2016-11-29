@@ -33,21 +33,19 @@ angular
         }
         else if ( parseInt($scope.score.player_1.total) < parseInt($scope.score.player_2.total) ) {
           $scope.score.winner = $scope.score.player_2.name;
-        };
-
-        // $scope.score.scoreStr: $score.player_1.total.toString() + " vs " + score.player_2.total.toString();
+        }
 
       }
 
       $scope.persistScore = function() {
-        console.log('inside persistScore func');
-        var scoreStr = $scope.score.toString();
-        console.log('scoreStr is ', scoreStr);
+        var objUrl = $window.location.pathname;
+        var objId = objUrl.replace("/games/", "/");
+        console.log('objId is ', objId);
         var hostUrl = $window.location.origin + "/addscore";
         $http({
           method: 'POST',
           url: hostUrl,
-          data: {score: scoreStr},
+          data: {score: $scope.score, oid: objId},
           // headers: {'Content-Type': 'application/json'}
         }).then(function mySucces(response) {
           console.log('response is success');
@@ -59,7 +57,6 @@ angular
           console.log(response.statusText);
         });
       }
-
 
       $scope.reloadRoute = function(endpoint) {
          $window.location.reload();
@@ -79,11 +76,9 @@ angular
         });
       }
 
-
     $scope.createGame = function(userInput) {
       $scope.getLatLng(userInput);
     }
-
 
     $scope.getLatLng = function(userInput) {
       var slugAddress = userInput.address.replace(/ |,/g , '+');

@@ -4,7 +4,6 @@ class CreateGames < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.string :score
-      # t.string :winner
       t.string :coordinates
       t.references :user
 
