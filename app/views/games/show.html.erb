@@ -58,15 +58,6 @@
               </tbody>
             </table> <!-- score-game -->
             <button ng-show="scoreAdded == true" ng-click="persistScore();" class="btn-success add-score">Save score to database</button>
-  <!--           <form 
-            name="scorePost" action="/games" method="post" ng-show="scoreAdded == true" style="width: 100px; height: 100px; display: inline" novalidate>
-              <input type="text">
-            </form>
-            <form action="/games" method="get">
-              <input type="text" name="score" value="{{ score.winner }}"><br>
-  <button type="submit" formmethod="post" formaction="demo_post.asp">Submit using POST</button> -->
-</form>
-
 
             
             <button ng-click="openScoreBox = true;" ng-hide="openScoreBox == true" class="btn-success add-score">Add new score</button>
@@ -115,16 +106,13 @@
                 <%= f.text_field :commenter %>
               </span>
               <span class="actions">
-                <!--<%= f.submit %>-->
                 <button class="btn-success">Add</button>
-                <!-- <input type="submit" name="commit" value="Add"> </input> -->
               </span>
             <% end %>
           </div>
         </div>
       </div>
   </div>
-
 
   <div class="edit-back">
     <%= link_to 'Edit', edit_game_path(@game) %> |
@@ -136,11 +124,9 @@
 <script>
   function initialize(coor) {
     var coords = [40.78694, -73.97528];
-    console.log('inside initMap in show page');
     console.log(coords);
     console.log('real coords are ', coor);
     var uluru = {lat: coords[0], lng: coords[1]};
-    // var uluru = {lat: -25.363, lng: 131.044};
     var map = new google.maps.Map(document.getElementById('showmap'), {
       // zoom: 4,
       zoom: 14,
