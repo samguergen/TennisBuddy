@@ -24,33 +24,31 @@ angular
       }
 
       $scope.addScore = function(){
-        console.log('inside addScore func, $scope.score is ', $scope.score);
+        // console.log('inside addScore func, $scope.score is ', $scope.score);
         $scope.score.player_1.total = parseInt($scope.score.player_1.first) + parseInt($scope.score.player_1.second) + parseInt($scope.score.player_1.third);
         $scope.score.player_2.total = parseInt($scope.score.player_2.first) + parseInt($scope.score.player_2.second) + parseInt($scope.score.player_2.third);
 
         if ( parseInt($scope.score.player_1.total) > parseInt($scope.score.player_2.total) ) {
-          console.log('first player is winner');
           $scope.score.winner = $scope.score.player_1.name;
         }
         else if ( parseInt($scope.score.player_1.total) < parseInt($scope.score.player_2.total) ) {
-          console.log('second player is winner');
           $scope.score.winner = $scope.score.player_2.name;
         };
 
-        console.log('winner is ', $scope.score.winner);
+        // $scope.score.scoreStr: $score.player_1.total.toString() + " vs " + score.player_2.total.toString();
+
       }
 
       $scope.persistScore = function() {
         console.log('inside persistScore func');
-        console.log('score winner ',$scope.score.scoreStr);
-        console.log('data type is ', typeof($scope.score));
-        var hostUrl = $window.location.origin + "/games";
-        console.log('data is ', $scope.score);
+        // var scoreStr = $score.score.toString();
+        // console.log('data type is ', scoreStr, typeof(scoreStr));
+        var hostUrl = $window.location.origin + "/addscore";
         $http({
           method: 'POST',
           url: hostUrl,
-          data: $scope.score.toString(),
-          headers: {'Content-Type': 'application/json'}
+          data: {score: "blah"},
+          // headers: {'Content-Type': 'application/json'}
         }).then(function mySucces(response) {
           console.log('response is success');
           $scope.myResponse = response.data;

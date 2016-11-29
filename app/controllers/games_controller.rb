@@ -88,10 +88,13 @@ class GamesController < ApplicationController
 
   def addscore
     puts 'inside addscore'
-    @game = Game.find(params[:id])
-    puts game_params
-    puts data
-    @game.update_attributes(:score => param[:score])
+    puts score_params
+    puts @game
+    # thegame = Game.find(params[:id])
+    # puts game_params
+    # puts data
+    # puts @game
+    # thegame.update_attributes(:score => params[:score])
 
   end
 
@@ -104,5 +107,9 @@ class GamesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
       params.require(:game).permit(:title, :description, :score, :coordinates)
+    end
+
+    def score_params
+      params.require(:game).permit(:score)
     end
 end
