@@ -7,10 +7,11 @@ class SessionsController < ApplicationController
     puts @user
     if @user && @user.authenticate(params[:password])
       puts 'matrix'
-      session[:user_id] = @user.id
+      session[:current_user_id] = @user.id
       puts "successfully logged in"
-      puts session[:user_id]
-      redirect_to root_path({sess: session[:user_id], user: @user})
+      puts session[:current_user_id]
+      redirect_to root_path
+      # redirect_to root_path({sess: session[:user_id], user: @user})
     else
       flash[:alert] = "You did not log in"
       puts "Not logged in"
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
 
 
   def logout
-    session[:user_id] = nil
+    session[:current_user_id] = nil
     redirect_to root_path
   end
 end

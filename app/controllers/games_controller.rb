@@ -6,6 +6,9 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.all
+    # if session[:current_user_id]
+    #   @logged_user = User.find(session[:current_user_id])
+    # end
   end
 
   # GET /games/1
