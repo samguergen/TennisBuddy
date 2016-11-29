@@ -24,11 +24,13 @@
           </div>
           <div class="score">
             <div class="score-title">Scores: </div><br>
-            <div style="background: yellow" class="existing-scores">
-              <% if @game.score != nil %>
-              <%= @game.score %>
-              <% end %>
-            </div>
+
+            <% if @game.score != nil %>
+              <div class="existing-scores">
+                <%= @game.score %>
+              </div>
+            <% end %>
+            
             <table ng-show="scoreAdded == true" class="table responsive-table score-game">
               <thead>
                 <th>Game Rounds</th>
