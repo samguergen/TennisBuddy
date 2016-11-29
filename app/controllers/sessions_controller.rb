@@ -3,10 +3,7 @@ class SessionsController < ApplicationController
 
   def login
     @user = User.find_by_email(params[:email])
-    puts 'user is '
-    puts @user
     if @user && @user.authenticate(params[:password])
-      puts 'matrix'
       session[:current_user_id] = @user.id
       puts "successfully logged in"
       puts session[:current_user_id]
