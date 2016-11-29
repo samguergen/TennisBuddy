@@ -87,9 +87,17 @@ class GamesController < ApplicationController
   end
 
   def addscore
-    puts 'inside addscore'
+    puts 'inside addscore, score params is '
     puts score_params
+    # puts 'score params score '
+    # puts score_params.score
+    puts 'score is'
+    puts params[:score]
+    puts 'game is '
     puts @game
+    puts 'score alone is'
+    puts @score
+    render nothing: true
     # thegame = Game.find(params[:id])
     # puts game_params
     # puts data

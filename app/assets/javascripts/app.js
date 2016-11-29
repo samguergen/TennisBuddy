@@ -41,13 +41,13 @@ angular
 
       $scope.persistScore = function() {
         console.log('inside persistScore func');
-        // var scoreStr = $score.score.toString();
-        // console.log('data type is ', scoreStr, typeof(scoreStr));
+        var scoreStr = $scope.score.toString();
+        console.log('scoreStr is ', scoreStr);
         var hostUrl = $window.location.origin + "/addscore";
         $http({
           method: 'POST',
           url: hostUrl,
-          data: {score: "blah"},
+          data: {score: scoreStr},
           // headers: {'Content-Type': 'application/json'}
         }).then(function mySucces(response) {
           console.log('response is success');
