@@ -40,7 +40,6 @@ angular
       $scope.persistScore = function() {
         var objUrl = $window.location.pathname;
         var objId = objUrl.replace("/games/", "/");
-        console.log('objId is ', objId);
         var hostUrl = $window.location.origin + "/addscore";
         $http({
           method: 'POST',
@@ -48,11 +47,8 @@ angular
           data: {score: $scope.score, oid: objId},
           // headers: {'Content-Type': 'application/json'}
         }).then(function mySucces(response) {
-          console.log('response is success');
           $scope.myResponse = response.data;
         }, function myError(response) {
-          console.log('response is error');
-          console.log(response);
           $scope.theError = response.statusText;
           console.log(response.statusText);
         });

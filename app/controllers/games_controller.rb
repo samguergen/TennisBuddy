@@ -88,24 +88,16 @@ class GamesController < ApplicationController
 
   def addscore
     puts 'inside addscore, score params is '
-    puts score_params
-    puts 'score is'
     puts params[:score]
-    puts 'params are'
-    puts params
     puts 'original url is'
-    puts request.referrer
-    puts 'oid is '
-    puts params[:oid]
-    puts 'id is '
-    puts params[:id]
+    url_id = request.referrer.split('/')[-1]
+    puts url_id
+    current_game = Game.find(url_id)
+    puts 'current game is '
+    puts current_game
+    new_score = params[:score]
+    current_game.update_attributes(:score => new_score)
     render nothing: true
-    # thegame = Game.find(params[:id])
-    # puts game_params
-    # puts data
-    # puts @game
-    # thegame.update_attributes(:score => params[:score])
-
   end
 
   private
