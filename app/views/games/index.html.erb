@@ -21,10 +21,7 @@
           </td>
             <td>by: <%= game.id %></td>
           <p>
-            <td class="game-edit-delete">
-              <a href="#" ng-click="reloadRoute('<%=game.id%>/edit')"> Edit</a> | 
-              <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+            <td class="game-edit-delete"></td>
           </p>
         </tr>
       <% end %>

@@ -53,7 +53,8 @@ angular
       }
 
       $scope.reloadRoute = function(endpoint) {
-         $window.location.reload();
+          console.log('endpoint is ', endpoint);
+         // $window.location.reload();
          $window.location.href = endpoint;
       }
 
