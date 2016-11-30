@@ -111,9 +111,11 @@
 
 </div>
 
-<% if @current_user %>
-  Signed in as <%= @current_user.first_name %> %>
+<div class="logged-box">
+<% if session.id %>
+  Signed in as <%= session.id %>
 <% end %>
+</div>
 
 <%= yield %>
 

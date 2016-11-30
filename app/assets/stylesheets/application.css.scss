@@ -657,3 +657,15 @@ p.labels {
   }
 
 }
+
+.logged-box {
+  background: rgba(196, 222, 83, 0.5);
+  border: 2px solid black;
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 6%;
+  margin-left: 1%;
+  padding: 2%;
+}
