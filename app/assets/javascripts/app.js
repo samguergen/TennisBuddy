@@ -4,6 +4,7 @@ angular
        $http.defaults.headers.common["X-Requested-With"];
       // console.log('angular installed? ', angular);
       $scope.showLogin = false;
+      $scope.showLogout = false;
       $scope.showSignup = false;
       $scope.showProfile = false;
       $scope.lookingToPlay = false;

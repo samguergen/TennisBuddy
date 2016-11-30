@@ -358,7 +358,7 @@ li.navlinx a:link {
   min-height: 100%;
 }
 
-.login-box {
+.login-box, .logout-box {
     height: 300px;
     width: 35%;
     border: 2px solid black;
@@ -379,6 +379,10 @@ li.navlinx a:link {
 .login-box, .signup-box input {
   padding: 5px;
   width: 300px;
+}
+
+.logout-box {
+  height: 200px;
 }
 
 p.labels {
@@ -668,4 +672,8 @@ p.labels {
   margin-top: 6%;
   margin-left: 1%;
   padding: 2%;
+}
+
+.logged-view, .unlogged-view {
+  position: absolute;
 }

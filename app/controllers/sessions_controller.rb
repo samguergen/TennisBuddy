@@ -6,17 +6,16 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:current_user_id] = @user.id
       puts "successfully logged in"
-      puts session[:current_user_id]
-      redirect_to root_path({sess: session[:current_user_id], usr: @user})
+      redirect_to root_path({usr: @user})
     else
       flash[:alert] = "You did not log in"
-      puts "Not logged in"
       redirect_to '/'
     end
   end
 
 
   def logout
+    puts 'about to log out'
     session[:current_user_id] = nil
     redirect_to root_path
   end
