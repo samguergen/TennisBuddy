@@ -30,11 +30,11 @@
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></li>
 
           <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showLogin')" href="#">Login</a></li>
-          <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
+          <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showSignup')" href="#">Signup</a></li>
 
           <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;"><%= button_to 'Logout', logout_path, :method => :delete %></a></li>
 
-          <li class="navlinx"><a ng-click="showProfile = !showProfile; showLogin = false; showSignup = false" href="#">My profile</a></li>
+          <li class="navlinx"><a ng-click="navToggle('showProfile')" href="#">My profile</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
