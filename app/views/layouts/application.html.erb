@@ -29,7 +29,7 @@
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games/new')">Start a game</a></li>
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></li>
 
-          <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="showLogin = !showLogin; showSignup = false; showProfile = false" href="#">Login</a></li>
+          <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showLogin')" href="#">Login</a></li>
           <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
 
           <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;"><%= button_to 'Logout', logout_path, :method => :delete %></a></li>
@@ -40,7 +40,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="login-box" ng-if="showLogin == true">
+<div class="login-box" ng-if="tabArray.showLogin == true">
 
   <form action="/login" method="post">
     <p style="font-size: 25px">Log In</p>
@@ -52,18 +52,8 @@
 
 </div>
 
-<!-- <div class="logout-box" ng-if="showLogout == true">
 
-  <form action="/logout" method="get">
-    <p style="font-size: 25px">Log Out</p>
-    <hr>
-    <button class="btn-danger" ng-click="logout()">Log out</button>
-  </form>
-
-</div> -->
-
-
-<div class="signup-box" ng-if="showSignup == true">
+<div class="signup-box" ng-if="tabArray.showSignup == true">
 
   <form class="signup-form" action="/users" method="post">
     <p style="font-size: 25px">Create an account</p>
@@ -85,7 +75,7 @@
 
 </div>
 
-<div class="profile-box" ng-if="showProfile == true">
+<div class="profile-box" ng-if="tabArray.showProfile == true">
   <div class="profile-wrapper">
   <div class="profile-top">
     Johnny B. Goode

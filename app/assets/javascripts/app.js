@@ -2,13 +2,18 @@ angular
     .module('myApp', [])
     .controller('MainCtrl', ['$scope', '$location', '$window', '$http', function($scope, $location, $window, $http){
        $http.defaults.headers.common["X-Requested-With"];
-      // console.log('angular installed? ', angular);
-      $scope.showLogin = false;
-      $scope.showLogout = false;
-      $scope.showSignup = false;
-      $scope.showProfile = false;
+
+       // $scope.showLogin = false;
+      // $scope.showSignup = false;
+      // $scope.showProfile = false;
       $scope.lookingToPlay = false;
       $scope.openGameForm = true;
+
+      $scope.tabArray = [
+        {showLogin: false},
+        {showSignup: false},
+        {showProfile: false},
+      ];
       $scope.game = {
         title: "", 
         description: "", 
@@ -21,7 +26,16 @@ angular
         player_1: {name: "player_1", first: 0, second: 0, third: 0, total: 0},
         player_2: {name: "player_2", first: 0, second: 0, third: 0, total: 0},
         winner: "",
-        // scoreStr: score.player_1.total + " vs " + score.player_2.total
+      }
+
+      $scope.navToggle = function(clickedTab){
+        var tabVal = Object.values($scope.tabArray);
+        // console.log('clickedTab is ', clickedTab);
+        for (var i in tabVal){
+          // console.log('each value is ', tabVal[i])
+          $scope.tabArray[i] = false;
+        }
+        $scope.tabArray[clickedTab] = !$scope.tabArray[clickedTab];
       }
 
       $scope.addScore = function(){
