@@ -2,9 +2,10 @@
 <div class="all-content">
 
   <div class="welcome-intro">
-    <% if session[:current_user_id] %>
+  <%= session.id %>
+    <% if session != nil %>
     <%= @user %>
-     User is: <%= session[:current_user_id]  %>
+     User is:  <%= session[:current_user_id] %>, <%= session[:id] %>, <%= session %>
     <% else %>
     Log in or sign up!
     <% end %>
