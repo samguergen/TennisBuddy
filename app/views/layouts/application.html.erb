@@ -29,16 +29,12 @@
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games/new')">Start a game</a></li>
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></li>
 
-        <div ng-if="<%= session.id == nil %>" class="unlogged-view">
-          <li class="navlinx"><a style="margin-top: 15px !important;" ng-click="showLogin = !showLogin; showSignup = false; showProfile = false" href="#">Login</a></li>
-          <li class="navlinx"><a style="margin-top: 15px !important;" ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
-        </div>
+          <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="showLogin = !showLogin; showSignup = false; showProfile = false" href="#">Login</a></li>
+          <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="showSignup = !showSignup; showLogin = false; ; showProfile = false" href="#">Signup</a></li>
 
-        <div ng-if="<%= session.id != nil %>" class="logged-view">
-          <li class="navlinx"><a style="margin-top: 15px !important;" ng-click="showLogout = !showLogout; showSignup = false; ; showProfile = false" href="#">Logout</a></li>
-        </div>
+          <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;"><%= button_to 'Logout', logout_path, :method => :delete %></a></li>
 
-        <li class="navlinx"><a ng-click="showProfile = !showProfile; showLogin = false; showSignup = false" href="#">My profile</a></li>
+          <li class="navlinx"><a ng-click="showProfile = !showProfile; showLogin = false; showSignup = false" href="#">My profile</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -56,7 +52,7 @@
 
 </div>
 
-<div class="logout-box" ng-if="showLogout == true">
+<!-- <div class="logout-box" ng-if="showLogout == true">
 
   <form action="/logout" method="get">
     <p style="font-size: 25px">Log Out</p>
@@ -64,7 +60,7 @@
     <button class="btn-danger" ng-click="logout()">Log out</button>
   </form>
 
-</div>
+</div> -->
 
 
 <div class="signup-box" ng-if="showSignup == true">

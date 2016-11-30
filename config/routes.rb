@@ -18,7 +18,8 @@ Rails.application.routes.draw do
    # post'/users' => 'users#create'
 
   post '/login' => 'sessions#login'
-  get '/logout' => 'sessions#logout'
+  delete '/logout' => 'sessions#logout'
+
 
   post '/addscore' => 'games#addscore'
 
