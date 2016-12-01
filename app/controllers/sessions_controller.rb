@@ -18,9 +18,13 @@ class SessionsController < ApplicationController
     puts @user
     puts 'about to log out'
     puts session.id
-    # session[:current_user_id] = nil
     session = nil
-    puts "current session is "
+    # puts "current session is "
+    # puts session.id
+    # puts 'again trying canceling session'
+    # session[:current_user_id] = nil
+    # puts "current session is "
+    # puts session.id
     redirect_to root_path
   end
 end

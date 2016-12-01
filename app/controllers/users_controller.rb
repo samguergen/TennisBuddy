@@ -1,6 +1,11 @@
   class UsersController < ApplicationController
   protect_from_forgery
 
+  def index
+    puts 'inside users list'
+    @users = User.all
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save

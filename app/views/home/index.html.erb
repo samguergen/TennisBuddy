@@ -2,6 +2,7 @@
 <div class="all-content">
 
   <div class="welcome-intro">
+    users are: <%= @users %>
     <% if session.id != nil %>
     Welcome back! :)
     <% else %>
@@ -12,7 +13,7 @@
   <div class="section-wrapper" ng-hide="openLocationReq == true">
     <div class="bubble">
       <div class="bubble-content">
-        <ul>Here is how to play:
+        <ul>Here's how to play:
         <p>
           <li> Click on "Find a Game" to view the list of proposed games in your area.
           <li> Select the most inviting game and view details.
