@@ -15,10 +15,10 @@ class SessionsController < ApplicationController
 
 
   def logout
-    puts @user
     puts 'about to log out'
-    puts session.id
-    session = nil
+    session.delete(session.id)
+    # puts session.id
+    # session = nil
     # puts "current session is "
     # puts session.id
     # puts 'again trying canceling session'
