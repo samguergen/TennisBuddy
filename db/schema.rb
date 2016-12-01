@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160911233733) do
     t.integer  "age"
     t.string   "gender"
     t.string   "description"
+    t.string   "photo"
     t.integer  "game_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false

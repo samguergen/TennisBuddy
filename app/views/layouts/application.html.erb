@@ -69,11 +69,11 @@
     <div class="second-col">
       <p class="labels"><input type="text" name="user[age]" placeholder="age"></input></p>
       <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
-      <p class="labels"><input type="file" onchange="previewFile()" placeholder="Upload photo"><br>
+      <p class="labels"><input type="file" name="user[photo]" ng-change="previewFile()" placeholder="Upload photo"><br>
       <img src="" height="200" alt="Image preview..."></p>
-    </div>
 
-    <button class="btn-success" ng-click="login()">Sign up</button>
+      <button class="btn-success" ng-click="login()">Sign up</button>
+    </div>
   </form>
 
 </div>

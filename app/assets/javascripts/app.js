@@ -35,10 +35,14 @@ angular
 
       reader.onloadend = function () {
          preview.src = reader.result;
+         console.log('preview src is ');
+         console.log(preview.src);
       }
 
       if (file) {
          reader.readAsDataURL(file); //reads the data as a URL
+         console.log('file is ');
+         console.log(file);
       } 
       else {
          preview.src = "";
