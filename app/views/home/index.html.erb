@@ -1,8 +1,14 @@
 
 <div class="all-content">
+  <ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= user %>
+    </li>
+  <% end %>
+</ul>
 
   <div class="welcome-intro">
-    users are: <%= @users %>
     <% if session.id != nil %>
     Welcome back! :)
     <% else %>
