@@ -349,6 +349,22 @@ li.navlinx a:link {
   font-weight: bold;
  }
 
+.logout-btn {
+  input[type="submit"] {
+    background-color: Transparent;
+    border: none;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: #aba104 !important;
+    font-weight: bold;
+  }
+  form.button_to {
+    margin-top: 45%;
+  }
+}
+
 .content-container {
   padding-top: 140px;
   padding-left: 50px;

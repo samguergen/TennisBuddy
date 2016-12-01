@@ -33,7 +33,7 @@
           <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showSignup')" href="#">Signup</a></li>
 
           <li ng-if="<%= session.id != nil %>" class="navlinx">
-            <div style="margin-top: 15px !important"><%= button_to 'Logout', logout_path, :method => :delete %></div></li>
+            <div class="logout-btn"><%= button_to 'Logout', logout_path, :method => :delete %></div></li>
 
           <li class="navlinx"><a ng-click="navToggle('showProfile')" href="#">My profile</a></li>
       </ul>
