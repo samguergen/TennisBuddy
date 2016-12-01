@@ -29,8 +29,8 @@
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games/new')">Start a game</a></li>
         <li class="navlinx"><a href="#" ng-click="reloadRoute('/games')">Find a game</a></li>
 
-          <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showLogin')" href="#">Login</a></li>
-          <li ng-if="<%= session.id == nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showSignup')" href="#">Signup</a></li>
+          <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showLogin')" href="#">Login</a></li>
+          <li ng-if="<%= session.id != nil %>" class="navlinx"><a style="margin-top: 15px !important;" ng-click="navToggle('showSignup')" href="#">Signup</a></li>
 
           <li ng-if="<%= session.id != nil %>" class="navlinx">
             <div class="logout-btn"><%= button_to 'Logout', logout_path, :method => :delete %></div></li>
@@ -69,6 +69,8 @@
     <div class="second-col">
       <p class="labels"><input type="text" name="user[age]" placeholder="age"></input></p>
       <p class="labels"><input style="height: 100px" name="user[description]" type="text" placeholder="about you"></input></p>
+      <p class="labels"><input type="file" onchange="previewFile()" placeholder="Upload photo"><br>
+      <img src="" height="200" alt="Image preview..."></p>
     </div>
 
     <button class="btn-success" ng-click="login()">Sign up</button>

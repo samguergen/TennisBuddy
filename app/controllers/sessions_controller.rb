@@ -17,14 +17,6 @@ class SessionsController < ApplicationController
   def logout
     puts 'about to log out'
     session.delete(session.id)
-    # puts session.id
-    # session = nil
-    # puts "current session is "
-    # puts session.id
-    # puts 'again trying canceling session'
-    # session[:current_user_id] = nil
-    # puts "current session is "
-    # puts session.id
     redirect_to root_path
   end
 end
