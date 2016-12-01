@@ -15,8 +15,12 @@ class SessionsController < ApplicationController
 
 
   def logout
+    puts @user
     puts 'about to log out'
-    session[:current_user_id] = nil
+    puts session.id
+    # session[:current_user_id] = nil
+    session = nil
+    puts "current session is "
     redirect_to root_path
   end
 end
