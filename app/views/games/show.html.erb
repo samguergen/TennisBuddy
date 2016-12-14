@@ -26,7 +26,7 @@
             <div class="score-title">Scores: </div><br>
 
             <% if @game.score != nil %>
-              <div class="existing-scores" ng-hide="openScoreBox == true">
+              <div class="existing-scores" ng-if="openScoreBox == false">
                 <%= @game.score %>
               </div>
             <% end %>
