@@ -1,1 +1,40 @@
-User Space
+<div class="profile-box" ng-if="tabArray.showProfile == true">
+  <div class="profile-wrapper">
+  <div class="profile-top">
+    Johnny B. Goode
+  </div>
+
+  <div class="profile-main">
+    <div class="pm-left">
+      <div class="content-header">Personal Info:</div>
+        <span class="user-label">nickname:</span> Jon <br>
+        <span class="user-label">member since: </span> 2016 <br>
+        <span class="user-label">age: </span> 27 <br>
+        <span class="user-label">description: </span> blablablab <br>
+
+    </div>
+    <div class="pm-center">
+      <div class="user-photo"></div>
+      <div class="message-link">
+        <button class="btn-success" ng-click="sendMessage()">Send a message</button>
+      </div>
+
+    </div>
+    <div class="pm-right">
+      <div class="player-info">
+        <div class="content-header">Player Info:</div>
+          <span class="user-label">games played: </span> 9 <br>
+          <span class="user-label">games won: </span> 4 <br>
+          <span class="user-label">best score: </span> 8-1 <br>
+      </div>
+      <div class="play-buttons">
+        <div class="looking-to-play" ng-show="lookingToPlay = true">Looking to Play</div>
+        <div class="not-looking-to-play" ng-show="lookingToPlay = false">Not Looking to Play</div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+</div>

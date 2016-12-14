@@ -3,6 +3,8 @@
 
   def index
     @users = User.all
+    puts 'current user is'
+    puts :current_user
   end
 
   def create
@@ -15,6 +17,8 @@
 
   def show
     @user = User.find_by(id: session[:user_id])
+    puts 'user is '
+    puts @user
   end
 
   private
