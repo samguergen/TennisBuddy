@@ -145,4 +145,10 @@ angular
       });
     }
 
+    $scope.activateFooter = function(){
+      console.log('inside activateFooter func');
+       // $('head').append('<link rel="stylesheet" href="custom-footer.scss" type="text/css" />');
+       $('footer').css({'margin-top': '500px'});
+    }
+
     }]);
