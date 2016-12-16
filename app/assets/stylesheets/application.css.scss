@@ -10,8 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
+ *= stub "users"
+ 
  */
 
 /*@import 'bootstrap-sass-official/assets/stylesheets/bootstrap';*/
@@ -290,21 +292,7 @@ button.btn.btn-primary, button.btn.btn-default {
   }
 }
 
-footer {
-    height: 10%;
-    background-color: #2A3D12;
-    border-top: 2px solid black;
-    color: #aba104 !important;
-    font-weight: bold;
-    text-shadow: 0px 0px 2px black;
-    text-align: right;
-    padding-top: 1%;
-    padding-right: 2%;
-}
 
-footer a {
-  color: black;
-}
 
 .popover {
   position: absolute;
@@ -372,7 +360,7 @@ li.navlinx a:link {
   background-image: image-url(tennis-ball);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  min-height: 100%;
+  min-height: 90%;
 }
 
 .login-box, .logout-box {
@@ -693,4 +681,22 @@ p.labels {
 
 .logged-view, .unlogged-view {
   position: absolute;
+}
+
+footer {
+    height: 10%;
+    background-color: #2A3D12;
+    border-top: 2px solid black;
+    color: #aba104 !important;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px black;
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 2%;
+
+/* z-index: 99; margin-top: 500px; */
+}
+
+footer a {
+  color: black;
 }
