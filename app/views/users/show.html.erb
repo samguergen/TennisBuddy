@@ -1,4 +1,6 @@
-<div class="profile-box" ng-if="tabArray.showProfile == true">
+<div class="user-show">
+	<div class="user-title">Inside user show page</div>
+
   <div class="profile-wrapper">
   <div class="profile-top">
     Johnny B. Goode
@@ -11,30 +13,30 @@
         <span class="user-label">member since: </span> 2016 <br>
         <span class="user-label">age: </span> 27 <br>
         <span class="user-label">description: </span> blablablab <br>
+    </div> <!-- pm-left -->
 
-    </div>
     <div class="pm-center">
       <div class="user-photo"></div>
       <div class="message-link">
         <button class="btn-success" ng-click="sendMessage()">Send a message</button>
       </div>
+    </div> <!-- pm-center -->
 
-    </div>
     <div class="pm-right">
       <div class="player-info">
         <div class="content-header">Player Info:</div>
           <span class="user-label">games played: </span> 9 <br>
           <span class="user-label">games won: </span> 4 <br>
           <span class="user-label">best score: </span> 8-1 <br>
-      </div>
+      </div><!-- player-info -->
       <div class="play-buttons">
         <div class="looking-to-play" ng-show="lookingToPlay = true">Looking to Play</div>
         <div class="not-looking-to-play" ng-show="lookingToPlay = false">Not Looking to Play</div>
-      </div>
+      </div><!-- play-buttons -->
+    </div><!-- pm-right -->
 
-    </div>
+  </div><!-- profile-main -->
+  </div><!-- profile-wrapper -->
 
-  </div>
-  </div>
-
+</div><!-- profile-box -->
 </div>
