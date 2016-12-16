@@ -375,7 +375,7 @@ li.navlinx a:link {
     background: beige;
     padding: 3%;
     padding-left: 90px;
-    z-index: 995;
+    z-index: 1995;
 }
 
 .login-box form { padding: 28px;}
@@ -398,7 +398,7 @@ p.labels {
 }
 
 .signup-box  {
-    z-index: 995;
+    z-index: 1995;
     height: 450px;
     width: 65%;
     border: 2px solid black;
@@ -408,7 +408,7 @@ p.labels {
     background: #9dcc69;
     padding: 3%;
     padding-left: 90px;
-    top: 20%;
+    top: 12%;
   }
 
 .signup-box hr {
@@ -453,7 +453,7 @@ p.labels {
   display: flex;
   flex-direction: column;
   justify-content: center;
-    z-index: 995;
+    z-index: 1995;
 }
 
 .profile-box .profile-top {
