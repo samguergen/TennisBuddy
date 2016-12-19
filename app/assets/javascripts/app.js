@@ -2,10 +2,6 @@ angular
     .module('myApp', [])
     .controller('MainCtrl', ['$scope', '$location', '$window', '$http', function($scope, $location, $window, $http){
        $http.defaults.headers.common["X-Requested-With"];
-
-       // $scope.showLogin = false;
-      // $scope.showSignup = false;
-      // $scope.showProfile = false;
       $scope.lookingToPlay = false;
       $scope.openGameForm = true;
 
@@ -51,16 +47,13 @@ angular
 
       $scope.navToggle = function(clickedTab){
         var tabVal = Object.values($scope.tabArray);
-        // console.log('clickedTab is ', clickedTab);
         for (var i in tabVal){
-          // console.log('each value is ', tabVal[i])
           $scope.tabArray[i] = false;
         }
         $scope.tabArray[clickedTab] = !$scope.tabArray[clickedTab];
       }
 
       $scope.addScore = function(){
-        // console.log('inside addScore func, $scope.score is ', $scope.score);
         $scope.score.player_1.total = parseInt($scope.score.player_1.first) + parseInt($scope.score.player_1.second) + parseInt($scope.score.player_1.third);
         $scope.score.player_2.total = parseInt($scope.score.player_2.first) + parseInt($scope.score.player_2.second) + parseInt($scope.score.player_2.third);
 
