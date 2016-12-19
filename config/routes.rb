@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   post '/addscore' => 'games#addscore'
 
+  post '/diplay_img' => 'images#displayimg'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
