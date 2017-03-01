@@ -1,18 +1,4 @@
 
-<div class="all-content">
-  <ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <a href="/users/<%= user.id %>"> <%= user.first_name %> </a>
-    </li>
-  <% end %>
-</ul>
-
-  <div class="welcome-intro">
-    <% if session.id != nil %>
-    Welcome back! :)
-    <% end %>
-  </div>
 
   <div class="section-wrapper" ng-hide="openLocationReq == true">
     <div class="bubble">
